@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Quicksand } from "next/font/google";
+import { Michroma, Quicksand } from "next/font/google";
 import "./globals.css";
 import ExternalTags from "@/components/ExternalTags";
 import Providers from "@/components/Providers";
 import Footer from "@/components/Footer/Footer";
 
-const bebasNeue = Bebas_Neue({
+const michroma = Michroma({
   weight: ["400"],
   variable: "--font-primary",
   subsets: ["latin"],
@@ -38,7 +38,7 @@ export default function RootLayout({
         <ExternalTags />
       </head>
       <body
-        className={`${bebasNeue.variable} ${quicksand.variable} antialiased`}
+        className={`${michroma.variable} ${quicksand.variable} antialiased`}
       >
         <Providers>
           {children}

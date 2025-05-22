@@ -7,11 +7,11 @@ export default function Home() {
     <main className="relative h-full">
       <div className="h-screen w-full bg-secondary flex flex-col items-center justify-center antialiased overflow-x-hidden">
         <BackgroundBeams />
-        <div className="!z-[80] flex items-center justify-center flex-col gap-5 section-max-w mx-auto section-px">
+        <div className="!z-[80] flex items-center justify-center flex-col gap-10 section-max-w mx-auto section-px">
           <Text
             Tag={"h1"}
             variant="title"
-            className="tracking-wider bg-clip-text bg-gradient-to-b from-gray-200 to-secondary-lighter text-transparent"
+            className="bg-clip-text bg-gradient-to-b from-gray-200 to-secondary-lighter text-transparent"
           >
             Join the waitlist
           </Text>

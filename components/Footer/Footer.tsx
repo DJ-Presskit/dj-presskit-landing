@@ -33,7 +33,7 @@ const Content = () => {
         <br className="md:hidden" /> All Rights Reserved
       </Text>
       <div className="hidden md:flex w-full items-center justify-center h-[0px] blur-sm absolute top-auto bottom-auto left-0">
-        <h5 className="text-[200px] tracking-wider  bg-gradient-to-t from-accent/40 to-secondary bg-clip-text text-transparent">
+        <h5 className="text-[100px] tracking-wider  bg-gradient-to-t from-accent/40 to-secondary bg-clip-text text-transparent">
           DJ PRESSKIT
         </h5>
       </div>
