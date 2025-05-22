@@ -1,13 +1,12 @@
 "use client";
 import {
   AnimatePresence,
-  inView,
+  useInView,
   motion,
   useScroll,
   useTransform,
 } from "framer-motion";
 import { useRef } from "react";
-import { useInView } from "react-intersection-observer";
 import { twMerge } from "tailwind-merge";
 
 export interface AnimatedTextProps {
@@ -43,8 +42,9 @@ const LettersBlurText: React.FC<AnimatedTextProps> = ({
   className,
 }) => {
   const letters = content.split("");
+  const ref = useRef<HTMLDivElement>(null);
 
-  const { ref, inView } = useInView({ triggerOnce: true });
+  const inView = useInView(ref, { once: true });
 
   return (
     <div
