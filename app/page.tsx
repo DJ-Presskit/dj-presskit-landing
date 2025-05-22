@@ -25,10 +25,7 @@ export default function Home() {
             tus redes o enviar a tus contactos. Agendá una reunión y te
             mostramos cómo hacerlo realidad.
           </Text>
-          <DefaultButton
-            href="https://calendly.com/ramifazio/dj-presskit-interview"
-            variant="secondary"
-          >
+          <DefaultButton href="https://calendly.com/ramifazio/dj-presskit-interview">
             AGENDA UNA REUNION
           </DefaultButton>
         </div>

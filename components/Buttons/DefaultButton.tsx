@@ -28,16 +28,16 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
 }) => {
   const variants = {
     primary: {
-      container: "bg-accent hover:bg-secondary-lighter",
-      text: "text-secondary group-hover:text-primary",
-    },
-    secondary: {
-      container: "bg-secondary-lighter hover:bg-accent",
+      container: "backdrop-blur-xs hover:bg-accent",
       text: "text-primary group-hover:text-secondary",
     },
+    secondary: {
+      container: "",
+      text: "",
+    },
     basic: {
-      container: "bg-none border-none",
-      text: "text-primary hover:opacity-60",
+      container: "",
+      text: "",
     },
   };
 

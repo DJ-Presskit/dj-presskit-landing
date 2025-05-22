@@ -19,6 +19,7 @@ const Content = () => {
     <div className="relative section-px section-max-w mx-auto w-full flex flex-col items-center gap-10 justify-between pt-[50px] md:flex-row-reverse">
       <div>
         <LandingImage
+          noPreload
           src="default_logo"
           alt="logo"
           width={100}
