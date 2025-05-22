@@ -12,7 +12,7 @@ export default function MagneticContainer({
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const handleMouse = (e) => {
+  const handleMouse = (e: any) => {
     const { clientX, clientY } = e;
     if (!ref.current) return;
     const { height, width, left, top } = ref.current.getBoundingClientRect();

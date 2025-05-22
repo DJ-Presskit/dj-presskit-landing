@@ -15,8 +15,6 @@ const eslintConfig = [
       "@typescript-eslint/no-any": "off",
       "no-explicit-any": "off",
       "prefer-const": "off",
-      "@typescript-eslint/ban-types": "off",
-      "@typescript-eslint/no-unused-vars": "warn",
       "no-unused-vars": "warn",
     },
   }),
