@@ -10,10 +10,10 @@ export default function Home() {
         <div className="!z-[80] flex items-center justify-center flex-col gap-10 section-max-w mx-auto section-px">
           <Text
             Tag={"h1"}
-            variant="title"
-            className="bg-clip-text bg-gradient-to-b from-gray-200 to-secondary-lighter text-transparent"
+            variant="custom"
+            className="text-transparent text-2xl md:text-4xl lg:text-5xl xl:text-6xl lg:leading-15 xl:leading-20 font-bold bg-clip-text bg-gradient-to-tl from-gray-200 to-neutral-600"
           >
-            Join the waitlist
+            Tu música ya tiene estilo, tu web también debería
           </Text>
           <Text
             variant="content"
