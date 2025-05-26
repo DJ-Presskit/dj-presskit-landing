@@ -12,7 +12,7 @@ const ScrollSmoother: React.FC<{ children: any }> = ({ children }) => {
   }, [pathname, lenis]);
 
   return (
-    <ReactLenis root options={{ lerp: 0.018 }}>
+    <ReactLenis root options={{ lerp: 0.022 }}>
       {children}
     </ReactLenis>
   );

@@ -10,8 +10,8 @@ export interface TextProps {
 
 export const VARIANTS = {
   title: "text-5xl lg:text-6xl xl:text-7xl font-bold",
-  subtitle: "text-2xl md:text-left md:text-3xl lg:text-4xl xl:text-5xl",
-  content: "text-md lg:text-left font-thin leading-6",
+  subtitle: "text-md md:text-xl xl:text-2xl font-semibold",
+  content: "text-md xl:text-lg font-medium",
   custom: "",
 } as const;
 

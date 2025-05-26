@@ -1,39 +1,17 @@
 import { BackgroundBeams } from "@/components/AnimatedBackgrounds/BackgroundBeams";
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import Text from "@/components/Text/Text";
+import Cards from "@/views/Cards";
+import Hero from "@/views/Hero";
 
 export default function Home() {
   return (
     <main className="relative h-full">
-      <div className="h-screen w-full bg-secondary flex flex-col items-center justify-center antialiased overflow-x-hidden">
-        <BackgroundBeams />
-        <div className="!z-[80] flex items-center justify-center flex-col gap-10 section-max-w mx-auto section-px">
-          <Text
-            Tag={"h1"}
-            variant="custom"
-            className="text-transparent text-2xl md:text-4xl lg:text-5xl xl:text-6xl lg:leading-15 xl:leading-20 font-bold bg-clip-text bg-gradient-to-tl from-gray-200 to-neutral-600"
-          >
-            Tu música ya tiene estilo, tu web también debería
-          </Text>
-          <Text
-            variant="content"
-            className="max-w-[500px] mx-auto !text-center"
-          >
-            <strong>¿Sos DJ y querés mostrar tu trabajo con estilo?</strong>
-            <br />
-            Creamos sitios únicos, listos en 48 - 72hs, que podés compartir en
-            tus redes o enviar a tus contactos. Agendá una reunión y te
-            mostramos cómo hacerlo realidad.
-          </Text>
-          <DefaultButton href="https://calendly.com/ramifazio/dj-presskit-interview">
-            AGENDA UNA REUNION
-          </DefaultButton>
-        </div>
-      </div>
-
+      <Hero />
+      <Cards />
       <div
         className={
-          "h-[60px] translate-y-[58px] w-full  absolute bottom-0 left-0 bg-gradient-to-b from-secondary to-transparent z-50"
+          "h-[100px] translate-y-[99px] w-full  absolute bottom-0 left-0 bg-gradient-to-b from-secondary to-transparent z-50"
         }
       ></div>
     </main>

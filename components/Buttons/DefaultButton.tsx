@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 import Text from "../Text/Text";
+import { GlowingEffect } from "../ui/GlowingEffect";
 
 interface DefaultButtonProps {
   children: React.ReactNode;
@@ -28,8 +29,8 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
 }) => {
   const variants = {
     primary: {
-      container: "backdrop-blur-xs hover:bg-accent",
-      text: "text-primary group-hover:text-secondary",
+      container: "backdrop-blur-xs",
+      text: "text-primary",
     },
     secondary: {
       container: "",
@@ -67,11 +68,19 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
       onClick={handleOnClick}
       transition={{ type: "spring", duration: 0.1 }}
       className={twMerge(
-        "w-fit h-[60px] min-w-[250px] disabled:opacity-50 disabled:pointer-events-none group flex px-5 lg:px-10 items-center justify-center cursor-pointer transition duration-500 border-2 border-accent",
+        "w-fit h-[60px] relative min-w-[250px] disabled:opacity-50 disabled:pointer-events-none group flex px-5 lg:px-10 items-center justify-center cursor-pointer transition duration-500 border-2 border-neutral-500",
         variants[variant].container,
         className
       )}
     >
+      <GlowingEffect
+        spread={150}
+        glow={true}
+        borderWidth={4}
+        disabled={false}
+        proximity={50}
+        inactiveZone={0.01}
+      />
       {renderChildren()}
     </motion.button>
   );

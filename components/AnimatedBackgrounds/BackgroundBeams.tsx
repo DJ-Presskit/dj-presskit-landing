@@ -60,7 +60,7 @@ export const BackgroundBeams = React.memo(
     return (
       <div
         className={twMerge(
-          "absolute inset-0 flex h-full w-full -z-0 items-center justify-center [mask-repeat:no-repeat] [mask-size:40px] min-h-screen",
+          "absolute inset-0 flex w-full -z-0 items-center justify-center [mask-repeat:no-repeat] [mask-size:40px] h-[150dvh]",
           className
         )}
       >
@@ -115,8 +115,8 @@ export const BackgroundBeams = React.memo(
               >
                 <stop stopColor="#59c6ba" stopOpacity="0"></stop>
                 <stop stopColor="#59c6ba"></stop>
-                <stop offset="32.5%" stopColor="#F19A3E"></stop>
-                <stop offset="100%" stopColor="#F19A3E" stopOpacity="0"></stop>
+                <stop offset="32.5%" stopColor="#F19A3E50"></stop>
+                <stop offset="100%" stopColor="#F19A3E50" stopOpacity="0"></stop>
               </motion.linearGradient>
             ))}
 
@@ -129,7 +129,7 @@ export const BackgroundBeams = React.memo(
               gradientTransform="translate(352 34) rotate(90) scale(555 1560.62)"
             >
               <stop offset="0.0666667" stopColor="#59c6ba"></stop>
-              <stop offset="0.243243" stopColor="#F19A3E"></stop>
+              <stop offset="0.243243" stopColor="#F19A3E50"></stop>
               <stop offset="0.43594" stopColor="white" stopOpacity="0"></stop>
             </radialGradient>
           </defs>
