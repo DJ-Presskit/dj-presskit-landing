@@ -98,14 +98,15 @@ const GridItem = ({ icon, title, description, index }: GridItemProps) => {
           variant="subtitle"
           className="lg:text-left flex items-center cursor-default"
         >
-          {title.split("").map((l) => (
-            <motion.h5
+          {title.split("").map((l, i) => (
+            <motion.div
+              key={i}
               whileHover={{ y: -5 }}
               transition={{ type: "spring", duration: 0.5 }}
               className="w-fit"
             >
               {l}
-            </motion.h5>
+            </motion.div>
           ))}
         </Text>
       </div>
