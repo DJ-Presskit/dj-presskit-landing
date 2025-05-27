@@ -15,44 +15,90 @@ import {
 import GradientIcon from "@/components/Icons/GradientIcon";
 import { FAQItemType } from "@/@types";
 import { twMerge } from "tailwind-merge";
+import LandingLink from "@/components/LandingLink/LandingLink";
 
 const faqData: FAQItemType[] = [
   {
+    type: "custom",
+    question: "¿Qué incluye el presskit?",
+    answer: (
+      <div className="flex flex-col items-start">
+        <Text variant="content" className="text-neutral-500 text-left">
+          <ul className="list-disc list-inside space-y-1">
+            <li>
+              Sitio web personalizado y responsive en menos de en menos de 72
+              horas hábiles
+            </li>
+            <li>Tu biografía y redes sociales integradas</li>
+            <li>Galería de imágenes para mostrar tu trabajo</li>
+            <li>
+              Carpeta de Google Drive con <strong>25 GB</strong> para subir lo
+              que necesites
+            </li>
+            <li>Sección de próximos eventos sincronizados a Google Sheets</li>
+            <li>Formulario de contacto sincronizado a Google Sheets</li>
+            <li>
+              Dominio tipo{" "}
+              <strong>
+                <code>[Tu Nombre].dj-presskit.com</code>
+              </strong>
+            </li>
+            <li>
+              Email personalizado tipo{" "}
+              <strong>
+                <code>[Tu Nombre]@dj-presskit.com</code>
+              </strong>
+            </li>
+            <li>Hosting y Certificados HTTPS</li>
+          </ul>
+        </Text>
+      </div>
+    ),
+    icon: <CheckCheck size={30} />,
+  },
+
+  {
     question: "¿Qué necesito para tener mi presskit?",
     answer:
-      "Solo tenés que completar un formulario con tu información (bio, redes, rider técnico, fechas, etc.) y agendar una reunión inicial. Con eso, nosotros nos encargamos del resto.",
+      "Solo tenés que completar un formulario con tu información (bio, redes, rider técnico, imagenes, etc...) y agendar una reunión inicial. Con eso, nosotros nos encargamos del resto.",
     icon: <Pin size={30} />,
   },
   {
-    question: "¿Cuánto tarda en estar lista mi web?",
+    question: "¿Cuánto tarda en estar listo mi presskit?",
     answer:
-      "Tu presskit estará online y listo para compartir en un máximo de 48 horas hábiles desde que recibimos todo el contenido necesario.",
+      "Tu presskit estará online y listo para compartir en menos de 72 horas hábiles desde que recibimos todo el contenido necesario.",
     icon: <Clock size={30} />,
   },
 
   {
-    question: "¿Puedo modificar la info de mi sitio después?",
+    question: "¿Puedo modificar la información de mi sitio después?",
     answer:
-      "Sí. Vas a tener una carpeta en Google Drive donde podés actualizar tu calendario de eventos o subir nuevo contenido. Nosotros nos encargamos de que se refleje automáticamente en tu web.",
+      "Sí. Te vamos a dar acceso a una carpeta en Google Drive donde podés actualizar tu calendario de eventos o subir nuevos. Nosotros nos encargamos de que se refleje automáticamente en tu web.",
     icon: <PencilRuler size={30} />,
   },
   {
     question: "¿Qué diferencia tiene esto con usar Linktree o Instagram?",
     answer:
-      "Esto es una web real, profesional, con diseño exclusivo, dominio propio y tu contenido estructurado de forma clara. No solo te destacás frente a otros DJs, también proyectás seriedad y estilo.",
+      "Esto es una web real, profesional, con diseño, dominio propio y tu contenido estructurado de forma clara. No solo te destacás frente a otros DJs, también proyectás seriedad y estilo.",
     icon: <Lightbulb size={30} />,
   },
   {
+    type: "custom",
     question: "¿Puedo ver cómo queda antes de pagar?",
-    answer:
-      "Sí, podés ver un demo del presskit en template.dj-presskit.com. Si te gusta, agendamos una llamada y arrancamos.",
+    answer: (
+      <Text variant="content" className="text-neutral-500 text-left flex">
+        Sí, podés ver un demo de nuestra última plantilla de presskit{" "}
+        <LandingLink
+          href={"https://template.dj-presskit.com"}
+          newTab
+          className="hover:opacity-50"
+        >
+          <strong>clickeando acá</strong>.
+        </LandingLink>{" "}
+        Si te gusta, agendamos una llamada y arrancamos.
+      </Text>
+    ),
     icon: <Eye size={30} />,
-  },
-  {
-    question: "¿Qué incluye el presskit?",
-    answer:
-      "Un sitio web personalizado en menos de 48hs con tu bio, galería de imágenes, próximas fechas desde Google Sheets, rider técnico, redes sociales, formulario de contacto conectado a tu Drive y dominio personalizado.",
-    icon: <CheckCheck size={30} />,
   },
 ];
 
@@ -144,9 +190,13 @@ const FAQItem = ({
             className="overflow-hidden"
           >
             <div className="p-8 pt-0">
-              <Text variant="content" className="text-neutral-500">
-                {item.answer}
-              </Text>
+              {item.type === "custom" ? (
+                item.answer
+              ) : (
+                <Text variant="content" className="text-neutral-500">
+                  {item.answer}
+                </Text>
+              )}
             </div>
           </motion.div>
         )}

@@ -1,7 +1,8 @@
 import React from "react";
 
 export type FAQItemType = {
+  type?: "custom";
   question: string;
-  answer: string;
+  answer: string | React.ReactElement;
   icon: React.ReactElement;
 };
