@@ -58,6 +58,10 @@
     -webkit-appearance: none;
     margin: 0;
   }
+
+  .lucide {
+    @apply text-neutral-400 group-hover:text-accent transition duration-600;
+  }
 }
 
 @layer utilities {

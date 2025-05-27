@@ -6,11 +6,11 @@ export default function Hero() {
   return (
     <div className="h-screen w-full bg-secondary flex flex-col items-center justify-center antialiased overflow-x-hidden">
       <BackgroundBeams />
-      <div className="!z-[80] flex items-center justify-center flex-col gap-10 section-max-w mx-auto section-px">
+      <div className="!z-[80] flex items-center justify-center flex-col gap-[10vh] section-max-w mx-auto section-px">
         <Text
           Tag={"h1"}
-          variant="custom"
-          className="text-transparent text-3xl md:text-4xl lg:text-5xl xl:text-6xl lg:leading-15 xl:leading-20 font-bold bg-clip-text bg-gradient-to-tl from-gray-200 to-neutral-600"
+          variant="title"
+          className="text-transparent bg-clip-text bg-gradient-to-tl from-gray-200 to-neutral-600 lg:leading-15 xl:leading-25"
         >
           Tu música ya tiene estilo,
           <br />
