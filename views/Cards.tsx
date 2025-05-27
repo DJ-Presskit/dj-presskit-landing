@@ -63,7 +63,7 @@ export default function Cards() {
         />
       </div>
       <DefaultButton href="https://calendly.com/ramifazio/dj-presskit-interview">
-        AGENDA UNA REUNION
+        CREA TU PRESSKIT
       </DefaultButton>
     </div>
   );
