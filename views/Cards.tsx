@@ -27,8 +27,8 @@ export default function Cards() {
       <div className="h-full grid grid-rows-none grid-cols-1 md:grid-cols-2 gap-10 xl:grid-cols-3 mb-10">
         <GridItem
           icon={<Rocket size={30} className="" />}
-          title="En menos de 48hs"
-          description="Tu presskit profesional listo para publicar en menos de dos días hábiles."
+          title="En menos de 72hs"
+          description="Tu presskit profesional listo para publicar en menos de tres días hábiles."
           index={0}
         />
         <GridItem
@@ -62,9 +62,20 @@ export default function Cards() {
           index={5}
         />
       </div>
-      <DefaultButton href="https://calendly.com/ramifazio/dj-presskit-interview">
-        CREA TU PRESSKIT
-      </DefaultButton>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          delay: 1,
+          ease: "easeOut",
+        }}
+      >
+        <DefaultButton href="https://calendly.com/ramifazio/dj-presskit-interview">
+          CREA TU PRESSKIT
+        </DefaultButton>
+      </motion.div>
     </div>
   );
 }
