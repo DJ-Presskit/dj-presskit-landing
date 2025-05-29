@@ -95,7 +95,7 @@ const GridItem = ({ icon, title, description, index }: GridItemProps) => {
       viewport={{ once: true, margin: "-100px" }}
       transition={{
         duration: 0.5,
-        delay: index * 0.2,
+        delay: index * 0.1,
         ease: "easeOut",
       }}
       className={`h-full pointer-events-none cursor-cell backdrop-blur-sm group min-h-[300px] gap-10 lg:h-[250px] relative rounded-2xl border-2 border-neutral-500 p-8 flex flex-col justify-between`}

@@ -31,10 +31,7 @@ const faqData: FAQItemType[] = [
             </li>
             <li>Tu biografía y redes sociales integradas</li>
             <li>Galería de imágenes para mostrar tu trabajo</li>
-            <li>
-              Carpeta de Google Drive con <strong>25 GB</strong> para subir lo
-              que necesites
-            </li>
+            <li>Carpeta de Google Drive para subir lo que necesites</li>
             <li>Sección de próximos eventos sincronizados a Google Sheets</li>
             <li>Formulario de contacto sincronizado a Google Sheets</li>
             <li>
@@ -43,12 +40,12 @@ const faqData: FAQItemType[] = [
                 <code>[Tu Nombre].dj-presskit.com</code>
               </strong>
             </li>
-            <li>
+            {/* <li>
               Email personalizado tipo{" "}
               <strong>
                 <code>[Tu Nombre]@dj-presskit.com</code>
               </strong>
-            </li>
+            </li> */}
             <li>Hosting y Certificados HTTPS</li>
           </ul>
         </Text>
