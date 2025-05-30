@@ -68,7 +68,6 @@ export default function Cards() {
         viewport={{ once: true }}
         transition={{
           duration: 0.5,
-          delay: 1,
           ease: "easeOut",
         }}
       >
