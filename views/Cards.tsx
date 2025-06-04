@@ -52,7 +52,7 @@ export default function Cards() {
         <GridItem
           icon={<Flame size={30} className="" />}
           title="Producto único"
-          description="Un diseño exclusivo que te hace destacar frente a toda la competencia del mercado."
+          description="Un producto exclusivo que te hace destacar frente a toda la competencia del mercado."
           index={4}
         />
         <GridItem
@@ -97,7 +97,7 @@ const GridItem = ({ icon, title, description, index }: GridItemProps) => {
         delay: index * 0.1,
         ease: "easeOut",
       }}
-      className={`h-full pointer-events-none cursor-cell backdrop-blur-sm group min-h-[300px] gap-10 lg:h-[250px] relative rounded-2xl border-2 border-neutral-500 p-8 flex flex-col justify-between`}
+      className={`h-full pointer-events-none backdrop-blur-sm group min-h-[300px] gap-10 lg:h-[250px] relative rounded-2xl border-2 border-neutral-500 p-8 flex flex-col justify-between`}
     >
       <GlowingEffect
         spread={80}
