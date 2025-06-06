@@ -8,7 +8,10 @@ interface ProvidersProps {
 const Providers: React.FC<ProvidersProps> = ({ children }) => {
   return (
     <>
-      <ScrollSmoother>{children}</ScrollSmoother>
+      <ScrollSmoother>
+        <p className="hidden">⪩༏⪨</p>
+        {children}
+      </ScrollSmoother>
     </>
   );
 };

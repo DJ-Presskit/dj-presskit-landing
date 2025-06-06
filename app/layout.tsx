@@ -44,7 +44,6 @@ export const metadata: Metadata = {
     title: "DJ Presskit - Sitios Web Profesionales para DJs",
     description:
       "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en menos de 72 horas.",
-    images: [{ url: "https://dj-presskit.com/og-image.png" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -79,7 +78,7 @@ export default function RootLayout({
     <html lang="es">
       <head>
         <ExternalTags />
-        <link rel="canonical" href="https://djpresskit.com" />
+        <link rel="canonical" href="https://dj-presskit.com" />
         <meta name="theme-color" content="#000000" />
       </head>
       <body
