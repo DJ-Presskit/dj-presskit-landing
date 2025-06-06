@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   description:
     "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en minutos, con diseño moderno y optimizado para compartir con promotores y clubes.",
   keywords:
-    "DJ presskit, sitio web DJ, landing page DJ, promoción DJ, portfolio DJ, presskit digital",
+    "DJ presskit, sitio web DJ, landing page DJ, promoción DJ, portfolio DJ, presskit digital, presskit, press kit, media kit ",
   authors: [{ name: "DJ Presskit" }],
   creator: "DJ Presskit",
   publisher: "DJ Presskit",

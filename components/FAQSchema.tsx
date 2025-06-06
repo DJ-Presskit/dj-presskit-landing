@@ -7,10 +7,10 @@ export default function FAQSchema() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "¿Qué es un DJ Presskit?",
+        name: "¿Qué es un press kit?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Un DJ Presskit es un sitio web profesional que muestra tu información como DJ, incluyendo tu biografía, fotos, videos, música y redes sociales. Es tu tarjeta de presentación digital para promotores y clubes.",
+          text: "Un Presskit es un sitio web profesional que muestra tu información como DJ, incluyendo tu biografía, fotos, videos, música y redes sociales. Es tu tarjeta de presentación digital para promotores y clubes.",
         },
       },
       {
