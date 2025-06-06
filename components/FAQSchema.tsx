@@ -2,6 +2,7 @@ import { FAQPage, WithContext } from "schema-dts";
 
 export default function FAQSchema() {
   const faqSchema: WithContext<FAQPage> = {
+    name: "FAQs",
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: [
