@@ -62,19 +62,6 @@ export default function Cards() {
           index={5}
         />
       </div>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 0.5,
-          ease: "easeOut",
-        }}
-      >
-        <DefaultButton href="https://calendly.com/ramifazio/dj-presskit-interview">
-          CREA TU PRESSKIT
-        </DefaultButton>
-      </motion.div>
     </div>
   );
 }
