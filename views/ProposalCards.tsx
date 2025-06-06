@@ -1,11 +1,9 @@
 "use client";
 import React, { useEffect } from "react";
-
 import { AnimatePresence, motion } from "motion/react";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 import Text from "@/components/Text/Text";
 import { Check, LayoutTemplate, Sparkles, SquarePen } from "lucide-react";
-import { exit } from "process";
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import { twMerge } from "tailwind-merge";
 import { useMediaQuery } from "@/hooks";
@@ -107,13 +105,7 @@ const Card = ({
   children?: React.ReactNode;
   includes?: string[];
 }) => {
-  const isMobile = useMediaQuery(769);
-
   const [hovered, setHovered] = React.useState(false);
-
-  useEffect(() => {
-    setHovered(isMobile);
-  }, [isMobile]);
 
   return (
     <motion.div
