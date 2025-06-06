@@ -11,7 +11,7 @@ import { twMerge } from "tailwind-merge";
 
 export interface AnimatedTextProps {
   content: string;
-  Tag?: React.ComponentType<{ className?: string; children?: React.ReactNode }>;
+  Tag?: any;
   className?: string;
   variant: keyof typeof VARIANTS;
   type?: "letters-blur" | "vertical-move";

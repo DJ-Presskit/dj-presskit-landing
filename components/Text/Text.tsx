@@ -3,7 +3,7 @@ import { twMerge } from "tailwind-merge";
 export interface TextProps {
   content?: string;
   children?: React.ReactNode;
-  Tag?: React.ElementType;
+  Tag?: any;
   className?: string;
   variant: keyof typeof VARIANTS;
 }
