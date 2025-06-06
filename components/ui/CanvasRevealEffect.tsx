@@ -25,7 +25,7 @@ export const CanvasRevealEffect = ({
 }) => {
   return (
     <div
-      className={cn("h-full relative bg-white w-full", containerClassName)}
+      className={cn("h-full relative w-full", containerClassName)}
       style={{ filter: "blur(1px)" }}
     >
       <div className="h-full w-full">
