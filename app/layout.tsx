@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title:
     "DJ Presskit - Sitios Web Profesionales para DJs | Landing Page Personalizada",
   description:
-    "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en minutos, con diseño moderno y optimizado para compartir con promotores y clubes.",
+    "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en menos de 72 horas, con diseño moderno y optimizado para compartir con promotores y clubes.",
   keywords:
     "DJ presskit, sitio web DJ, landing page DJ, promoción DJ, portfolio DJ, presskit digital, presskit, press kit, media kit ",
   authors: [{ name: "DJ Presskit" }],
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     siteName: "DJ Presskit",
     title: "DJ Presskit - Sitios Web Profesionales para DJs",
     description:
-      "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en minutos.",
+      "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en menos de 72 horas.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/logos/og-image.png",
         width: 1200,
         height: 630,
         alt: "DJ Presskit - Tu Presskit Digital Profesional",
@@ -57,8 +57,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DJ Presskit - Sitios Web Profesionales para DJs",
     description:
-      "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en minutos.",
-    images: ["/og-image.png"],
+      "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en menos de 72 horas.",
+    images: ["/logos/og-image.png"],
     creator: "@djpresskit",
   },
   robots: {
