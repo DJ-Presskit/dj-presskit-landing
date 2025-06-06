@@ -21,7 +21,7 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://djpresskit.com"),
+  metadataBase: new URL("https://dj-presskit.com"),
   title:
     "DJ Presskit - Sitios Web Profesionales para DJs | Landing Page Personalizada",
   description:
@@ -39,18 +39,19 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_ES",
-    url: "https://djpresskit.com",
+    url: "https://dj-presskit.com",
     siteName: "DJ Presskit",
     title: "DJ Presskit - Sitios Web Profesionales para DJs",
     description:
       "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en menos de 72 horas.",
+    images: [{ url: "https://dj-presskit.com/og-image.png" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "DJ Presskit - Sitios Web Profesionales para DJs",
     description:
       "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en menos de 72 horas.",
-    creator: "@djpresskit",
+    creator: "@dj-presskit",
   },
   robots: {
     index: true,
