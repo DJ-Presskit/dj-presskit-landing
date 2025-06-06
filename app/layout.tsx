@@ -46,11 +46,11 @@ export const metadata: Metadata = {
       "Creamos sitios web profesionales y personalizados para DJs. Tu presskit digital listo en menos de 72 horas.",
     images: [
       {
-        url: "/og-image.png",
-        secureUrl: "/og-image.png",
+        url: "/logos/default-logo.png",
+        secureUrl: "/logos/default-logo.png",
         width: 1200,
         height: 630,
-       alt: "dj-presskit"
+        alt: "dj-presskit",
       },
     ],
   },
