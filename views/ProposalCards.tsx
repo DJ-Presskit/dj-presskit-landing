@@ -21,6 +21,7 @@ export function ProposalCards() {
         </Text>
         <div className="h-full grid grid-rows-none grid-cols-1 md:grid-cols-2 gap-10 xl:grid-cols-3">
           <Card
+            href="https://template.dj-presskit.com"
             title="Plan Presskit Básico"
             description="Ideal para DJs que quieren una presencia web rápida, clara y sin complicaciones."
             price="Desde $150.000"
@@ -36,6 +37,7 @@ export function ProposalCards() {
           ></Card>
 
           <Card
+            href="https://template-avanzado.dj-presskit.com"
             title="Plan Presskit Avanzado"
             description="Un presskit más visual, más dinámico y con funciones extra para destacar."
             price="Desde $220.000"
@@ -61,6 +63,7 @@ export function ProposalCards() {
           </Card>
 
           <Card
+            href="https://calendly.com/ramifazio/dj-presskit-interview"
             title="Plan Presskit Premium"
             description="Para DJs exigentes que buscan un sitio a medida, sin límites de creatividad ni funcionalidad."
             price="Desde $650.000"
@@ -97,6 +100,7 @@ const Card = ({
   icon,
   children,
   includes = [],
+  href,
 }: {
   title: string;
   description: string;
@@ -104,6 +108,7 @@ const Card = ({
   icon: React.ReactNode;
   children?: React.ReactNode;
   includes?: string[];
+  href: string;
 }) => {
   const [hovered, setHovered] = React.useState(false);
 
@@ -208,7 +213,11 @@ const Card = ({
           }}
           transition={{ delay: 2.5, duration: 0.5 }}
         >
-          <DefaultButton>VER MÁS</DefaultButton>
+          <DefaultButton href={href}>
+            {title === "Plan Presskit Premium"
+              ? "AGENDA UNA REUNION"
+              : "VER MÁS"}
+          </DefaultButton>
         </motion.div>
       </div>
     </motion.div>
