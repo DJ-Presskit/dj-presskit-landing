@@ -97,8 +97,8 @@ export default function RootLayout({
         <Providers>
           {children}
           <Footer />
+          <Analytics />
         </Providers>
-        <Analytics />
       </body>
     </html>
   );
