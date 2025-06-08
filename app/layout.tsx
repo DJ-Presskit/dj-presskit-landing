@@ -4,6 +4,7 @@ import "./globals.css";
 import ExternalTags from "@/components/ExternalTags";
 import Providers from "@/components/Providers";
 import Footer from "@/components/Footer/Footer";
+import { Analytics } from "@/components/Analytics";
 
 const michroma = Michroma({
   weight: ["400"],
@@ -97,6 +98,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
