@@ -149,7 +149,7 @@ const FAQItem = ({
       viewport={{ once: true }}
       transition={{
         duration: 0.5,
-        delay: idx * 0.2,
+        delay: idx * 0.02,
         ease: "easeOut",
       }}
       className="border-2 border-neutral-500 rounded-2xl overflow-hidden backdrop-blur-sm"

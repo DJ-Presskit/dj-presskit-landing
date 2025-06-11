@@ -19,7 +19,7 @@ export function ProposalCards() {
         >
           Nuestros Planes
         </Text>
-        <div className="h-full grid grid-rows-none grid-cols-1 md:grid-cols-2 gap-10 xl:grid-cols-3">
+        <div className="h-full grid grid-rows-none grid-cols-1 gap-10 xl:grid-cols-3">
           <Card
             href="https://template.dj-presskit.com"
             title="Plan Presskit Básico"
@@ -46,7 +46,7 @@ export function ProposalCards() {
               "Todo lo del Plan Básico",
               "Diseño con animaciones y transiciones parallax.",
               "Sección de próximos eventos conectada a Google Sheets.",
-              "Dominio personalizado incluido.",
+              "Dominio personalizado incluido con membresia.",
               "Email profesional con tu dominio.",
               "Entrega en menos de 72hs.",
             ]}
@@ -110,16 +110,14 @@ const Card = ({
   includes?: string[];
   href: string;
 }) => {
-  const [hovered, setHovered] = React.useState(false);
+  const [hovered, setHovered] = React.useState(true);
 
   return (
     <motion.div
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
       whileHover="hover"
       initial="initial"
       animate="initial"
-      className="backdrop-blur-sm group/canvas-card relative flex items-center justify-center rounded-2xl border-2 w-full border-neutral-500 py-10 md:py-20 px-10 h-[70vh] overflow-hidden bg-secondary"
+      className="backdrop-blur-sm group/canvas-card relative flex items-center justify-center rounded-2xl border-2 w-full border-neutral-500 py-10 md:py-20 px-10 min-h-[70vh] overflow-hidden bg-secondary"
       variants={{
         hover: {
           scale: 1.025,
@@ -143,7 +141,7 @@ const Card = ({
       </AnimatePresence>
 
       {/* Contenido */}
-      <div className="relative z-20 text-center h-full w-full flex items-center justify-center flex-col">
+      <div className="relative z-20 text-center h-full w-full flex items-center justify-center flex-col gap-8">
         <motion.div
           className="absolute h-full w-full flex items-center justify-center"
           animate={{
@@ -191,20 +189,22 @@ const Card = ({
           {price}
         </motion.p>
 
-        {includes.map((item, i) => (
-          <motion.li
-            key={i}
-            animate={{
-              opacity: hovered ? 1 : 0,
-              x: hovered ? 0 : -20,
-            }}
-            transition={{ delay: i * 0.4, duration: 0.4 }}
-            className="flex gap-2 w-full text-left"
-          >
-            <Check className="text-green-400 mt-1 min-w-4 min-h-4 max-w-4 max-h-4" />
-            {item}
-          </motion.li>
-        ))}
+        <div>
+          {includes.map((item, i) => (
+            <motion.li
+              key={i}
+              animate={{
+                opacity: hovered ? 1 : 0,
+                x: hovered ? 0 : -20,
+              }}
+              transition={{ delay: i * 0.4, duration: 0.4 }}
+              className="flex gap-2 w-full text-left"
+            >
+              <Check className="text-green-400 mt-1 min-w-4 min-h-4 max-w-4 max-h-4" />
+              {item}
+            </motion.li>
+          ))}
+        </div>
         <motion.div
           className="mt-auto"
           animate={{
