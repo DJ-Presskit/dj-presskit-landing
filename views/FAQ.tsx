@@ -27,18 +27,18 @@ const faqData: FAQItemType[] = [
           <ul className="list-disc list-inside space-y-1">
             <li>
               Sitio web personalizado y responsive en menos de en menos de 72
-              horas hábiles
+              horas hábiles.
             </li>
-            <li>Tu biografía y redes sociales integradas</li>
-            <li>Galería de imágenes para mostrar tu trabajo</li>
-            <li>Carpeta de Google Drive para subir lo que necesites</li>
-            <li>Sección de próximos eventos sincronizados a Google Sheets</li>
-            <li>Formulario de contacto sincronizado a Google Sheets</li>
+            <li>Tu biografía y redes sociales integradas.</li>
+            <li>Galería de imágenes para mostrar tu trabajo.</li>
+            <li>Carpeta de Google Drive para subir lo que necesites.</li>
+            <li>Sección de próximos eventos sincronizados a Google Sheets.</li>
+            <li>Formulario de contacto sincronizado a Google Sheets.</li>
             <li>
               Dominio tipo{" "}
               <strong>
                 <code>[Tu Nombre].dj-presskit.com</code>
-              </strong>
+              </strong>.
             </li>
             {/* <li>
               Email personalizado tipo{" "}
@@ -46,7 +46,7 @@ const faqData: FAQItemType[] = [
                 <code>[Tu Nombre]@dj-presskit.com</code>
               </strong>
             </li> */}
-            <li>Hosting y Certificados HTTPS</li>
+            <li>Hosting y Certificados HTTPS.</li>
           </ul>
         </Text>
       </div>
