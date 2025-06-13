@@ -26,7 +26,7 @@ const faqData: FAQItemType[] = [
         <Text variant="content" className="text-neutral-500 text-left">
           <ul className="list-disc list-inside space-y-1">
             <li>
-              Sitio web personalizado y responsive en menos de en menos de 72
+              Sitio web personalizado y responsive en menos de en menos de 48
               horas hábiles.
             </li>
             <li>Tu biografía y redes sociales integradas.</li>
@@ -38,7 +38,8 @@ const faqData: FAQItemType[] = [
               Dominio tipo{" "}
               <strong>
                 <code>[Tu Nombre].dj-presskit.com</code>
-              </strong>.
+              </strong>
+              .
             </li>
             {/* <li>
               Email personalizado tipo{" "}
@@ -63,7 +64,7 @@ const faqData: FAQItemType[] = [
   {
     question: "¿Cuánto tarda en estar listo mi presskit?",
     answer:
-      "Tu presskit estará online y listo para compartir en menos de 72 horas hábiles desde que recibimos todo el contenido necesario.",
+      "Tu presskit estará online y listo para compartir en menos de 48 horas hábiles desde que recibimos todo el contenido necesario.",
     icon: <Clock size={30} />,
   },
 

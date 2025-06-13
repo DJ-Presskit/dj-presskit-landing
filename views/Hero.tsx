@@ -19,7 +19,7 @@ export default function Hero() {
         <Text variant="content" className="max-w-[600px] mx-auto !text-center">
           <strong>¿Sos DJ y querés mostrar tu trabajo con estilo?</strong>
           <br />
-          Creamos presskits únicos, listos en menos de 48hs, que podés compartir
+          Creamos presskits únicos, listos en menos de 48 horas hábiles, que podés compartir
           en tus redes o enviar a tus contactos. Agendá una reunión y te
           mostramos cómo hacerlo realidad.
         </Text>

@@ -27,8 +27,8 @@ export default function Cards() {
       <div className="h-full grid grid-rows-none grid-cols-1 md:grid-cols-2 gap-10 xl:grid-cols-3 mb-10">
         <GridItem
           icon={<Rocket size={30} className="" />}
-          title="En menos de 72hs"
-          description="Tu presskit profesional listo para publicar en menos de tres días hábiles."
+          title="En menos de 48hs"
+          description="Tu presskit profesional listo para publicar en menos de 48 horas hábiles."
           index={0}
         />
         <GridItem
