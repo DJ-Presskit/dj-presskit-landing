@@ -1,12 +1,12 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { CanvasRevealEffect } from "@/components/ui/CanvasRevealEffect";
 import Text from "@/components/Text/Text";
 import { Check, LayoutTemplate, Sparkles, SquarePen } from "lucide-react";
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import { twMerge } from "tailwind-merge";
-import { useMediaQuery } from "@/hooks";
+import LandingLink from "@/components/LandingLink/LandingLink";
 
 export function ProposalCards() {
   return (
@@ -24,7 +24,7 @@ export function ProposalCards() {
             href="https://template.dj-presskit.com"
             title="Plan Presskit Básico"
             description="Ideal para DJs que quieren una presencia web rápida, clara y sin complicaciones."
-            price="Desde $150.000"
+            price="USD $150"
             icon={<LayoutTemplate size={40} />}
             includes={[
               "Diseño estático moderno basado en plantilla.",
@@ -34,13 +34,14 @@ export function ProposalCards() {
               "Dominio de dj-presskit incluido",
               "Entrega en menos de 48hs.",
             ]}
+            buttonText="EXPLORAR PLANTILLAS"
           ></Card>
 
           <Card
             href="https://template-avanzado.dj-presskit.com"
             title="Plan Presskit Avanzado"
             description="Un presskit más visual, más dinámico y con funciones extra para destacar."
-            price="Desde $220.000"
+            price="USD $220"
             icon={<Sparkles size={40} />}
             includes={[
               "Todo lo del Plan Básico",
@@ -50,6 +51,7 @@ export function ProposalCards() {
               "Email profesional con tu dominio.",
               "Entrega en menos de 72hs.",
             ]}
+            buttonText="EXPLORAR PLANTILLAS"
           >
             <CanvasRevealEffect
               animationSpeed={3}
@@ -66,7 +68,7 @@ export function ProposalCards() {
             href="https://calendly.com/ramifazio/dj-presskit-interview"
             title="Plan Presskit Premium"
             description="Para DJs exigentes que buscan un sitio a medida, sin límites de creatividad ni funcionalidad."
-            price="Desde $650.000"
+            price="Desde USD $680"
             icon={<SquarePen size={40} />}
             includes={[
               "Todo lo del Plan Avanzado",
@@ -76,6 +78,7 @@ export function ProposalCards() {
               "Asesoramiento 1 a 1 en todo el proceso.",
               "Entrega en 20 días aprox.",
             ]}
+            buttonText="AGENDA UNA REUNION"
           >
             <CanvasRevealEffect
               animationSpeed={3}
@@ -101,6 +104,7 @@ const Card = ({
   children,
   includes = [],
   href,
+  buttonText,
 }: {
   title: string;
   description: string;
@@ -109,6 +113,7 @@ const Card = ({
   children?: React.ReactNode;
   includes?: string[];
   href: string;
+  buttonText: string;
 }) => {
   const [hovered, setHovered] = React.useState(true);
 
@@ -213,11 +218,13 @@ const Card = ({
           }}
           transition={{ delay: 2.5, duration: 0.5 }}
         >
-          <DefaultButton href={href}>
-            {title === "Plan Presskit Premium"
-              ? "AGENDA UNA REUNION"
-              : "VER MÁS"}
-          </DefaultButton>
+          <LandingLink href={href}>
+            <DefaultButton
+              noGlow={title === "Plan Presskit Básico" ? true : false}
+            >
+              {buttonText}
+            </DefaultButton>
+          </LandingLink>
         </motion.div>
       </div>
     </motion.div>

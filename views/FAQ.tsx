@@ -86,7 +86,7 @@ const faqData: FAQItemType[] = [
       <Text variant="content" className="text-neutral-500 text-left flex">
         Sí, podés ver un demo de nuestra última plantilla de presskit{" "}
         <LandingLink
-          href={"https://template.dj-presskit.com"}
+          href={"https://template-avanzado.dj-presskit.com"}
           newTab
           className="hover:opacity-50"
         >

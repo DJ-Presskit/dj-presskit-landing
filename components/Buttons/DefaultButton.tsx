@@ -15,6 +15,7 @@ interface DefaultButtonProps {
   type?: "submit" | "reset" | "button";
   disabled?: boolean;
   childrenClassName?: string;
+  noGlow?: boolean;
 }
 
 const DefaultButton: React.FC<DefaultButtonProps> = ({
@@ -26,6 +27,7 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
   type,
   disabled,
   childrenClassName,
+  noGlow = "false",
 }) => {
   const variants = {
     primary: {
@@ -73,14 +75,16 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
         className
       )}
     >
-      <GlowingEffect
-        spread={150}
-        glow={true}
-        borderWidth={4}
-        disabled={false}
-        proximity={50}
-        inactiveZone={0.01}
-      />
+      {!noGlow && (
+        <GlowingEffect
+          spread={150}
+          glow={true}
+          borderWidth={4}
+          disabled={false}
+          proximity={50}
+          inactiveZone={0.01}
+        />
+      )}
       {renderChildren()}
     </motion.button>
   );
