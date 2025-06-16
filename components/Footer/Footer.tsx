@@ -1,5 +1,7 @@
+import { Instagram } from "lucide-react";
 import LandingImage from "../Images/LandingImage";
 import Text from "../Text/Text";
+import LandingLink from "../LandingLink/LandingLink";
 
 const Footer = () => {
   return (
@@ -27,11 +29,16 @@ const Content = () => {
           className=""
         />
       </div>
-      <Text variant="content" className="!text-xs">
-        © Copyright {new Date().getFullYear()} - <strong>DJ PRESSKIT ®</strong>{" "}
-        -
-        <br className="md:hidden" /> All Rights Reserved
-      </Text>
+      <div className="flex md:flex-col gap-10 flex-col-reverse md:items-start items-center">
+        <Text variant="content" className="!text-xs">
+          © Copyright {new Date().getFullYear()} -{" "}
+          <strong>DJ PRESSKIT ®</strong> -
+          <br className="md:hidden" /> All Rights Reserved
+        </Text>
+        <LandingLink href={"https://www.instagram.com/dj_presskit/#"} newTab>
+          <Instagram className="size-8 hover:text-accent cursor-pointer" />
+        </LandingLink>
+      </div>
       <div className="hidden md:flex w-full items-center justify-center h-[0px] blur-sm absolute top-auto bottom-auto left-0">
         <h5 className="text-[100px] tracking-wider  bg-gradient-to-t from-accent/40 to-secondary bg-clip-text text-transparent">
           DJ PRESSKIT
