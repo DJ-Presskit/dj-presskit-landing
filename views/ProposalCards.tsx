@@ -21,20 +21,21 @@ export function ProposalCards() {
         </Text>
         <div className="h-full grid grid-rows-none grid-cols-1 gap-10 xl:grid-cols-3">
           <Card
+            discount={55}
             href="https://template.dj-presskit.com"
             title="Plan Presskit Básico"
-            description="Ideal para DJs que quieren una presencia web rápida, clara y sin complicaciones."
+            description="Ideal para DJs que quieren una presencia profesional rápida, clara y sin complicaciones."
             price="USD $150"
             icon={<LayoutTemplate size={40} />}
             includes={[
-              "Diseño estático moderno basado en plantilla.",
+              "Diseño estático y moderno.",
               "Formulario de contacto integrado conectado a Google Sheets.",
               "Sitio responsive (adaptado a móviles).",
               "Hosting incluido.",
-              "Dominio de dj-presskit incluido",
+              "Dominio de dj-presskit incluido.",
               "Entrega en menos de 48hs.",
             ]}
-            buttonText="EXPLORAR PLANTILLAS"
+            buttonText="EXPLORAR"
           ></Card>
 
           <Card
@@ -44,14 +45,14 @@ export function ProposalCards() {
             price="USD $220"
             icon={<Sparkles size={40} />}
             includes={[
-              "Todo lo del Plan Básico",
+              "Todo lo del Plan Básico.",
               "Diseño con animaciones y transiciones parallax.",
               "Sección de próximos eventos conectada a Google Sheets.",
               "Dominio personalizado incluido con membresia.",
               "Email profesional con tu dominio.",
               "Entrega en menos de 72hs.",
             ]}
-            buttonText="EXPLORAR PLANTILLAS"
+            buttonText="EXPLORAR"
           >
             <CanvasRevealEffect
               animationSpeed={3}
@@ -67,12 +68,12 @@ export function ProposalCards() {
           <Card
             href="https://calendly.com/ramifazio/dj-presskit-interview"
             title="Plan Presskit Premium"
-            description="Para DJs exigentes que buscan un sitio a medida, sin límites de creatividad ni funcionalidad."
+            description="Para DJs exigentes que buscan un impulso a medida, sin límites de creatividad ni funcionalidad."
             price="Desde USD $680"
             icon={<SquarePen size={40} />}
             includes={[
-              "Todo lo del Plan Avanzado",
-              "Diseño único desde cero (no plantilla).",
+              "Todo lo del Plan Avanzado.",
+              "Diseño único desde cero.",
               "Animaciones, efectos y performance top tier.",
               "Secciones personalizadas a elección.",
               "Asesoramiento 1 a 1 en todo el proceso.",
@@ -105,6 +106,7 @@ const Card = ({
   includes = [],
   href,
   buttonText,
+  discount,
 }: {
   title: string;
   description: string;
@@ -114,6 +116,7 @@ const Card = ({
   includes?: string[];
   href: string;
   buttonText: string;
+  discount?: number;
 }) => {
   const [hovered, setHovered] = React.useState(true);
 
