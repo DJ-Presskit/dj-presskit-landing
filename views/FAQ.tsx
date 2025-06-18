@@ -11,94 +11,24 @@ import {
   PencilRuler,
   Pin,
   Wrench,
+  UserPen,
 } from "lucide-react";
 import GradientIcon from "@/components/Icons/GradientIcon";
 import { FAQItemType } from "@/@types";
 import { twMerge } from "tailwind-merge";
 import LandingLink from "@/components/LandingLink/LandingLink";
+import { faqData, iconMap } from "@/DATA";
+import DefaultButton from "@/components/Buttons/DefaultButton";
 
-const faqData: FAQItemType[] = [
-  {
-    type: "custom",
-    question: "¿Qué incluye el presskit?",
-    answer: (
-      <div className="flex flex-col items-start">
-        <Text variant="content" className="text-neutral-500 text-left">
-          <ul className="list-disc list-inside space-y-1">
-            <li>
-              Sitio web personalizado y responsive en menos de en menos de 48
-              horas hábiles.
-            </li>
-            <li>Tu biografía y redes sociales integradas.</li>
-            <li>Galería de imágenes para mostrar tu trabajo.</li>
-            <li>Carpeta de Google Drive para subir lo que necesites.</li>
-            <li>Sección de próximos eventos sincronizados a Google Sheets.</li>
-            <li>Formulario de contacto sincronizado a Google Sheets.</li>
-            <li>
-              Dominio tipo{" "}
-              <strong>
-                <code>[Tu Nombre].dj-presskit.com</code>
-              </strong>
-              .
-            </li>
-            {/* <li>
-              Email personalizado tipo{" "}
-              <strong>
-                <code>[Tu Nombre]@dj-presskit.com</code>
-              </strong>
-            </li> */}
-            <li>Hosting y Certificados HTTPS.</li>
-          </ul>
-        </Text>
-      </div>
-    ),
-    icon: <CheckCheck size={30} />,
-  },
-
-  {
-    question: "¿Qué necesito para tener mi presskit?",
-    answer:
-      "Solo tenés que completar un formulario con tu información (bio, redes, rider técnico, imagenes, etc...) y agendar una reunión inicial. Con eso, nosotros nos encargamos del resto.",
-    icon: <Pin size={30} />,
-  },
-  {
-    question: "¿Cuánto tarda en estar listo mi presskit?",
-    answer:
-      "Tu presskit estará online y listo para compartir en menos de 48 horas hábiles desde que recibimos todo el contenido necesario.",
-    icon: <Clock size={30} />,
-  },
-
-  {
-    question: "¿Puedo modificar la información de mi sitio después?",
-    answer:
-      "Sí. Te vamos a dar acceso a una carpeta en Google Drive donde podés actualizar tu calendario de eventos o subir nuevos. Nosotros nos encargamos de que se refleje automáticamente en tu web.",
-    icon: <PencilRuler size={30} />,
-  },
-  {
-    question: "¿Qué diferencia tiene esto con usar Linktree o Instagram?",
-    answer:
-      "Esto es una web real, profesional, con diseño, dominio propio y tu contenido estructurado de forma clara. No solo te destacás frente a otros DJs, también proyectás seriedad y estilo.",
-    icon: <Lightbulb size={30} />,
-  },
-  {
-    type: "custom",
-    question: "¿Puedo ver cómo queda antes de pagar?",
-    answer: (
-      <Text variant="content" className="text-neutral-500 text-left flex">
-        Sí, podés ver un demo de nuestra última plantilla de presskit{" "}
-        <LandingLink
-          href={"https://template-avanzado.dj-presskit.com"}
-          newTab
-          className="hover:opacity-50"
-        >
-          <strong>clickeando acá</strong>.
-        </LandingLink>{" "}
-        Si te gusta, agendamos una llamada y arrancamos.
-      </Text>
-    ),
-    icon: <Eye size={30} />,
-  },
-];
+const iconComponents = {
+  CheckCheck,
+  Pin,
+  Clock,
+  PencilRuler,
+  Lightbulb,
+  Eye,
+  UserPen,
+};
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -138,11 +68,13 @@ const FAQItem = ({
   onClick,
   idx,
 }: {
-  item: FAQItemType;
+  item: any;
   isOpen: boolean;
   onClick: () => void;
   idx: number;
 }) => {
+  const IconComponent =
+    iconComponents[item.icon as keyof typeof iconComponents];
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -161,7 +93,7 @@ const FAQItem = ({
       >
         <div className="flex items-center gap-5 md:gap-8">
           <GradientIcon
-            icon={item.icon}
+            icon={<IconComponent size={30} />}
             className={twMerge(isOpen && "[&>svg]:stroke-accent")}
           />
           <Text
@@ -188,8 +120,30 @@ const FAQItem = ({
             className="overflow-hidden"
           >
             <div className="p-8 pt-0">
-              {item.type === "custom" ? (
-                item.answer
+              {Array.isArray(item.answer) ? (
+                <Text variant="content" className="text-neutral-500 text-left">
+                  <ul className="list-disc list-inside space-y-1">
+                    {item.answer.map((line: string, i: number) => (
+                      <li key={i}>{line}</li>
+                    ))}
+                  </ul>
+                </Text>
+              ) : item.link ? (
+                <Text
+                  variant="content"
+                  className="text-neutral-500 text-left flex flex-col gap-5"
+                >
+                  {item.answer.split("clickeando acá")[0]}
+                  <LandingLink
+                    href={item.link}
+                    newTab
+                    containerClassName="mx-auto"
+                    className="hover:opacity-50"
+                  >
+                    <strong>{item.linkText}</strong>
+                  </LandingLink>
+                  {item.answer.split("clickeando acá")[1]}
+                </Text>
               ) : (
                 <Text variant="content" className="text-neutral-500">
                   {item.answer}

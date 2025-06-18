@@ -50,7 +50,7 @@
   }
 
   strong {
-    @apply text-accent font-bold;
+    @apply text-accent-2 font-bold;
   }
 
   input[type="number"]::-webkit-inner-spin-button,

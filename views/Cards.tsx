@@ -1,8 +1,10 @@
 "use client";
+import { CardItemType } from "@/@types";
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import GradientIcon from "@/components/Icons/GradientIcon";
 import Text from "@/components/Text/Text";
 import { GlowingEffect } from "@/components/ui/GlowingEffect";
+import { benefitsCards } from "@/DATA";
 import { motion } from "framer-motion";
 import {
   Brain,
@@ -14,6 +16,16 @@ import {
   UserPen,
 } from "lucide-react";
 
+// Mapeo de iconos para renderizar dinámicamente
+const iconComponents = {
+  Rocket,
+  UserPen,
+  Link,
+  Headphones,
+  Flame,
+  Brain,
+} as const;
+
 export default function Cards() {
   return (
     <div className="flex flex-col section-py section-mb section-max-w section-px mx-auto items-center">
@@ -22,58 +34,26 @@ export default function Cards() {
         variant="title"
         className="bg-clip-text bg-gradient-to-tl from-gray-200 to-neutral-600 text-transparent py-4 mb-[10vh]"
       >
-        ¿Por qué elegirnos?
+        ¿Por qué elegir DJ Presskit?
       </Text>
-      <div className="h-full grid grid-rows-none grid-cols-1 md:grid-cols-2 gap-10 xl:grid-cols-3 mb-10">
-        <GridItem
-          icon={<Rocket size={30} className="" />}
-          title="En menos de 48hs"
-          description="Tu presskit profesional listo para publicar en menos de 48 horas hábiles."
-          index={0}
-        />
-        <GridItem
-          icon={<UserPen size={30} className="" />}
-          title="Adaptado a vos"
-          description="Incluye tu bio, redes sociales, rider técnico y próximas fechas de eventos."
-          index={1}
-        />
-        <GridItem
-          icon={<Link size={30} className="" />}
-          title="Compartible"
-          description="Un solo link para compartir en todas tus redes sociales y con tus contactos."
-          index={2}
-        />
-        <GridItem
-          icon={<Headphones size={30} className="" />}
-          title="Presencia profesional"
-          description="Potenciamos tu marca personal como DJ para que tu imagen refleje la calidad de tu música."
-          index={3}
-        />
-        <GridItem
-          icon={<Flame size={30} className="" />}
-          title="Producto único"
-          description="Un producto exclusivo que te hace destacar frente a toda la competencia del mercado."
-          index={4}
-        />
-        <GridItem
-          icon={<Brain size={30} className="" />}
-          title="Sin complicaciones"
-          description="Solo respondés unas preguntas y nosotros nos encargamos de todo el proceso."
-          index={5}
-        />
+      <div className="h-full grid grid-rows-none grid-cols-1 md:grid-cols-2 gap-10 mb-10">
+        {benefitsCards.map((card, index) => (
+          <GridItem key={card.title} card={card} index={index} />
+        ))}
       </div>
     </div>
   );
 }
 
 interface GridItemProps {
-  icon: React.ReactNode;
-  title: string;
-  description: React.ReactNode;
+  card: CardItemType;
   index: number;
 }
 
-const GridItem = ({ icon, title, description, index }: GridItemProps) => {
+const GridItem = ({ card, index }: GridItemProps) => {
+  const IconComponent =
+    iconComponents[card.icon as keyof typeof iconComponents];
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 100 }}
@@ -84,7 +64,7 @@ const GridItem = ({ icon, title, description, index }: GridItemProps) => {
         delay: index * 0.1,
         ease: "easeOut",
       }}
-      className={`h-full pointer-events-none backdrop-blur-sm group min-h-[300px] gap-10 lg:h-[250px] relative rounded-2xl border-2 border-neutral-500 p-8 flex flex-col justify-between`}
+      className={`h-full pointer-events-none backdrop-blur-sm group min-h-[300px] gap-10 lg:min-h-auto lg:h-[250px] relative rounded-2xl border-2 border-neutral-500 p-8 flex flex-col justify-between`}
     >
       <GlowingEffect
         spread={80}
@@ -95,17 +75,17 @@ const GridItem = ({ icon, title, description, index }: GridItemProps) => {
         inactiveZone={0}
       />
       <div className="flex flex-col lg:items-start items-center gap-5">
-        <GradientIcon icon={icon} />
+        <GradientIcon icon={<IconComponent size={30} className="" />} />
         <Text
           Tag={"h5"}
           variant="subtitle"
           className="lg:text-left flex items-center cursor-default"
         >
-          {title}
+          {card.title}
         </Text>
       </div>
       <Text variant="content" className="lg:text-left text-neutral-500">
-        {description}
+        {card.description}
       </Text>
     </motion.article>
   );

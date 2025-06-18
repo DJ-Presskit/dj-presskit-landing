@@ -2,6 +2,7 @@ import Cards from "@/views/Cards";
 import Hero from "@/views/Hero";
 import FAQ from "@/views/FAQ";
 import { ProposalCards } from "@/views/ProposalCards";
+import CTA from "@/views/CTA";
 import FAQSchema from "@/components/FAQSchema";
 import OrganizationSchema from "@/components/OrganizationSchema";
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Cards />
       <ProposalCards />
+      <CTA />
       <FAQ />
       <div
         className={
