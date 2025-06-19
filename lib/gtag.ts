@@ -9,3 +9,32 @@ export const pageview = (url: string) => {
     page_path: url,
   });
 };
+
+// Envia eventos personalizados a GA
+export const event = ({
+  action,
+  category,
+  label,
+  value,
+}: {
+  action: string;
+  category: string;
+  label?: string;
+  value?: number;
+}) => {
+  if (!GA_MEASUREMENT_ID) return;
+  (window as any).gtag("event", action, {
+    event_category: category,
+    event_label: label,
+    value: value,
+  });
+};
+
+// Función específica para tracking de clicks en botones CTA de WhatsApp
+export const trackWhatsAppClick = (buttonLocation: string) => {
+  event({
+    action: "click",
+    category: "whatsapp_cta",
+    label: buttonLocation,
+  });
+};

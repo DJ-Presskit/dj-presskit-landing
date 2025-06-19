@@ -115,7 +115,12 @@ const Card = ({
           ))}
         </div>
         <div className="mt-auto">
-          <LandingLink href={href}>
+          <LandingLink
+            href={href}
+            trackingLabel={
+              title === "Plan Presskit Premium" ? "premium_plan" : undefined
+            }
+          >
             <DefaultButton
               noGlow={title === "Plan Presskit Básico" ? true : false}
             >

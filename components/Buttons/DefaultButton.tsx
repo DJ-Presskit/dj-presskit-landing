@@ -5,6 +5,7 @@ import React from "react";
 import { twMerge } from "tailwind-merge";
 import Text from "../Text/Text";
 import { GlowingEffect } from "../ui/GlowingEffect";
+import { trackWhatsAppClick } from "@/lib/gtag";
 
 interface DefaultButtonProps {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ interface DefaultButtonProps {
   disabled?: boolean;
   childrenClassName?: string;
   noGlow?: boolean;
+  trackingLabel?: string;
 }
 
 const DefaultButton: React.FC<DefaultButtonProps> = ({
@@ -28,6 +30,7 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
   disabled,
   childrenClassName,
   noGlow = "false",
+  trackingLabel,
 }) => {
   const variants = {
     primary: {
@@ -58,8 +61,11 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
   );
 
   const handleOnClick = () => {
-    href && window.open(href);
+    if (href && href.includes("wa.me") && trackingLabel) {
+      trackWhatsAppClick(trackingLabel);
+    }
 
+    href && window.open(href);
     onClick && onClick();
   };
 

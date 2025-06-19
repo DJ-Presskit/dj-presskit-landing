@@ -1,5 +1,6 @@
 import Link, { LinkProps } from "next/link";
 import { twMerge } from "tailwind-merge";
+import { trackWhatsAppClick } from "@/lib/gtag";
 
 export interface LandingLinkProps extends LinkProps {
   content?: string;
@@ -8,6 +9,7 @@ export interface LandingLinkProps extends LinkProps {
   children?: React.ReactNode;
   newTab?: boolean;
   raw?: boolean;
+  trackingLabel?: string;
 }
 
 const LandingLink: React.FC<LandingLinkProps> = ({
@@ -18,8 +20,20 @@ const LandingLink: React.FC<LandingLinkProps> = ({
   prefetch = false,
   newTab,
   raw,
+  trackingLabel,
   ...props
 }) => {
+  const handleClick = () => {
+    if (
+      props.href &&
+      typeof props.href === "string" &&
+      props.href.includes("wa.me") &&
+      trackingLabel
+    ) {
+      trackWhatsAppClick(trackingLabel);
+    }
+  };
+
   return (
     <div className={twMerge("w-fit", containerClassName)}>
       <Link
@@ -31,6 +45,7 @@ const LandingLink: React.FC<LandingLinkProps> = ({
           className,
           raw ? "" : "font-semibold text-base transition duration-300"
         )}
+        onClick={handleClick}
       >
         {content}
         {children}

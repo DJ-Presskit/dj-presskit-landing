@@ -1,3 +1,4 @@
+"use client";
 import { Instagram } from "lucide-react";
 import LandingImage from "../Images/LandingImage";
 import Text from "../Text/Text";
@@ -35,7 +36,7 @@ const Content = () => {
           <strong>DJ PRESSKIT ®</strong> -
           <br className="md:hidden" /> All Rights Reserved
         </Text>
-        <LandingLink href={"https://www.instagram.com/dj_presskit/#"} newTab>
+        <LandingLink href={"https://www.instagram.com/dj_presskit"} newTab>
           <Instagram className="size-8 hover:text-accent cursor-pointer" />
         </LandingLink>
       </div>

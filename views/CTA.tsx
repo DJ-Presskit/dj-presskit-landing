@@ -26,7 +26,11 @@ export default function CTA() {
           <strong> Simplificá tu comunicación y potenciá tu marca hoy.</strong>
         </Text>
 
-        <DefaultButton href={whatsappLink} className="uppercase">
+        <DefaultButton
+          href={whatsappLink}
+          className="uppercase"
+          trackingLabel="cta_section"
+        >
           CONTACTANOS
         </DefaultButton>
       </div>

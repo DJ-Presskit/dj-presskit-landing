@@ -23,7 +23,11 @@ export default function Hero() {
           fotos en un solo link que hable por vos antes de que pongas play.
           Comunidad, claridad y estatus en cada click.
         </Text>
-        <DefaultButton href={whatsappLink} className="uppercase">
+        <DefaultButton
+          href={whatsappLink}
+          className="uppercase"
+          trackingLabel="hero_section"
+        >
           ¡Empezá tu Presskit!
         </DefaultButton>
       </div>
