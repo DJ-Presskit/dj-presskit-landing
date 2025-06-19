@@ -33,8 +33,8 @@ export const event = ({
 // Función específica para tracking de clicks en botones CTA de WhatsApp
 export const trackWhatsAppClick = (buttonLocation: string) => {
   event({
-    action: "click",
-    category: "whatsapp_cta",
+    action: "WHATSAPP_CTA",
+    category: "WHATSAPP_CTA",
     label: buttonLocation,
   });
 };
