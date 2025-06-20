@@ -1,4 +1,4 @@
-import { CardItemType, PlanType } from "./@types";
+import { CardItemType, PlanType, Capsule } from "./@types";
 
 export const whatsappLink = `https://wa.me/542477313700?text=${encodeURIComponent(
   "¡Hola! Quiero mi Presskit en 48 hs: Mi espacio profesional que muestre quién soy y unifique mi música, fechas e historia. ¿Cómo arrancamos?"
@@ -142,7 +142,7 @@ export const faqData = [
   {
     question: "¿Puedo ver ejemplos antes de contratar?",
     answer:
-      "Claro, accedé al demo de nuestra ultima capsula de Plan Avanzado y revisá casos reales de DJs que ya profesionalizaron su imagen en nuestras redes.",
+      "Claro, accedé al demo de nuestra ultima CAPSULE de Plan Avanzado y revisá casos reales de DJs que ya profesionalizaron su imagen en nuestras redes.",
     icon: "Eye",
     link: "https://template-avanzado.dj-presskit.com",
     linkText: "EXPLORAR DEMO",
@@ -156,5 +156,82 @@ export const faqData = [
       "Formás parte de una comunidad de artistas en constante evolución.",
     ],
     icon: "PencilRuler",
+  },
+];
+
+export const CAPSULES: Capsule[] = [
+  {
+    title: "Cápsula Genesis",
+    description:
+      "El primer concepto. Un punto de partida. Genesis no es solo un conjunto de sitios webs — es el inicio de una forma nueva de mostrarse con claridad y profesionalismo. De los links sueltos al branding con propósito. Acá nació la idea de DJ Presskit como comunidad y estándar.",
+    projects: [
+      {
+        name: "Giuliano Machia",
+        web: "https://giuliano.dj-presskit.com",
+        image: "/images/genesis-capsule/giuliano.webp",
+        color: "#c8b6ff",
+      },
+      {
+        name: "Servando Duhau",
+        web: "https://servando.dj-presskit.com",
+        image: "/images/genesis-capsule/servando.webp",
+        color: "#0561a3",
+      },
+      {
+        name: "Cirilo Rolotti",
+        web: "https://rolling.dj-presskit.com",
+        image: "/images/genesis-capsule/rolling.webp",
+        color: "#820006",
+      },
+      {
+        name: "Servando Duhau",
+        web: "https://servando.dj-presskit.com",
+        image: "/images/genesis-capsule/servando.webp",
+        color: "#0561a3",
+      },
+      {
+        name: "Cirilo Rolotti",
+        web: "https://rolling.dj-presskit.com",
+        image: "/images/genesis-capsule/rolling.webp",
+        color: "#820006",
+      },
+    ],
+  },
+  {
+    title: "Cápsula 001",
+    description:
+      "El segundo concepto. Un punto de partida. Genesis no es solo un conjunto de sitios webs — es el inicio de una forma nueva de mostrarse con claridad y profesionalismo. De los links sueltos al branding con propósito. Acá nació la idea de DJ Presskit como comunidad y estándar.",
+    projects: [
+      {
+        name: "Giuliano Machia",
+        web: "https://giuliano.dj-presskit.com",
+        image: "/images/genesis-capsule/giuliano.webp",
+        color: "#c8b6ff",
+      },
+      {
+        name: "Servando Duhau",
+        web: "https://servando.dj-presskit.com",
+        image: "/images/genesis-capsule/servando.webp",
+        color: "#0561a3",
+      },
+      {
+        name: "Cirilo Rolotti",
+        web: "https://rolling.dj-presskit.com",
+        image: "/images/genesis-capsule/rolling.webp",
+        color: "#820006",
+      },
+      {
+        name: "Servando Duhau",
+        web: "https://servando.dj-presskit.com",
+        image: "/images/genesis-capsule/servando.webp",
+        color: "#0561a3",
+      },
+      {
+        name: "Cirilo Rolotti",
+        web: "https://rolling.dj-presskit.com",
+        image: "/images/genesis-capsule/rolling.webp",
+        color: "#820006",
+      },
+    ],
   },
 ];

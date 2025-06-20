@@ -23,3 +23,17 @@ export type PlanType = {
   buttonText: string;
   discount?: number;
 };
+
+export type Project = {
+  name: string;
+  web: string;
+  image: string;
+  color: string;
+  // Puedes agregar más campos si lo necesitas
+};
+
+export type Capsule = {
+  title: string;
+  description: string;
+  projects: Project[];
+};

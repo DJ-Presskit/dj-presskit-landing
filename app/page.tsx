@@ -5,6 +5,7 @@ import { ProposalCards } from "@/views/ProposalCards";
 import CTA from "@/views/CTA";
 import FAQSchema from "@/components/FAQSchema";
 import OrganizationSchema from "@/components/OrganizationSchema";
+import Capsules from "@/views/Capsules";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <OrganizationSchema />
       <Hero />
       <Cards />
+      <Capsules />
       <ProposalCards />
       <CTA />
       <FAQ />
