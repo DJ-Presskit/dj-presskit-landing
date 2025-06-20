@@ -37,8 +37,8 @@ export default function Project({
         <Text
           variant="subtitle"
           className={twMerge(
-            "group-hover:-translate-x-10 transition duration-400 uppercase",
-            capsuleIndex % 2 && "group-hover:translate-x-10"
+            "lg:group-hover:-translate-x-10 transition duration-400 uppercase",
+            capsuleIndex % 2 && "lg:group-hover:translate-x-10"
           )}
         >
           {name}

@@ -90,7 +90,7 @@ export default function Modal({ modal, projects }: ModalProps) {
         initial="initial"
         animate={active ? "enter" : "closed"}
         className={
-          "h-[400px] w-[500px] absolute bg-white overflow-hidden pointer-events-none flex items-center justify-center"
+          "hidden lg:flex h-[400px] w-[500px] absolute bg-white overflow-hidden pointer-events-none items-center justify-center"
         }
       >
         <div
@@ -124,7 +124,7 @@ export default function Modal({ modal, projects }: ModalProps) {
       <motion.div
         ref={cursor}
         className={
-          "w-[70px] h-[70px] rounded-full bg-accent/60 absolute z-20 flex items-center justify-center pointer-events-none"
+          "hidden lg:flex w-[70px] h-[70px] rounded-full bg-accent/60 absolute z-20 items-center justify-center pointer-events-none"
         }
         variants={scaleAnimation}
         initial="initial"
@@ -133,7 +133,7 @@ export default function Modal({ modal, projects }: ModalProps) {
       <motion.div
         ref={cursorLabel}
         className={
-          "w-[70px] h-[70px] rounded-full bg-accent/60 absolute z-20 flex items-center justify-center pointer-events-none"
+          "hidden lg:flex w-[70px] h-[70px] rounded-full bg-accent/60 absolute z-20 items-center justify-center pointer-events-none"
         }
         variants={scaleAnimation}
         initial="initial"

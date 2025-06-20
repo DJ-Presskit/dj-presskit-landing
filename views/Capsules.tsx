@@ -59,7 +59,7 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
         capsuleIndex % 2 && "flex-row-reverse"
       )}
     >
-      <div className="w-full sticky top-[40%] z-10 flex-1 space-y-5">
+      <div className="w-full sticky top-[25%] lg:top-[40%] z-10 flex-1 space-y-5">
         <motion.div style={{ opacity: opacity1 }}>
           <Text
             Tag={"h2"}
