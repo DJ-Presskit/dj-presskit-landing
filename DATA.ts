@@ -67,7 +67,7 @@ export const plans: PlanType[] = [
     title: "Plan Presskit Avanzado",
     description:
       "Un presskit más visual, más dinámico y con funciones extra para destacar.",
-    price: "USD $220",
+    price: "USD $240",
     icon: "Sparkles",
     includes: [
       "Todo lo del Plan Básico.",
@@ -166,22 +166,22 @@ export const CAPSULES: Capsule[] = [
       "El primer concepto. Un punto de partida. Genesis no es solo un conjunto de sitios webs — es el inicio de una forma nueva de mostrarse con claridad y profesionalismo. De los links sueltos al branding con propósito. Acá nació la idea de DJ Presskit como comunidad y estándar.",
     projects: [
       {
-        name: "Giuliano Machia",
+        name: "Giuliano",
         web: "https://giuliano.dj-presskit.com",
         image: "/images/genesis-capsule/giuliano.webp",
         color: "#c8b6ff",
       },
       {
-        name: "Servando Duhau",
+        name: "Servando",
         web: "https://servando.dj-presskit.com",
         image: "/images/genesis-capsule/servando.webp",
         color: "#0561a3",
       },
       {
-        name: "Cirilo Rolotti",
+        name: "Rolling",
         web: "https://rolling.dj-presskit.com",
         image: "/images/genesis-capsule/rolling.webp",
-        color: "#820006",
+        color: "#4a1dce",
       },
     ],
   },
