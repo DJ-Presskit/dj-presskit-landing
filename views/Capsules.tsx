@@ -11,7 +11,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function Capsules() {
   return (
-    <section className={twMerge("w-full flex flex-col")}>
+    <section id="capsules" className={twMerge("w-full flex flex-col")}>
       {CAPSULES.map((item, index) => {
         return <CapsuleSection key={index} {...item} capsuleIndex={index} />;
       })}
