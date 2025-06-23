@@ -27,7 +27,7 @@ export default function FAQSchema() {
         name: "¿Qué incluye exactamente mi presskit?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Incluye un sitio web responsive, listo en 48 horas hábiles; tu bio, redes sociales y galería de imágenes; secciones de eventos sincronizadas con Google Sheets; formulario de contacto y carpeta de Google Drive; dominio personalizado (TuNombre.dj-presskit.com), hosting y certificados HTTPS.",
+          text: "Incluye un sitio web responsive, listo en 48 horas hábiles; tu bio, redes sociales y galería de imágenes; secciones de eventos sincronizadas con Google Sheets; formulario de contacto y carpeta de Google Drive; dominio personalizado (TuNombre.dj-presskit.com), hosting y certificados HTTPS. SEO Avanzado y posicionamiento en internet.",
         },
       },
       {
