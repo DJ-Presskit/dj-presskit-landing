@@ -41,7 +41,7 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
 
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start center", "40% start"],
+    offset: ["start center", "50% start"],
   });
 
   const opacity1 = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0]);
@@ -55,8 +55,9 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
     <div
       ref={container}
       className={twMerge(
-        "h-[150vh] container mx-auto w-full flex items-start gap-10 px-6 xl:px-0",
-        capsuleIndex % 2 && "flex-row-reverse"
+        "container mx-auto w-full flex items-start gap-10 px-6 xl:px-0",
+        capsuleIndex % 2 && "flex-row-reverse",
+        projects.length > 5 ? "h-[200vh]" : "h-[150vh]"
       )}
     >
       <div className="w-full sticky top-[25%] lg:top-[40%] z-10 flex-1 space-y-5">

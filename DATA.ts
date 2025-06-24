@@ -118,7 +118,7 @@ export const faqData = [
       "Sección de musica sincronizada a Soundcloud.",
       "Formulario de contacto y carpeta de Google Drive para subir todo lo que necesites.",
       "Dominio personalizado ([TuNombre].dj-presskit.com), hosting y certificados HTTPS.",
-      'SEO Avanzado y posicionamiento.'
+      "SEO Avanzado y posicionamiento.",
     ],
     icon: "CheckCheck",
   },
