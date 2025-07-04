@@ -50,8 +50,7 @@ export const plans: PlanType[] = [
     title: "Plan Presskit Básico",
     description:
       "Ideal para DJs que quieren una presencia profesional rápida, clara y sin complicaciones.",
-    price: "USD $150",
-    icon: "LayoutTemplate",
+    price: 150,
     includes: [
       "Diseño estático y moderno.",
       "Formulario de contacto integrado conectado a Google Sheets.",
@@ -67,8 +66,7 @@ export const plans: PlanType[] = [
     title: "Plan Presskit Avanzado",
     description:
       "Un presskit más visual, más dinámico y con funciones extra para destacar.",
-    price: "USD $240",
-    icon: "Sparkles",
+    price: 240,
     includes: [
       "Todo lo del Plan Básico.",
       "Diseño con animaciones y transiciones parallax.",
@@ -79,13 +77,13 @@ export const plans: PlanType[] = [
     ],
     href: "https://template-avanzado.dj-presskit.com",
     buttonText: "VER DEMO",
+    discount: 25,
   },
   {
     title: "Plan Presskit Premium",
     description:
       "Para DJs exigentes que buscan un impulso a medida, sin límites de creatividad ni funcionalidad.",
-    price: "Desde USD $680",
-    icon: "SquarePen",
+    price: 680,
     includes: [
       "Todo lo del Plan Avanzado.",
       "Diseño único desde cero.",
@@ -162,7 +160,7 @@ export const faqData = [
 
 export const CAPSULES: Capsule[] = [
   {
-    title: "Cápsula Genesis",
+    title: "Cápsula Génesis",
     description:
       "El primer concepto.\nUn punto de partida.\nGenesis no es solo un conjunto de sitios webs, es el inicio de una forma nueva de mostrarse con claridad y profesionalismo. De los links sueltos al branding con propósito.\nAcá nació la idea de DJ Presskit como comunidad y estándar.",
     projects: [
@@ -183,6 +181,30 @@ export const CAPSULES: Capsule[] = [
         web: "https://rolling.dj-presskit.com",
         image: "/images/genesis-capsule/rolling.webp",
         color: "#4a1dce",
+      },
+      {
+        name: "",
+        web: "",
+        image: "",
+        color: "",
+      },
+      {
+        name: "",
+        web: "",
+        image: "",
+        color: "",
+      },
+      {
+        name: "",
+        web: "",
+        image: "",
+        color: "",
+      },
+      {
+        name: "",
+        web: "",
+        image: "",
+        color: "",
       },
     ],
   },

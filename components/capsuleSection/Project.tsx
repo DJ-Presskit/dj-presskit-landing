@@ -4,10 +4,12 @@ import { twMerge } from "tailwind-merge";
 import Text from "../Text/Text";
 import { Project as ProjectType } from "@/@types";
 import AnimatedSeparator from "../AnimatedSeparator";
+import { ModalState } from "@/views/Capsules";
+import { Hash } from "lucide-react";
 
 interface ProjectProps extends ProjectType {
   index: number;
-  setModal: (modal: { active: boolean; index: number }) => void;
+  setModal: (modal: ModalState) => void;
   capsuleIndex: number;
 }
 
@@ -22,26 +24,59 @@ export default function Project({
     <>
       <AnimatedSeparator />
       <div
-        onClick={() => window.open(web)}
+        onClick={() => {
+          if (web !== "") {
+            window.open(web);
+          }
+        }}
         onMouseEnter={() => {
-          setModal({ active: true, index });
+          setModal({
+            active: true,
+            index,
+            showOpen: true,
+          });
         }}
         onMouseLeave={() => {
-          setModal({ active: false, index });
+          setModal({
+            active: false,
+            index,
+            showOpen: true,
+          });
         }}
         className={twMerge(
-          "flex w-full justify-center lg:justify-start items-center group p-10 cursor-pointer transition duration-300 hover:opacity-50",
-          capsuleIndex % 2 && "lg:justify-end"
+          "flex w-full justify-center md:justify-start items-center group p-10 px-0 lg:px-10 cursor-pointer transition duration-300 hover:opacity-50 gap-5",
+          capsuleIndex % 2 && "lg:justify-end",
+          name === "" && "cursor-default"
         )}
       >
-        <Text
-          variant="subtitle"
+        <div
           className={twMerge(
-            "lg:group-hover:-translate-x-10 transition duration-400 uppercase",
+            "lg:group-hover:-translate-x-10 transition duration-400 items-center hidden md:flex",
             capsuleIndex % 2 && "lg:group-hover:translate-x-10"
           )}
         >
-          {name}
+          <Hash size={20} />
+          <Text
+            Tag="h5"
+            variant="subtitle"
+            className="group-hover:text-accent transition duration-400"
+          >
+            {index + 1}
+          </Text>
+        </div>
+        <Text
+          variant="subtitle"
+          className={twMerge(
+            "lg:group-hover:-translate-x-10 transition duration-400 uppercase md:flex items-center",
+            capsuleIndex % 2 && "lg:group-hover:translate-x-10"
+          )}
+        >
+          {name || "?????"}{" "}
+          {name === "" && (
+            <span className="text-[10px] md:text-sm text-accent-2">
+              PRÓXIMAMENTE
+            </span>
+          )}
         </Text>
       </div>
       <AnimatedSeparator />

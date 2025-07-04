@@ -2,9 +2,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Text from "../Text/Text";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Project as ProjectType } from "@/@types";
+import { twMerge } from "tailwind-merge";
+import { ModalState } from "@/views/Capsules";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -23,7 +25,7 @@ const scaleAnimation = {
 };
 
 interface ModalProps {
-  modal: { active: boolean; index: number };
+  modal: ModalState;
   projects: ProjectType[];
 }
 
@@ -103,24 +105,34 @@ export default function Modal({ modal, projects }: ModalProps) {
           {projects.map((project, index) => {
             return (
               <div
-                className={`h-full w-full flex items-center justify-center`}
+                className={twMerge(
+                  `h-full w-full flex items-center justify-center`
+                )}
                 style={{
-                  background: `radial-gradient(circle, ${project.color}, var(--color-secondary))`,
+                  background: `radial-gradient(circle, ${
+                    project.color || "#151515"
+                  }, var(--color-secondary))`,
                 }}
                 key={`modal_${index}`}
               >
                 <Image
-                  src={project.image}
+                  src={
+                    project.image || "/images/genesis-capsule/in-develop.webp"
+                  }
                   width={400}
                   height={0}
                   alt={project.name}
-                  className="h-auto"
+                  className={twMerge(
+                    "h-auto",
+                    project.name === "" && "blur-xl"
+                  )}
                 />
               </div>
             );
           })}
         </div>
       </motion.div>
+
       <motion.div
         ref={cursor}
         className={

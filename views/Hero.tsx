@@ -21,7 +21,7 @@ export default function Hero() {
           <br />
           Profesionalizá tu marca personal: reuní tu bio, playlists, fechas y
           fotos en un solo link que hable por vos antes de que pongas play.
-          Comunidad, claridad y estatus en cada click.
+          Comunidad, claridad y estatus en cada clic.
         </Text>
         <DefaultButton
           href={whatsappLink}

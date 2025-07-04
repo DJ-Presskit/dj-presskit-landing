@@ -7,7 +7,9 @@ import { Check, LayoutTemplate, Sparkles, SquarePen } from "lucide-react";
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import { twMerge } from "tailwind-merge";
 import LandingLink from "@/components/LandingLink/LandingLink";
-import { plans } from "@/DATA";
+import { CAPSULES, plans } from "@/DATA";
+import { PlanType } from "@/@types";
+import { interleaveAttributes } from "three/examples/jsm/utils/BufferGeometryUtils.js";
 
 // Mapeo de string a componente de icono
 const iconMap: Record<string, React.ReactNode> = {
@@ -29,9 +31,9 @@ export function ProposalCards() {
         </Text>
         <div className="h-full grid grid-rows-none grid-cols-1 gap-10 xl:grid-cols-3">
           {plans.map((plan, idx) => (
-            <Card key={plan.title} {...plan}>
+            <Card key={idx} {...plan}>
               {/* CanvasRevealEffect solo para los planes avanzados y premium */}
-              {plan.icon === "Sparkles" && (
+              {plan.title === "Plan Presskit Avanzado" && (
                 <CanvasRevealEffect
                   animationSpeed={3}
                   containerClassName="bg-black"
@@ -42,7 +44,7 @@ export function ProposalCards() {
                   dotSize={5}
                 />
               )}
-              {plan.icon === "SquarePen" && (
+              {plan.title === "Plan Presskit Premium" && (
                 <CanvasRevealEffect
                   animationSpeed={3}
                   containerClassName="bg-black"
@@ -61,6 +63,10 @@ export function ProposalCards() {
   );
 }
 
+interface CardProps extends PlanType {
+  children: any;
+}
+
 const Card = ({
   title,
   description,
@@ -69,15 +75,8 @@ const Card = ({
   includes = [],
   href,
   buttonText,
-}: {
-  title: string;
-  description: string;
-  price: string;
-  children?: React.ReactNode;
-  includes?: string[];
-  href: string;
-  buttonText: string;
-}) => {
+  discount,
+}: CardProps) => {
   return (
     <div className="backdrop-blur-sm group/canvas-card relative flex items-center justify-center rounded-2xl border-2 w-full border-neutral-500 py-10 md:py-20 px-10 min-h-[70vh] overflow-hidden bg-secondary">
       <div
@@ -88,6 +87,12 @@ const Card = ({
       </div>
 
       <div className="relative z-20 text-center h-full w-full flex items-center justify-center flex-col gap-10">
+        {discount && (
+          <span className="px-2 py-1 font-bold rounded bg-red-600 text-white text-sm animate-bounce">
+            ÚLTIMOS {10 - CAPSULES[0].projects.length} - CÁPSULA{" "}
+            <strong className="text-accent">GÉNESIS</strong>
+          </span>
+        )}
         <Text Tag={"h5"} variant="subtitle">
           {title}
         </Text>
@@ -96,15 +101,30 @@ const Card = ({
           {description}
         </Text>
 
-        <Text
-          variant="custom"
-          className={twMerge(
-            "text-lg font-semibold text-accent mt-4 mb-auto",
-            title === "Plan Presskit Premium" && "text-accent-2"
+        <div>
+          <Text
+            variant="custom"
+            className={twMerge(
+              "text-lg font-semibold text-accent mt-4 mb-auto flex relative items-center justify-center",
+              title === "Plan Presskit Premium" && "text-accent-2",
+              discount && "blur-[1px]"
+            )}
+          >
+            {discount && <div className="w-full h-[3px] bg-red-600 absolute" />}
+            {title === "Plan Presskit Premium" && "Desde"} USD ${price}
+          </Text>
+          {discount && (
+            <Text
+              variant="custom"
+              className={twMerge(
+                "text-lg font-semibold text-accent mb-auto flex relative items-center justify-center",
+                title === "Plan Presskit Premium" && "text-accent-2"
+              )}
+            >
+              USD ${price - price * (discount / 100)}
+            </Text>
           )}
-        >
-          {price}
-        </Text>
+        </div>
 
         <div>
           {includes.map((item, i) => (

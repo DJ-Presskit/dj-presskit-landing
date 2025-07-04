@@ -24,9 +24,10 @@ interface CapsuleSectionProps extends Capsule {
 }
 
 // Type para el estado del modal
-interface ModalState {
+export interface ModalState {
   active: boolean;
   index: number;
+  showOpen: boolean;
 }
 
 const CapsuleSection: React.FC<CapsuleSectionProps> = ({
@@ -35,7 +36,11 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
   description,
   capsuleIndex,
 }) => {
-  const [modal, setModal] = useState<ModalState>({ active: false, index: 0 });
+  const [modal, setModal] = useState<ModalState>({
+    active: false,
+    index: 0,
+    showOpen: true,
+  });
 
   const container = useRef(null);
 
