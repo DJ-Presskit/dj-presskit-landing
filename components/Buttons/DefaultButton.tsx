@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import React from "react";
 import { twMerge } from "tailwind-merge";
 import Text from "../Text/Text";
-import { GlowingEffect } from "../ui/GlowingEffect";
 import { trackWhatsAppClick } from "@/lib/gtag";
 
 interface DefaultButtonProps {
@@ -81,16 +80,6 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
         className
       )}
     >
-      {!noGlow && (
-        <GlowingEffect
-          spread={150}
-          glow={true}
-          borderWidth={4}
-          disabled={false}
-          proximity={50}
-          inactiveZone={0.01}
-        />
-      )}
       {renderChildren()}
     </motion.button>
   );

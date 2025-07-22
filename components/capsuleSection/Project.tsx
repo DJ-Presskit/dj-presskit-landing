@@ -6,6 +6,7 @@ import { Project as ProjectType } from "@/@types";
 import AnimatedSeparator from "../AnimatedSeparator";
 import { ModalState } from "@/views/Capsules";
 import { Hash } from "lucide-react";
+import DecryptedText from "../Text/DecryptedText";
 
 interface ProjectProps extends ProjectType {
   index: number;
@@ -19,10 +20,11 @@ export default function Project({
   setModal,
   web,
   capsuleIndex,
+  commingSoon,
 }: ProjectProps) {
   return (
     <>
-      <AnimatedSeparator />
+      <AnimatedSeparator className="first:hidden" />
       <div
         onClick={() => {
           if (web !== "") {
@@ -67,19 +69,24 @@ export default function Project({
         <Text
           variant="subtitle"
           className={twMerge(
-            "lg:group-hover:-translate-x-10 transition duration-400 uppercase md:flex items-center",
+            "lg:group-hover:-translate-x-10 transition duration-400 flex flex-col uppercase md:flex-row items-center",
             capsuleIndex % 2 && "lg:group-hover:translate-x-10"
           )}
         >
-          {name || "?????"}{" "}
-          {name === "" && (
+          <DecryptedText
+            text={name}
+            speed={150}
+            animateOn="view"
+            revealDirection="center"
+          />
+          {commingSoon && (
             <span className="text-[10px] md:text-sm text-accent-2">
+              {" "}
               PRÓXIMAMENTE
             </span>
           )}
         </Text>
       </div>
-      <AnimatedSeparator />
     </>
   );
 }

@@ -29,33 +29,9 @@ export function ProposalCards() {
         >
           Nuestros Planes
         </Text>
-        <div className="h-full grid grid-rows-none grid-cols-1 gap-10 xl:grid-cols-3">
+        <div className="h-full grid grid-rows-none grid-cols-1 gap-10 lg:grid-cols-2 xl:grid-cols-3">
           {plans.map((plan, idx) => (
-            <Card key={idx} {...plan}>
-              {/* CanvasRevealEffect solo para los planes avanzados y premium */}
-              {plan.title === "Plan Presskit Avanzado" && (
-                <CanvasRevealEffect
-                  animationSpeed={3}
-                  containerClassName="bg-black"
-                  colors={[
-                    [89, 198, 186],
-                    [137, 214, 206],
-                  ]}
-                  dotSize={5}
-                />
-              )}
-              {plan.title === "Plan Presskit Premium" && (
-                <CanvasRevealEffect
-                  animationSpeed={3}
-                  containerClassName="bg-black"
-                  colors={[
-                    [241, 154, 62],
-                    [245, 178, 107],
-                  ]}
-                  dotSize={5}
-                />
-              )}
-            </Card>
+            <Card key={idx} {...plan} />
           ))}
         </div>
       </div>
@@ -63,15 +39,12 @@ export function ProposalCards() {
   );
 }
 
-interface CardProps extends PlanType {
-  children: any;
-}
+interface CardProps extends PlanType {}
 
 const Card = ({
   title,
   description,
   price,
-  children,
   includes = [],
   href,
   buttonText,
@@ -83,12 +56,17 @@ const Card = ({
         className="absolute inset-0 [mask-image:radial-gradient(600px_at_center,white,transparent)] bg-secondary"
         style={{ filter: "blur(1px)" }}
       >
-        {children}
+        {title === "Plan Presskit Avanzado" && (
+          <div className="w-full h-full absolute bg-radial from-accent/40 to-transparent blur-2xl" />
+        )}
+        {title === "Plan Presskit Premium" && (
+          <div className="w-full h-full absolute bg-radial from-accent-2/40 to-transparent blur-2xl animate-pulse" />
+        )}
       </div>
 
       <div className="relative z-20 text-center h-full w-full flex items-center justify-center flex-col gap-10">
         {discount && (
-          <span className="px-2 py-1 font-bold rounded bg-red-600 text-white text-sm animate-bounce">
+          <span className="px-2 py-1 font-bold rounded bg-red-600 text-white text-sm animate-bounce md:absolute -top-10">
             ÚLTIMOS {10 - CAPSULES[0].projects.length} - CÁPSULA{" "}
             <strong className="text-accent">GÉNESIS</strong>
           </span>

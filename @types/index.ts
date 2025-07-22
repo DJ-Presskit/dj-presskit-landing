@@ -28,6 +28,7 @@ export type Project = {
   web: string;
   image: string;
   color: string;
+  commingSoon?: boolean;
   // Puedes agregar más campos si lo necesitas
 };
 

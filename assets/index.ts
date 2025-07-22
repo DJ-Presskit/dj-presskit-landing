@@ -22,6 +22,7 @@ export type LogosKeys = keyof typeof logos;
 
 export const icons = {
   whatsapp: "/icons/whatsapp.svg",
+  soundcloud: "/icons/soundcloud.svg",
 
   //? Agregar mas iconos aca
 } as const;

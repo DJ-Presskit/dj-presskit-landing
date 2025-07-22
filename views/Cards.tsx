@@ -1,9 +1,7 @@
 "use client";
 import { CardItemType } from "@/@types";
-import DefaultButton from "@/components/Buttons/DefaultButton";
 import GradientIcon from "@/components/Icons/GradientIcon";
 import Text from "@/components/Text/Text";
-import { GlowingEffect } from "@/components/ui/GlowingEffect";
 import { benefitsCards } from "@/DATA";
 import { motion } from "framer-motion";
 import {
@@ -66,14 +64,6 @@ const GridItem = ({ card, index }: GridItemProps) => {
       }}
       className={`h-full pointer-events-none backdrop-blur-sm group min-h-[300px] gap-10 lg:min-h-auto lg:h-[250px] relative rounded-2xl border-2 border-neutral-500 p-8 flex flex-col justify-between`}
     >
-      <GlowingEffect
-        spread={80}
-        glow={true}
-        borderWidth={4}
-        disabled={false}
-        proximity={150}
-        inactiveZone={0}
-      />
       <div className="flex flex-col lg:items-start items-center gap-5">
         <GradientIcon icon={<IconComponent size={30} className="" />} />
         <Text

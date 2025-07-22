@@ -14,7 +14,7 @@ interface AnimatedSeparatorProps {
 const AnimatedSeparator = ({
   className,
   direction = "horizontal",
-  once = false,
+  once = true,
 }: AnimatedSeparatorProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once });

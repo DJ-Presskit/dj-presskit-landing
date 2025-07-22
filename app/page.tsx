@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import LandingLink from "@/components/LandingLink/LandingLink";
 import { whatsappLink } from "@/DATA";
 import Icon from "@/components/Icons/Icon";
+import SoundCloudSupportBanner from "@/components/soundcloud/SoundCloudSupportBanner";
 
 export default function Home() {
   useEffect(() => {
@@ -32,6 +33,7 @@ export default function Home() {
       <OrganizationSchema />
       <Hero />
       <Cards />
+      <SoundCloudSupportBanner />
       <Capsules />
       <ProposalCards />
       <CTA />
