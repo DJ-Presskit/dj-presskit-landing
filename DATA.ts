@@ -205,7 +205,7 @@ export const CAPSULES: Capsule[] = [
       },
       {
         commingSoon: true,
-        name: "JOACO",
+        name: "JOAQUIN",
         web: "",
         image: "",
         color: "",
