@@ -77,7 +77,6 @@ export const plans: PlanType[] = [
     ],
     href: "https://template-avanzado.dj-presskit.com",
     buttonText: "VER DEMO",
-    discount: 25,
   },
   {
     title: "Plan Presskit Premium",
