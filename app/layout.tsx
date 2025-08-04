@@ -5,6 +5,7 @@ import ExternalTags from "@/components/ExternalTags";
 import Providers from "@/components/Providers";
 import Footer from "@/components/Footer/Footer";
 import { Analytics } from "@/components/Analytics";
+import { WebViewWarning } from "@/components/WebViewWarning";
 
 const michroma = Michroma({
   weight: ["400"],
@@ -95,6 +96,7 @@ export default function RootLayout({
         className={`${michroma.variable} ${quicksand.variable} antialiased`}
       >
         <Providers>
+          <WebViewWarning />
           {children}
           <Footer />
           <Analytics />

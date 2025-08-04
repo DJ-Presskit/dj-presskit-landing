@@ -2,10 +2,26 @@ import { BackgroundBeams } from "@/components/AnimatedBackgrounds/BackgroundBeam
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import Text from "@/components/Text/Text";
 import { whatsappLink } from "@/DATA";
+import { useWebViewDetection } from "@/hooks/useWebViewDetection";
+import { useEffect } from "react";
+import { initSafeHeight } from "@/lib/safeHeight";
 
 export default function Hero() {
+  const { shouldUseSafeHeight } = useWebViewDetection();
+
+  useEffect(() => {
+    if (shouldUseSafeHeight) {
+      const cleanup = initSafeHeight();
+      return cleanup;
+    }
+  }, [shouldUseSafeHeight]);
+
   return (
-    <div className="h-screen w-full bg-secondary flex flex-col items-center justify-center antialiased overflow-x-hidden">
+    <div
+      className={`${
+        shouldUseSafeHeight ? "safe-height-custom" : "h-screen"
+      } w-full bg-secondary flex flex-col items-center justify-center antialiased overflow-x-hidden`}
+    >
       <BackgroundBeams />
       <div className="!z-[80] flex items-center justify-center flex-col gap-[10vh] section-max-w mx-auto section-px">
         <Text Tag={"h1"} variant="title" className="">

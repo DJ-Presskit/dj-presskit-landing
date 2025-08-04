@@ -2,9 +2,11 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { twMerge } from "tailwind-merge";
+import { useWebViewDetection } from "@/hooks/useWebViewDetection";
 
 export const BackgroundBeams = React.memo(
   ({ className }: { className?: string }) => {
+    const { shouldReduceAnimations } = useWebViewDetection();
     const paths = [
       "M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875",
       "M-373 -197C-373 -197 -305 208 159 335C623 462 691 867 691 867",
@@ -87,6 +89,8 @@ export const BackgroundBeams = React.memo(
               stroke={`url(#linearGradient-${index})`}
               strokeOpacity="0.4"
               strokeWidth="0.5"
+              initial={shouldReduceAnimations ? false : undefined}
+              animate={shouldReduceAnimations ? false : undefined}
             ></motion.path>
           ))}
           <defs>
@@ -94,29 +98,50 @@ export const BackgroundBeams = React.memo(
               <motion.linearGradient
                 id={`linearGradient-${index}`}
                 key={`gradient-${index}`}
-                initial={{
-                  x1: "0%",
-                  x2: "0%",
-                  y1: "0%",
-                  y2: "0%",
-                }}
-                animate={{
-                  x1: ["0%", "100%"],
-                  x2: ["0%", "95%"],
-                  y1: ["0%", "100%"],
-                  y2: ["0%", `${93 + Math.random() * 8}%`],
-                }}
-                transition={{
-                  duration: Math.random() * 10 + 10,
-                  ease: "easeInOut",
-                  repeat: Infinity,
-                  delay: Math.random() * 10,
-                }}
+                initial={
+                  shouldReduceAnimations
+                    ? {
+                        x1: "0%",
+                        x2: "0%",
+                        y1: "0%",
+                        y2: "0%",
+                      }
+                    : {
+                        x1: "0%",
+                        x2: "0%",
+                        y1: "0%",
+                        y2: "0%",
+                      }
+                }
+                animate={
+                  shouldReduceAnimations
+                    ? false
+                    : {
+                        x1: ["0%", "100%"],
+                        x2: ["0%", "95%"],
+                        y1: ["0%", "100%"],
+                        y2: ["0%", `${93 + Math.random() * 8}%`],
+                      }
+                }
+                transition={
+                  shouldReduceAnimations
+                    ? {}
+                    : {
+                        duration: Math.random() * 10 + 10,
+                        ease: "easeInOut",
+                        repeat: Infinity,
+                        delay: Math.random() * 10,
+                      }
+                }
               >
                 <stop stopColor="#59c6ba" stopOpacity="0"></stop>
                 <stop stopColor="#59c6ba"></stop>
                 <stop offset="32.5%" stopColor="#F19A3E50"></stop>
-                <stop offset="100%" stopColor="#F19A3E50" stopOpacity="0"></stop>
+                <stop
+                  offset="100%"
+                  stopColor="#F19A3E50"
+                  stopOpacity="0"
+                ></stop>
               </motion.linearGradient>
             ))}
 

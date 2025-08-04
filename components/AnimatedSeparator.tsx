@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { twMerge } from "tailwind-merge";
+import { useWebViewDetection } from "@/hooks/useWebViewDetection";
 
 interface AnimatedSeparatorProps {
   className?: string;
@@ -18,6 +19,7 @@ const AnimatedSeparator = ({
 }: AnimatedSeparatorProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once });
+  const { shouldReduceAnimations } = useWebViewDetection();
 
   return (
     <div
@@ -30,9 +32,8 @@ const AnimatedSeparator = ({
       )}
     >
       <motion.div
-        initial={direction === "horizontal" ? { scaleX: 0 } : { scaleY: 0 }}
-        animate={
-          isInView
+        initial={
+          shouldReduceAnimations
             ? direction === "horizontal"
               ? { scaleX: 1 }
               : { scaleY: 1 }
@@ -40,11 +41,28 @@ const AnimatedSeparator = ({
             ? { scaleX: 0 }
             : { scaleY: 0 }
         }
-        transition={{
-          delay: 0.2,
-          duration: 1.5,
-          ease: [0.77, 0, 0.18, 1],
-        }}
+        animate={
+          shouldReduceAnimations
+            ? direction === "horizontal"
+              ? { scaleX: 1 }
+              : { scaleY: 1 }
+            : isInView
+            ? direction === "horizontal"
+              ? { scaleX: 1 }
+              : { scaleY: 1 }
+            : direction === "horizontal"
+            ? { scaleX: 0 }
+            : { scaleY: 0 }
+        }
+        transition={
+          shouldReduceAnimations
+            ? {}
+            : {
+                delay: 0.2,
+                duration: 1.5,
+                ease: [0.77, 0, 0.18, 1],
+              }
+        }
         style={{
           width: "100%",
           height: "100%",

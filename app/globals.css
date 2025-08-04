@@ -112,6 +112,32 @@
   .help {
     @apply border-1 border-red-500;
   }
+
+  /* iOS WebView compatibility */
+  .safe-height {
+    height: 100dvh;
+  }
+
+  .safe-height-fallback {
+    height: 100vh;
+  }
+
+  .safe-height-custom {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+
+  /* WebView animation fallbacks */
+  .webview-safe {
+    will-change: auto;
+    transform-style: flat;
+    backface-visibility: visible;
+  }
+
+  .webview-safe * {
+    will-change: auto;
+    transform-style: flat;
+    backface-visibility: visible;
+  }
   @keyframes moveInCircle {
     0% {
       transform: translate(-30%, -30%);

@@ -197,7 +197,7 @@ export const CAPSULES: Capsule[] = [
       {
         name: "SERENA",
         web: "https://serena.dj-presskit.com",
-        image: "",
+        image: "/images/genesis-capsule/serena.webp",
         color: "#707070",
       },
       {
@@ -205,6 +205,27 @@ export const CAPSULES: Capsule[] = [
         web: "https://joacoibanez.dj-presskit.com",
         image: "/images/genesis-capsule/joaco.webp",
         color: "#314097",
+      },
+      {
+        commingSoon: true,
+        name: "Matias",
+        web: "",
+        image: "",
+        color: "",
+      },
+      {
+        commingSoon: true,
+        name: "???",
+        web: "",
+        image: "",
+        color: "",
+      },
+      {
+        commingSoon: true,
+        name: "Kebin",
+        web: "",
+        image: "",
+        color: "",
       },
     ],
   },
