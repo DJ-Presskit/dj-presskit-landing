@@ -47,22 +47,6 @@ export const iconMap = {
 
 export const plans: PlanType[] = [
   {
-    title: "Plan Presskit Básico",
-    description:
-      "Ideal para DJs que quieren una presencia profesional rápida, clara y sin complicaciones.",
-    price: 150,
-    includes: [
-      "Diseño estático y moderno.",
-      "Formulario de contacto integrado conectado a Google Sheets.",
-      "Sitio responsive (adaptado a móviles).",
-      "Hosting incluido.",
-      "Dominio de dj-presskit incluido.",
-      "Entrega en menos de 48hs.",
-    ],
-    href: "https://template.dj-presskit.com",
-    buttonText: "EXPLORAR",
-  },
-  {
     title: "Plan Presskit Avanzado",
     description:
       "Un presskit más visual, más dinámico y con funciones extra para destacar.",
@@ -73,7 +57,7 @@ export const plans: PlanType[] = [
       "Sección de próximos eventos conectada a Google Sheets.",
       "Dominio personalizado incluido con membresia.",
       "Email profesional con tu dominio.",
-      "Entrega en menos de 72hs.",
+      "Entrega en menos de 48hs.",
     ],
     href: "https://template-avanzado.dj-presskit.com",
     buttonText: "VER DEMO",
@@ -206,17 +190,17 @@ export const CAPSULES: Capsule[] = [
         color: "#314097",
       },
       {
+        name: "Pupi Jaet",
+        web: "https://pupijaet.dj-presskit.com",
+        image: "/images/genesis-capsule/pupi-jaet.webp",
+        color: "#e5e5e5",
+      },
+      {
         commingSoon: true,
         name: "Matias",
         web: "",
         image: "",
         color: "",
-      },
-      {
-        name: "Pupi Jaet",
-        web: "https://pupijaet.dj-presskit.com",
-        image: "/images/genesis-capsule/pupi-jaet.webp",
-        color: "#e5e5e5",
       },
       {
         name: "Kebin Van Reeken",

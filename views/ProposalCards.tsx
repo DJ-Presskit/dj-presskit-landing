@@ -29,7 +29,7 @@ export function ProposalCards() {
         >
           Nuestros Planes
         </Text>
-        <div className="h-full grid grid-rows-none grid-cols-1 gap-10 lg:grid-cols-2 xl:grid-cols-3">
+        <div className="h-full grid grid-rows-none grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20 place-items-center">
           {plans.map((plan, idx) => (
             <Card key={idx} {...plan} />
           ))}
@@ -51,7 +51,7 @@ const Card = ({
   discount,
 }: CardProps) => {
   return (
-    <div className="backdrop-blur-sm group/canvas-card relative flex items-center justify-center rounded-2xl border-2 w-full border-neutral-500 py-10 md:py-20 px-10 min-h-[70vh] overflow-hidden bg-secondary">
+    <div className="backdrop-blur-sm group/canvas-card relative flex items-center justify-center rounded-2xl border-2 w-full lg:max-w-[600px] border-neutral-500 py-10 md:py-20 px-10 min-h-[70vh] overflow-hidden bg-secondary">
       <div
         className="absolute inset-0 [mask-image:radial-gradient(600px_at_center,white,transparent)] bg-secondary"
         style={{ filter: "blur(1px)" }}
