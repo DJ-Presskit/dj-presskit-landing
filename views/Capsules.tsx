@@ -6,6 +6,7 @@ import ProjectComponent from "@/components/capsuleSection/Project";
 import Text from "@/components/Text/Text";
 import { CAPSULES } from "@/DATA";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { Lock } from "lucide-react";
 import { useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
@@ -67,6 +68,9 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
     >
       <div className="w-full sticky top-[25%] lg:top-[40%] z-10 flex-1 space-y-5">
         <motion.div style={{ opacity: opacity1 }}>
+          {projects.length === 10 && (
+            <Lock className="size-10 text-accent-2 mb-5" />
+          )}
           <Text
             Tag={"h2"}
             variant="title"
