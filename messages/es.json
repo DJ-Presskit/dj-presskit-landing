@@ -13,7 +13,7 @@
     "title": "¿Por qué elegir DJ Presskit?"
   },
   "cta": {
-    "title": "Tu comunidad <br/> te está esperando",
+    "title": "Tu comunidad <br></br> te está esperando",
     "desc": "Seducí a bookers, sellos y fans con un presskit que hable por vos. <strong>Simplificá tu comunicación y potenciá tu marca hoy.</strong>",
     "button": "CONTACTANOS"
   },
@@ -31,7 +31,7 @@
   },
   "soundcloud": {
     "partner": "Official Partner",
-    "text": "DJ Presskit is officially supported by SoundCloud.<br/>A trusted partnership to elevate your music presence."
+    "text": "DJ Presskit is officially supported by SoundCloud.<br></br>A trusted partnership to elevate your music presence."
   },
   "footer": {
     "rights": "All Rights Reserved"
@@ -39,5 +39,8 @@
   "buttons": {
     "view_demo": "VER DEMO",
     "let_s_talk": "HABLEMOS"
+  },
+  "projects": {
+    "soon": "proximamente"
   }
 }

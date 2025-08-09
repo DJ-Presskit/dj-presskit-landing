@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 export default function CTA() {
   const t = useTranslations("cta");
   const { whatsappLink } = useLocalizedData();
+
   return (
     <section className="relative section-px py-20 lg:py-40 section-my mx-auto bg-radial from-secondary-lighter to-secondary-lighter/90 overflow-hidden">
       <VideoBackground
@@ -21,7 +22,7 @@ export default function CTA() {
       />
       <div className="flex flex-col items-center text-center gap-10">
         <Text Tag={"h4"} variant="title">
-          {t.rich("title", { br: () => <br /> })}
+          {t.rich("title", { br: () => <br></br> })}
         </Text>
 
         <Text variant="content" className="text-neutral-500 max-w-[600px]">

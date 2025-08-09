@@ -7,6 +7,7 @@ import AnimatedSeparator from "../AnimatedSeparator";
 import { ModalState } from "@/views/Capsules";
 import { Hash } from "lucide-react";
 import DecryptedText from "../Text/DecryptedText";
+import { useTranslations } from "next-intl";
 
 interface ProjectProps extends ProjectType {
   index: number;
@@ -22,6 +23,8 @@ export default function Project({
   capsuleIndex,
   commingSoon,
 }: ProjectProps) {
+  const t = useTranslations("projects");
+
   return (
     <>
       <AnimatedSeparator className="first:hidden" />
@@ -82,7 +85,7 @@ export default function Project({
           {commingSoon && (
             <span className="text-[10px] md:text-sm text-accent-2">
               {" "}
-              PRÓXIMAMENTE
+              {t("soon")}
             </span>
           )}
         </Text>
