@@ -66,9 +66,9 @@ const AnimatedSeparator = ({
         style={{
           width: "100%",
           height: "100%",
-          transformOrigin: "center",
+          transformOrigin: "left",
         }}
-        className={twMerge(`bg-radial from-accent to-transparent rounded-full`)}
+        className={twMerge(`bg-gradient-to-r from-accent to-transparent rounded-full`)}
       />
     </div>
   );

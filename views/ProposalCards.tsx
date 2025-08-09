@@ -7,9 +7,10 @@ import { Check, LayoutTemplate, Sparkles, SquarePen } from "lucide-react";
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import { twMerge } from "tailwind-merge";
 import LandingLink from "@/components/LandingLink/LandingLink";
-import { CAPSULES, plans } from "@/DATA";
+import { useLocalizedData } from "@/hooks/useLocalizedData";
 import { PlanType } from "@/@types";
 import { interleaveAttributes } from "three/examples/jsm/utils/BufferGeometryUtils.js";
+import {useTranslations} from "next-intl";
 
 // Mapeo de string a componente de icono
 const iconMap: Record<string, React.ReactNode> = {
@@ -19,6 +20,8 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export function ProposalCards() {
+  const {plans} = useLocalizedData();
+  const t = useTranslations('plans');
   return (
     <section className="w-full section-px section-max-w mx-auto section-my section-py">
       <div className="">
@@ -27,7 +30,7 @@ export function ProposalCards() {
           variant="title"
           className="bg-clip-text bg-gradient-to-tl from-gray-200 to-neutral-600 text-transparent py-4 mb-[10vh]"
         >
-          Nuestros Planes
+          {t('title')}
         </Text>
         <div className="h-full grid grid-rows-none grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20 place-items-center">
           {plans.map((plan, idx) => (
@@ -42,6 +45,7 @@ export function ProposalCards() {
 interface CardProps extends PlanType {}
 
 const Card = ({
+  id,
   title,
   description,
   price,
@@ -50,16 +54,18 @@ const Card = ({
   buttonText,
   discount,
 }: CardProps) => {
+  const {CAPSULES} = useLocalizedData();
+  const t = useTranslations('plans');
   return (
     <div className="backdrop-blur-sm group/canvas-card relative flex items-center justify-center rounded-2xl border-2 w-full lg:max-w-[600px] border-neutral-500 py-10 md:py-20 px-10 min-h-[70vh] overflow-hidden bg-secondary">
       <div
         className="absolute inset-0 [mask-image:radial-gradient(600px_at_center,white,transparent)] bg-secondary"
         style={{ filter: "blur(1px)" }}
       >
-        {title === "Plan Presskit Avanzado" && (
+        {id === "advanced" && (
           <div className="w-full h-full absolute bg-radial from-accent/40 to-transparent blur-2xl" />
         )}
-        {title === "Plan Presskit Premium" && (
+        {id === "premium" && (
           <div className="w-full h-full absolute bg-radial from-accent-2/40 to-transparent blur-2xl animate-pulse" />
         )}
       </div>
@@ -84,19 +90,19 @@ const Card = ({
             variant="custom"
             className={twMerge(
               "text-lg font-semibold text-accent mt-4 mb-auto flex relative items-center justify-center",
-              title === "Plan Presskit Premium" && "text-accent-2",
+              id === "premium" && "text-accent-2",
               discount && "blur-[1px]"
             )}
           >
             {discount && <div className="w-full h-[3px] bg-red-600 absolute" />}
-            {title === "Plan Presskit Premium" && "Desde"} USD ${price}
+            {id === "premium" && t('from')} USD ${price}
           </Text>
           {discount && (
             <Text
               variant="custom"
               className={twMerge(
                 "text-lg font-semibold text-accent mb-auto flex relative items-center justify-center",
-                title === "Plan Presskit Premium" && "text-accent-2"
+                id === "premium" && "text-accent-2"
               )}
             >
               USD ${price - price * (discount / 100)}
@@ -113,14 +119,9 @@ const Card = ({
           ))}
         </div>
         <div className="mt-auto">
-          <LandingLink
-            href={href}
-            trackingLabel={
-              title === "Plan Presskit Premium" ? "premium_plan" : undefined
-            }
-          >
+          <LandingLink href={href} trackingLabel={id === "premium" ? "premium_plan" : undefined}>
             <DefaultButton
-              noGlow={title === "Plan Presskit Básico" ? true : false}
+              noGlow={id === "basic" ? true : false}
             >
               {buttonText}
             </DefaultButton>

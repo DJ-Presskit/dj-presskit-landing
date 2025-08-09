@@ -4,13 +4,14 @@ import { Capsule, Project } from "@/@types";
 import Modal from "@/components/capsuleSection/Modal";
 import ProjectComponent from "@/components/capsuleSection/Project";
 import Text from "@/components/Text/Text";
-import { CAPSULES } from "@/DATA";
+import { useLocalizedData } from "@/hooks/useLocalizedData";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { Lock } from "lucide-react";
 import { useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 export default function Capsules() {
+  const {CAPSULES} = useLocalizedData();
   return (
     <section id="capsules" className={twMerge("w-full flex flex-col")}>
       {CAPSULES.map((item, index) => {
@@ -76,14 +77,6 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
             variant="title"
             className={twMerge("text-left", capsuleIndex % 2 && "text-right")}
           >
-            {/* CAPSULA{" "}
-          <span
-          className="font-bold text-accent"
-          style={{ fontFamily: "var(--font-primary)" }}
-          >
-          GENESIS
-          </span> */}
-
             {title.split(" ")[0]}
             <br />
             <span

@@ -2,7 +2,8 @@
 import { CardItemType } from "@/@types";
 import GradientIcon from "@/components/Icons/GradientIcon";
 import Text from "@/components/Text/Text";
-import { benefitsCards } from "@/DATA";
+import { useLocalizedData } from "@/hooks/useLocalizedData";
+import {useTranslations} from "next-intl";
 import { motion } from "framer-motion";
 import {
   Brain,
@@ -25,6 +26,8 @@ const iconComponents = {
 } as const;
 
 export default function Cards() {
+  const {benefitsCards} = useLocalizedData();
+  const t = useTranslations('cards');
   return (
     <div className="flex flex-col section-py section-mb section-max-w section-px mx-auto items-center">
       <Text
@@ -32,7 +35,7 @@ export default function Cards() {
         variant="title"
         className="bg-clip-text bg-gradient-to-tl from-gray-200 to-neutral-600 text-transparent py-4 mb-[10vh]"
       >
-        ¿Por qué elegir DJ Presskit?
+        {t('title')}
       </Text>
       <div className="h-full grid grid-rows-none grid-cols-1 md:grid-cols-2 gap-10 mb-10">
         {benefitsCards.map((card, index) => (

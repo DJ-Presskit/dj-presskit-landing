@@ -4,18 +4,18 @@ import Hero from "@/views/Hero";
 import FAQ from "@/views/FAQ";
 import { ProposalCards } from "@/views/ProposalCards";
 import CTA from "@/views/CTA";
-import FAQSchema from "@/components/FAQSchema";
-import OrganizationSchema from "@/components/OrganizationSchema";
 import Capsules from "@/views/Capsules";
 import { useEffect } from "react";
 import LandingLink from "@/components/LandingLink/LandingLink";
-import { whatsappLink } from "@/DATA";
+import { useLocalizedData } from "@/hooks/useLocalizedData";
 import Icon from "@/components/Icons/Icon";
 import SoundCloudSupportBanner from "@/components/soundcloud/SoundCloudSupportBanner";
 
 export default function Home() {
+  const { whatsappLink } = useLocalizedData();
   useEffect(() => {
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+    const delay = (ms: number) =>
+      new Promise((resolve) => setTimeout(resolve, ms));
     delay(1000).then(() => {
       if (typeof window !== "undefined" && window.location.hash) {
         const id = window.location.hash.replace("#", "");
@@ -29,8 +29,6 @@ export default function Home() {
 
   return (
     <main className="relative h-full">
-      <FAQSchema />
-      <OrganizationSchema />
       <Hero />
       <Cards />
       <SoundCloudSupportBanner />

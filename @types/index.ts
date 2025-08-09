@@ -14,6 +14,7 @@ export type CardItemType = {
 };
 
 export type PlanType = {
+  id?: string;
   title: string;
   description: string;
   price: number;

@@ -17,7 +17,8 @@ import GradientIcon from "@/components/Icons/GradientIcon";
 import { FAQItemType } from "@/@types";
 import { twMerge } from "tailwind-merge";
 import LandingLink from "@/components/LandingLink/LandingLink";
-import { faqData, iconMap } from "@/DATA";
+import { useLocalizedData } from "@/hooks/useLocalizedData";
+import {useTranslations} from "next-intl";
 import DefaultButton from "@/components/Buttons/DefaultButton";
 
 const iconComponents = {
@@ -32,6 +33,8 @@ const iconComponents = {
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const {faqData} = useLocalizedData();
+  const t = useTranslations('faq');
 
   return (
     <section className="section-py section-px section-max-w mx-auto">
@@ -41,10 +44,10 @@ export default function FAQ() {
           variant="title"
           className="bg-clip-text bg-gradient-to-tl from-gray-200 to-neutral-600 text-transparent py-4"
         >
-          Preguntas Frecuentes
+          {t('title')}
         </Text>
         <Text variant="content" className="">
-          Resolvé tus dudas sobre nuestro servicio de presskit profesional
+          {t('subtitle')}
         </Text>
       </div>
       <div className="space-y-5">
@@ -129,11 +132,8 @@ const FAQItem = ({
                   </ul>
                 </Text>
               ) : item.link ? (
-                <Text
-                  variant="content"
-                  className="text-neutral-500 text-left flex flex-col gap-5"
-                >
-                  {item.answer.split("clickeando acá")[0]}
+                <Text variant="content" className="text-neutral-500 text-left flex flex-col gap-5">
+                  {item.answer}
                   <LandingLink
                     href={item.link}
                     newTab
@@ -142,7 +142,6 @@ const FAQItem = ({
                   >
                     <strong>{item.linkText}</strong>
                   </LandingLink>
-                  {item.answer.split("clickeando acá")[1]}
                 </Text>
               ) : (
                 <Text variant="content" className="text-neutral-500">

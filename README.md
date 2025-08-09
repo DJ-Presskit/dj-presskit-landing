@@ -16,7 +16,7 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `app/[locale]/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
@@ -28,6 +28,17 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## i18n (next-intl)
+
+The app uses `next-intl` with localized routes `app/[locale]` and middleware for `es` and `en`.
+
+- Messages: `messages/es.json`, `messages/en.json`
+- Localized data copies: `data/es.ts`, `data/en.ts`
+- Hook to access localized data: `hooks/useLocalizedData.ts`
+- Language switcher: `components/Nav/LanguageSwitcher.tsx` (fixed top-right)
+
+Legacy routes like `app/plantillas-avanzadas` remain without prefix for compatibility.
 
 ## Deploy on Vercel
 

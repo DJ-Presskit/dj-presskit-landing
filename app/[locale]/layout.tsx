@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import { Michroma, Quicksand } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import ExternalTags from "@/components/ExternalTags";
 import Providers from "@/components/Providers";
 import Footer from "@/components/Footer/Footer";
 import { Analytics } from "@/components/Analytics";
 import { WebViewWarning } from "@/components/WebViewWarning";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing, AppLocale } from "@/i18n/routing";
+import { setRequestLocale } from "next-intl/server";
+import LanguageSwitcher from "@/components/Nav/LanguageSwitcher";
+import FAQSchema from "@/components/FAQSchema";
+import OrganizationSchema from "@/components/OrganizationSchema";
 
 const michroma = Michroma({
   weight: ["400"],
@@ -80,13 +88,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function LocaleLayout({
   children,
-}: Readonly<{
+  params,
+}: {
   children: React.ReactNode;
-}>) {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: langParam } = await params;
+  const lang = langParam as AppLocale;
+  if (!routing.locales.includes(lang)) {
+    notFound();
+  }
+  setRequestLocale(lang);
+  const messages = await getMessages({ locale: lang });
   return (
-    <html lang="es">
+    <html lang={lang}>
       <head>
         <ExternalTags />
         <link rel="canonical" href="https://dj-presskit.com" />
@@ -95,13 +112,22 @@ export default function RootLayout({
       <body
         className={`${michroma.variable} ${quicksand.variable} antialiased`}
       >
-        <Providers>
-          <WebViewWarning />
-          {children}
-          <Footer />
-          <Analytics />
-        </Providers>
+        <FAQSchema />
+        <OrganizationSchema />
+        <NextIntlClientProvider messages={messages} locale={lang}>
+          <Providers>
+            <WebViewWarning />
+            <LanguageSwitcher className="fixed top-5 right-5 z-[100]" />
+            {children}
+            <Footer />
+            <Analytics />
+          </Providers>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
 }

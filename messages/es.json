@@ -1,0 +1,43 @@
+{
+  "nav": {
+    "language": "Idioma"
+  },
+  "hero": {
+    "title_line1": "Tu música ya tiene estilo,",
+    "title_line2": "tu presskit también debería",
+    "desc_strong": "Convertí tus flyers y drives en tu espacio digital, en 48 horas sin tocar una línea de código.",
+    "desc": "Profesionalizá tu marca personal: reuní tu bio, playlists, fechas y fotos en un solo link que hable por vos antes de que pongas play. Comunidad, claridad y estatus en cada clic.",
+    "cta": "¡Empezá tu Presskit!"
+  },
+  "cards": {
+    "title": "¿Por qué elegir DJ Presskit?"
+  },
+  "cta": {
+    "title": "Tu comunidad <br/> te está esperando",
+    "desc": "Seducí a bookers, sellos y fans con un presskit que hable por vos. <strong>Simplificá tu comunicación y potenciá tu marca hoy.</strong>",
+    "button": "CONTACTANOS"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Resolvé tus dudas sobre nuestro servicio de presskit profesional"
+  },
+  "plans": {
+    "title": "Nuestros Planes",
+    "from": "Desde"
+  },
+  "capsules": {
+    "genesis": "Cápsula Génesis",
+    "genesis_description": "El primer concepto. Un punto de partida. Genesis no es solo un conjunto de sitios webs, es el inicio de una forma nueva de mostrarse con claridad y profesionalismo. De los links sueltos al branding con propósito. Acá nació la idea de DJ Presskit como comunidad y estándar."
+  },
+  "soundcloud": {
+    "partner": "Official Partner",
+    "text": "DJ Presskit is officially supported by SoundCloud.<br/>A trusted partnership to elevate your music presence."
+  },
+  "footer": {
+    "rights": "All Rights Reserved"
+  },
+  "buttons": {
+    "view_demo": "VER DEMO",
+    "let_s_talk": "HABLEMOS"
+  }
+}
