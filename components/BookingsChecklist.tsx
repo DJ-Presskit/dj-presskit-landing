@@ -140,7 +140,7 @@ export default function BookingsChecklist() {
       </header>
       <AnimatedSeparator transformOrigin="center" />
 
-      <div className="sticky top-0 py-5 bg-secondary shadow-xl">
+      <div className="sticky top-0 py-5 bg-secondary shadow-xl z-50">
         <div className="mb-3 flex items-center justify-between">
           <div className="flex items-center gap-2 text-sm text-secondary-lighter/90">
             <Text variant="content">✓</Text>
