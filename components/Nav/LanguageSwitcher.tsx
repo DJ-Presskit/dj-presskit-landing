@@ -27,6 +27,12 @@ export default function LanguageSwitcher({ className }: Props) {
     router.push("/" + segments.join("/"));
   };
 
+  const notLanding = pathname !== "/";
+
+  if (notLanding) {
+    return <></>;
+  }
+
   return (
     <div className={twMerge("flex items-center gap-2", className)}>
       <div className="flex rounded-full border border-neutral-600 overflow-hidden backdrop-blur bg-secondary/60">

@@ -6,13 +6,19 @@ import { MessageCircle } from "lucide-react";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
 import VideoBackground from "@/components/VideoBackground";
 import { useTranslations } from "next-intl";
+import { twMerge } from "tailwind-merge";
 
-export default function CTA() {
+export default function CTA({ className }: { className?: string }) {
   const t = useTranslations("cta");
   const { whatsappLink } = useLocalizedData();
 
   return (
-    <section className="relative section-px py-20 lg:py-40 section-my mx-auto bg-radial from-secondary-lighter to-secondary-lighter/90 overflow-hidden">
+    <section
+      className={twMerge(
+        "relative section-px py-20 lg:py-40 section-my mx-auto bg-radial from-secondary-lighter to-secondary-lighter/90 overflow-hidden",
+        className
+      )}
+    >
       <VideoBackground
         className="object-bottom"
         sources={[
