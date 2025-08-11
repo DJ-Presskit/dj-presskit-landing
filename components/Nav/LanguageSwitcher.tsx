@@ -27,7 +27,7 @@ export default function LanguageSwitcher({ className }: Props) {
     router.push("/" + segments.join("/"));
   };
 
-  const notLanding = pathname !== "/";
+  const notLanding = pathname === "/es/bookings-checklist";
 
   if (notLanding) {
     return <></>;

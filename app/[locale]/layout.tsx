@@ -14,6 +14,7 @@ import { setRequestLocale } from "next-intl/server";
 import LanguageSwitcher from "@/components/Nav/LanguageSwitcher";
 import FAQSchema from "@/components/FAQSchema";
 import OrganizationSchema from "@/components/OrganizationSchema";
+import Nav from "@/components/Nav/Nav";
 
 const michroma = Michroma({
   weight: ["400"],
