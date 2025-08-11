@@ -17,76 +17,75 @@ function getInitialItems(): ChecklistItem[] {
   return [
     {
       id: "presskit-actualizado",
-      label: "Presskit actualizado (bio, fotos, rider, logos)",
+      label: "Presskit actualizado (bio, fotos, rider, logos).",
     },
     {
       id: "bio-12-palabras",
       label:
-        "Bio clara en 12 palabras (quién sos, géneros, ciudad, diferencial)",
+        "Bio clara en 12 palabras (quién sos, géneros, ciudad, diferencial).",
     },
     {
       id: "foto-perfil-pro",
-      label: "Foto de perfil profesional (rostro o cabina)",
+      label: "Foto de perfil profesional (rostro o cabina).",
     },
     {
       id: "piezas-fijadas",
-      label: "Piezas fijadas: reel 30–60s, álbum 5 fotos, testimonio",
+      label: "Piezas fijadas: reel 30–60s, álbum 5 fotos, testimonio.",
     },
     {
       id: "link-unico",
       label: "Un solo link con música, próximas fechas y contacto",
     },
-    { id: "playlist-bestof", label: "Playlist “Best Of” de 10–12 minutos" },
+    { id: "playlist-bestof", label: "Playlist “Best Of” de 10–12 minutos." },
     {
       id: "lives-completos",
-      label: "2 lives completos con títulos claros (Live @ [Club] – Mes Año)",
+      label: "2 lives completos con títulos claros (Live @ [Club] – Mes Año.",
     },
-    { id: "proximas-fechas", label: "Próximas fechas visibles y actualizadas" },
+    {
+      id: "proximas-fechas",
+      label: "Próximas fechas visibles y actualizadas.",
+    },
     {
       id: "highlight-bookings",
-      label: "Highlight “Bookings” al día (flyers + clips)",
+      label: "Highlight “Bookings” al día (flyers + clips).",
     },
     {
       id: "press-photos-hq",
-      label: "Press photos en alta (vertical 9:16 y horizontal 3:4)",
+      label: "Press photos en alta (vertical 9:16 y horizontal 3:4).",
     },
-    { id: "logo-png", label: "Logo/wordmark en PNG transparente" },
+    { id: "logo-png", label: "Logo/wordmark en PNG transparente." },
     {
       id: "rider-tecnico",
-      label: "Rider técnico actualizado (setup, canales, necesidades)",
+      label: "Rider técnico actualizado (setup, canales, necesidades).",
     },
     {
       id: "hospitality-rider",
-      label: "Hospitality rider claro (bebidas, camarín, traslados, etc.)",
+      label: "Hospitality rider claro (bebidas, camarín, traslados, etc.).",
     },
     {
       id: "stage-plot",
-      label: "Stage plot simple (posición de equipos y conexiones)",
+      label: "Stage plot simple (posición de equipos y conexiones).",
     },
     {
       id: "contacto-visible",
-      label: "Contacto visible (WhatsApp/mail) en bio y landing",
+      label: "Contacto visible (WhatsApp/mail) en bio.",
     },
     {
       id: "mail-profesional",
-      label: "Mail profesional o alias (bookings@ o similar)",
+      label: "Mail profesional o alias (bookings@ o similar).",
     },
     {
       id: "pitch-5-lineas",
-      label: "Mensaje/pitch breve en 5 líneas listo para enviar",
+      label: "Mensaje/pitch breve en 5 líneas listo para enviar.",
     },
     {
       id: "contactos-objetivo",
-      label: "Lista de contactos objetivo (clubs, promotorxs, sellos)",
+      label: "Lista de contactos objetivo (clubs, promotorxs, sellos).",
     },
     {
       id: "seguimiento",
       label:
-        "Sistema de seguimiento (quién respondió y cuándo volver a escribir)",
-    },
-    {
-      id: "carpeta-drive",
-      label: "Carpeta Drive organizada y compartible (Press/Booking)",
+        "Sistema de seguimiento (quién respondió y cuándo volver a escribir).",
     },
   ];
 }
@@ -148,11 +147,7 @@ export default function BookingsChecklist() {
               {completedCount} / {items.length} completadas
             </Text>
           </div>
-          <Text
-            Tag="span"
-            variant="content"
-            className="text-secondary-lighter/80"
-          >
+          <Text Tag="span" variant="content">
             {Math.round((completedCount / items.length) * 100)}%
           </Text>
         </div>
@@ -217,7 +212,7 @@ export default function BookingsChecklist() {
                 <div className="flex-1">
                   <motion.div
                     initial={false}
-                    animate={{ opacity: isChecked ? 0.75 : 1 }}
+                    animate={{ opacity: isChecked ? 0.5 : 1 }}
                     transition={{ duration: 0.15 }}
                   >
                     <Text
