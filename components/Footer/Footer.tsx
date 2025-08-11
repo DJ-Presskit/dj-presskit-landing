@@ -3,7 +3,8 @@ import { Instagram } from "lucide-react";
 import LandingImage from "../Images/LandingImage";
 import Text from "../Text/Text";
 import LandingLink from "../LandingLink/LandingLink";
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -19,10 +20,10 @@ const Footer = () => {
 };
 
 const Content = () => {
-  const t = useTranslations('footer');
+  const t = useTranslations("footer");
   return (
     <div className="relative section-px section-max-w mx-auto w-full flex flex-col items-center gap-10 justify-between pt-[50px] md:flex-row-reverse">
-      <div>
+      <Link href={"/"}>
         <LandingImage
           noPreload
           src="default_logo"
@@ -31,12 +32,12 @@ const Content = () => {
           height={100}
           className=""
         />
-      </div>
+      </Link>
       <div className="flex md:flex-col gap-10 flex-col-reverse md:items-start items-center">
         <Text variant="content" className="!text-xs">
           © Copyright {new Date().getFullYear()} -{" "}
           <strong>DJ PRESSKIT ®</strong> -
-          <br className="md:hidden" /> {t('rights')}
+          <br className="md:hidden" /> {t("rights")}
         </Text>
         <LandingLink href={"https://www.instagram.com/dj_presskit"} newTab>
           <Instagram className="size-8 hover:text-accent cursor-pointer" />

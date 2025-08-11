@@ -59,11 +59,7 @@ const LandingImage: React.FC<LandingImageProps> = ({
         width={width}
         height={height}
         onLoad={() => setIsLoaded(true)}
-        className={twMerge(
-          "transition-opacity duration-500",
-          isLoaded ? "opacity-100" : "opacity-0",
-          className
-        )}
+        className={twMerge("transition-opacity duration-500", className)}
       />
 
       {/* Overlay de color que se desliza hacia arriba */}

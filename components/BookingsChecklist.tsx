@@ -5,6 +5,9 @@ import { motion } from "framer-motion";
 import Text from "@/components/Text/Text";
 import DecryptedText from "@/components/Text/DecryptedText";
 import AnimatedSeparator from "./AnimatedSeparator";
+import LandingImage from "./Images/LandingImage";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
 type ChecklistItem = {
   id: string;
@@ -125,10 +128,17 @@ export default function BookingsChecklist() {
     setChecked((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  const clearAll = () => setChecked({});
-
   return (
     <section className="mx-auto max-w-5xl section-py grid gap-10 section-px">
+      <Link
+        href={"/"}
+        className="flex items-center gap-3 hover:opacity-50 transition-opacity"
+      >
+        <ArrowLeft size={15} />
+        <Text variant="content" className="!text-xs">
+          Volver al inicio
+        </Text>
+      </Link>
       <header className="flex items-center justify-center gap-2 flex-col">
         <Text Tag="h1" variant="title" className="">
           Checklist para Bookings
