@@ -10,7 +10,7 @@ import LandingLink from "@/components/LandingLink/LandingLink";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
 import { PlanType } from "@/@types";
 import { interleaveAttributes } from "three/examples/jsm/utils/BufferGeometryUtils.js";
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 
 // Mapeo de string a componente de icono
 const iconMap: Record<string, React.ReactNode> = {
@@ -20,8 +20,8 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 export function ProposalCards() {
-  const {plans} = useLocalizedData();
-  const t = useTranslations('plans');
+  const { plans } = useLocalizedData();
+  const t = useTranslations("plans");
   return (
     <section className="w-full section-px section-max-w mx-auto section-my section-py">
       <div className="">
@@ -30,7 +30,7 @@ export function ProposalCards() {
           variant="title"
           className="bg-clip-text bg-gradient-to-tl from-gray-200 to-neutral-600 text-transparent py-4 mb-[10vh]"
         >
-          {t('title')}
+          {t("title")}
         </Text>
         <div className="h-full grid grid-rows-none grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-20 place-items-center">
           {plans.map((plan, idx) => (
@@ -54,8 +54,8 @@ const Card = ({
   buttonText,
   discount,
 }: CardProps) => {
-  const {CAPSULES} = useLocalizedData();
-  const t = useTranslations('plans');
+  const { CAPSULES } = useLocalizedData();
+  const t = useTranslations("plans");
   return (
     <div className="backdrop-blur-sm group/canvas-card relative flex items-center justify-center rounded-2xl border-2 w-full lg:max-w-[600px] border-neutral-500 py-10 md:py-20 px-10 min-h-[70vh] overflow-hidden bg-secondary">
       <div
@@ -95,7 +95,7 @@ const Card = ({
             )}
           >
             {discount && <div className="w-full h-[3px] bg-red-600 absolute" />}
-            {id === "premium" && t('from')} USD ${price}
+            {id === "premium" && t("from")} USD ${price}
           </Text>
           {discount && (
             <Text
@@ -119,10 +119,11 @@ const Card = ({
           ))}
         </div>
         <div className="mt-auto">
-          <LandingLink href={href} trackingLabel={id === "premium" ? "premium_plan" : undefined}>
-            <DefaultButton
-              noGlow={id === "basic" ? true : false}
-            >
+          <LandingLink
+            href={href}
+            trackingLabel={id === "premium" ? "premium_plan" : undefined}
+          >
+            <DefaultButton noGlow={id === "basic" ? true : false}>
               {buttonText}
             </DefaultButton>
           </LandingLink>
