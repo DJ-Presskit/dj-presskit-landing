@@ -188,11 +188,11 @@ export default function BookingsChecklist() {
                   initial={false}
                   animate={{
                     backgroundColor: isChecked
-                      ? "rgba(168,85,247,0.2)"
+                      ? "rgba(255,115,51,0.2)" // accent (naranja) con opacidad para el fondo
                       : "rgba(0,0,0,0)",
                     borderColor: isChecked
-                      ? "rgb(168,85,247)"
-                      : "rgba(148,163,184,0.3)",
+                      ? "rgb(255,115,51)" // accent (naranja) para el borde
+                      : "rgba(255,255,255,0.3)",
                     scale: isChecked ? 1.05 : 1,
                   }}
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -200,7 +200,7 @@ export default function BookingsChecklist() {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                     <motion.path
                       d="M5 13l4 4L19 7"
-                      stroke="rgb(168,85,247)"
+                      className="stroke-accent"
                       strokeWidth="2.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
