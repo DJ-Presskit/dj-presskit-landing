@@ -3,6 +3,7 @@ import { usePathname, useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { locales } from "@/i18n";
 import { twMerge } from "tailwind-merge";
+import { motion } from "framer-motion";
 
 type Props = { className?: string };
 
@@ -35,14 +36,23 @@ export default function LanguageSwitcher({ className }: Props) {
 
   return (
     <div className={twMerge("flex items-center gap-2", className)}>
-      <div className="flex rounded-full border border-neutral-600 overflow-hidden backdrop-blur bg-secondary/60">
+      <div className="flex rounded-full  overflow-hidden backdrop-blur-xl space-x-5 px-5 py-2 relative">
+        <motion.div
+          className="absolute top-0 left-0 w-1/2 bg-accent h-full"
+          initial={false}
+          animate={
+            activeLocale === "es"
+              ? { left: 0, right: "auto" }
+              : { left: "50%", right: 0 }
+          }
+        />
         {locales.map((loc) => (
           <button
             key={loc}
             onClick={() => onChange(loc)}
             className={twMerge(
-              "px-3 py-1 text-xs md:text-sm uppercase hover:text-accent transition-500 cursor-pointer",
-              activeLocale === loc && "bg-neutral-900 text-white"
+              "text-xs md:text-sm uppercase hover:text-accent transition-500 cursor-pointer text-primary z-[99] font-bold transition duration-500",
+              activeLocale === loc && "text-secondary hover:text-primary"
             )}
             aria-label={`${t("language")}: ${loc}`}
           >
