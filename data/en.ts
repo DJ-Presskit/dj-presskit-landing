@@ -1,7 +1,7 @@
 import { CardItemType, PlanType, Capsule } from "@/@types";
 
 export const whatsappLink = `https://wa.me/542477313700?text=${encodeURIComponent(
-  "Hi! I want my Presskit in 48 hours: My professional space that shows who I am and unifies my music, dates and story. How do we start?"
+  "*Send to start your Presskit*"
 )}`;
 
 export const benefitsCards: CardItemType[] = [
