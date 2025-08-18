@@ -1,6 +1,6 @@
 import { CardItemType, PlanType, Capsule } from "@/@types";
 
-export const whatsappLink = `https://wa.me/542477313700?text=${encodeURIComponent(
+export const whatsappLink = `https://wa.me/+5491140757359?text=${encodeURIComponent(
   "Envia para empezar tu Presskit"
 )}`;
 

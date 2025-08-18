@@ -1,6 +1,6 @@
 import { CardItemType, PlanType, Capsule } from "@/@types";
 
-export const whatsappLink = `https://wa.me/542477313700?text=${encodeURIComponent(
+export const whatsappLink = `https://wa.me/+5491140757359?text=${encodeURIComponent(
   "Send to start your Presskit"
 )}`;
 
@@ -47,7 +47,7 @@ export const iconMap = {
 
 export const plans: PlanType[] = [
   {
-    id: 'advanced',
+    id: "advanced",
     title: "Advanced Presskit Plan",
     description:
       "A more visual, dynamic presskit with extra features to stand out.",
@@ -63,7 +63,7 @@ export const plans: PlanType[] = [
     buttonText: "VIEW DEMO",
   },
   {
-    id: 'premium',
+    id: "premium",
     title: "Premium Presskit Plan",
     description:
       "For demanding DJs seeking a custom boost, with no limits to creativity or functionality.",
@@ -83,7 +83,8 @@ export const plans: PlanType[] = [
 
 export const faqData = [
   {
-    question: "Why do I need a presskit if I already have Instagram or Linktree?",
+    question:
+      "Why do I need a presskit if I already have Instagram or Linktree?",
     answer: [
       "DJ Presskit is your real space, with strategic design and domain that conveys professionalism.",
       "It unifies your bio, music, dates, rider and photos in a coherent space that Instagram or Linktree cannot offer.",
@@ -148,18 +149,61 @@ export const CAPSULES: Capsule[] = [
     description:
       "The first concept.\nA starting point.\nGenesis is not just a set of websites; it's the beginning of a new way to show yourself with clarity and professionalism. From scattered links to purpose-driven branding. This is where the idea of DJ Presskit was born as a community and standard.",
     projects: [
-      { name: "Giuliano", web: "https://giuliano.dj-presskit.com", image: "/images/genesis-capsule/giuliano.webp", color: "#c8b6ff" },
-      { name: "Servando", web: "https://servando.dj-presskit.com", image: "/images/genesis-capsule/servando.webp", color: "#0561a3" },
-      { name: "Rolling", web: "https://rolling.dj-presskit.com", image: "/images/genesis-capsule/rolling.webp", color: "#4a1dce" },
-      { name: "DEXTHER", web: "https://dexther.dj-presskit.com", image: "/images/genesis-capsule/dexther.webp", color: "#9642f5" },
-      { name: "LUCIANO", web: "https://lucianobedini.dj-presskit.com", image: "/images/genesis-capsule/luciano.webp", color: "#42a4f5" },
-      { name: "SERENA", web: "https://serena.dj-presskit.com", image: "/images/genesis-capsule/serena.webp", color: "#707070" },
-      { name: "JOACO", web: "https://joacoibanez.dj-presskit.com", image: "/images/genesis-capsule/joaco.webp", color: "#314097" },
-      { name: "Pupi Jaet", web: "https://pupijaet.dj-presskit.com", image: "/images/genesis-capsule/pupi-jaet.webp", color: "#e5e5e5" },
+      {
+        name: "Giuliano",
+        web: "https://giuliano.dj-presskit.com",
+        image: "/images/genesis-capsule/giuliano.webp",
+        color: "#c8b6ff",
+      },
+      {
+        name: "Servando",
+        web: "https://servando.dj-presskit.com",
+        image: "/images/genesis-capsule/servando.webp",
+        color: "#0561a3",
+      },
+      {
+        name: "Rolling",
+        web: "https://rolling.dj-presskit.com",
+        image: "/images/genesis-capsule/rolling.webp",
+        color: "#4a1dce",
+      },
+      {
+        name: "DEXTHER",
+        web: "https://dexther.dj-presskit.com",
+        image: "/images/genesis-capsule/dexther.webp",
+        color: "#9642f5",
+      },
+      {
+        name: "LUCIANO",
+        web: "https://lucianobedini.dj-presskit.com",
+        image: "/images/genesis-capsule/luciano.webp",
+        color: "#42a4f5",
+      },
+      {
+        name: "SERENA",
+        web: "https://serena.dj-presskit.com",
+        image: "/images/genesis-capsule/serena.webp",
+        color: "#707070",
+      },
+      {
+        name: "JOACO",
+        web: "https://joacoibanez.dj-presskit.com",
+        image: "/images/genesis-capsule/joaco.webp",
+        color: "#314097",
+      },
+      {
+        name: "Pupi Jaet",
+        web: "https://pupijaet.dj-presskit.com",
+        image: "/images/genesis-capsule/pupi-jaet.webp",
+        color: "#e5e5e5",
+      },
       { commingSoon: true, name: "Matias", web: "", image: "", color: "" },
-      { name: "Kebin Van Reeken", web: "https://kebinvanreeken.dj-presskit.com", image: "/images/genesis-capsule/kebin-van-reeken.webp", color: "#501269" }
+      {
+        name: "Kebin Van Reeken",
+        web: "https://kebinvanreeken.dj-presskit.com",
+        image: "/images/genesis-capsule/kebin-van-reeken.webp",
+        color: "#501269",
+      },
     ],
   },
 ];
-
-
