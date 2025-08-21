@@ -37,4 +37,6 @@ export type Capsule = {
   title: string;
   description: string;
   projects: Project[];
+  commingSoon?: boolean;
+  demoUrl?: string;
 };

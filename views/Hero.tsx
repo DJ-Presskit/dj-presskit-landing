@@ -4,13 +4,13 @@ import Text from "@/components/Text/Text";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
 import { useWebViewDetection } from "@/hooks/useWebViewDetection";
 import { useEffect } from "react";
-import {useTranslations} from "next-intl";
+import { useTranslations } from "next-intl";
 import { initSafeHeight } from "@/lib/safeHeight";
 
 export default function Hero() {
   const { shouldUseSafeHeight } = useWebViewDetection();
-  const t = useTranslations('hero');
-  const {whatsappLink} = useLocalizedData();
+  const t = useTranslations("hero");
+  const { whatsappLink } = useLocalizedData();
 
   useEffect(() => {
     if (shouldUseSafeHeight) {
@@ -28,21 +28,21 @@ export default function Hero() {
       <BackgroundBeams />
       <div className="!z-[80] flex items-center justify-center flex-col gap-[10vh] section-max-w mx-auto section-px">
         <Text Tag={"h1"} variant="title" className="">
-          {t('title_line1')}
+          {t("title_line1")}
           <br />
-          {t('title_line2')}
+          {t("title_line2")}
         </Text>
         <Text variant="content" className="max-w-[600px] mx-auto !text-center">
-          <strong>{t('desc_strong')}</strong>
+          <strong>{t("desc_strong")}</strong>
           <br />
-          {t('desc')}
+          {t("desc")}
         </Text>
         <DefaultButton
           href={whatsappLink}
           className="uppercase"
           trackingLabel="hero_section"
         >
-          {t('cta')}
+          {t("cta")}
         </DefaultButton>
       </div>
     </div>

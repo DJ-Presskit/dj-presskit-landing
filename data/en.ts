@@ -4,6 +4,10 @@ export const whatsappLink = `https://wa.me/+5491140757359?text=${encodeURICompon
   "Send to start your Presskit"
 )}`;
 
+export const UnlockDemoWhatsappLink = `https://wa.me/+5491140757359?text=${encodeURIComponent(
+  "I want to see the Demo of capsule 00 and the key to access the development."
+)}`;
+
 export const benefitsCards: CardItemType[] = [
   {
     icon: "Rocket",
@@ -81,68 +85,6 @@ export const plans: PlanType[] = [
   },
 ];
 
-export const faqData = [
-  {
-    question:
-      "Why do I need a presskit if I already have Instagram or Linktree?",
-    answer: [
-      "DJ Presskit is your real space, with strategic design and domain that conveys professionalism.",
-      "It unifies your bio, music, dates, rider and photos in a coherent space that Instagram or Linktree cannot offer.",
-      "It positions you as a serious DJ before bookers, labels and your community, beyond a simple profile or list of links.",
-    ],
-    icon: "Lightbulb",
-  },
-  {
-    question: "What exactly does my presskit include?",
-    answer: [
-      "Responsive website, ready in 48 business hours.",
-      "Your bio, social networks and image gallery.",
-      "Events section synchronized with Google Sheets.",
-      "Music section synchronized with SoundCloud.",
-      "Contact form and Google Drive folder to upload everything you need.",
-      "Custom domain ([YourName].dj-presskit.com), hosting and HTTPS certificates.",
-      "Advanced SEO and positioning.",
-    ],
-    icon: "CheckCheck",
-  },
-  {
-    question: "How does the process work and how long does it take?",
-    answer: [
-      "Send your information (bio, photos, networks, links, rider) through a simple form.",
-      "Our team accompanies you closely via WhatsApp or email.",
-      "You receive your finished and published presskit in 48 business hours, with no technical complications.",
-    ],
-    icon: "Clock",
-  },
-  {
-    question: "Can I customize the design to my style?",
-    answer: [
-      "Yes, from the modern Basic Plan to the Premium with 100% custom design.",
-      "We add animations, dynamic sections or SoundCloud integrations depending on the chosen plan.",
-      "We always maintain your visual identity and artistic narrative as the main axis.",
-    ],
-    icon: "UserPen",
-  },
-  {
-    question: "Can I see examples before hiring?",
-    answer:
-      "Of course, access the demo of our latest Advanced Plan Capsule and check real cases of DJs who have already professionalized their image on our networks.",
-    icon: "Eye",
-    link: "https://template-avanzado.dj-presskit.com",
-    linkText: "EXPLORE DEMO",
-  },
-  {
-    question: "What if I later want to update or scale my site?",
-    answer: [
-      "You can modify your events calendar or manage the upload of new photos for the gallery.",
-      "Most of your Presskit content is updated automatically, as it is integrated with your artist tools.",
-      "We offer ongoing support and referral plans for DJs who recommend our services.",
-      "You become part of a community of artists in constant evolution.",
-    ],
-    icon: "PencilRuler",
-  },
-];
-
 export const CAPSULES: Capsule[] = [
   {
     title: "Genesis Capsule",
@@ -205,5 +147,75 @@ export const CAPSULES: Capsule[] = [
         color: "#501269",
       },
     ],
+  },
+  {
+    title: "Capsule 00",
+    description:
+      "The evolution of the concept.\nA design that not only showcases but also connects; fluid animations, SoundCloud integration, multilingual support, and a unique effect that turns each presskit into an unrepeatable experience.\nThis capsule sets the path toward an even higher standard.\n15 spots available.",
+    projects: [],
+    commingSoon: true,
+    demoUrl: "https://demo.dj-presskit.com",
+  },
+];
+
+export const faqData = [
+  {
+    question:
+      "Why do I need a presskit if I already have Instagram or Linktree?",
+    answer: [
+      "DJ Presskit is your real space, with strategic design and domain that conveys professionalism.",
+      "It unifies your bio, music, dates, rider and photos in a coherent space that Instagram or Linktree cannot offer.",
+      "It positions you as a serious DJ before bookers, labels and your community, beyond a simple profile or list of links.",
+    ],
+    icon: "Lightbulb",
+  },
+  {
+    question: "What exactly does my presskit include?",
+    answer: [
+      "Responsive website, ready in 48 business hours.",
+      "Your bio, social networks and image gallery.",
+      "Events section synchronized with Google Sheets.",
+      "Music section synchronized with SoundCloud.",
+      "Contact form and Google Drive folder to upload everything you need.",
+      "Custom domain ([YourName].dj-presskit.com), hosting and HTTPS certificates.",
+      "Advanced SEO and positioning.",
+    ],
+    icon: "CheckCheck",
+  },
+  {
+    question: "How does the process work and how long does it take?",
+    answer: [
+      "Send your information (bio, photos, networks, links, rider) through a simple form.",
+      "Our team accompanies you closely via WhatsApp or email.",
+      "You receive your finished and published presskit in 48 business hours, with no technical complications.",
+    ],
+    icon: "Clock",
+  },
+  {
+    question: "Can I customize the design to my style?",
+    answer: [
+      "Yes, from the modern Basic Plan to the Premium with 100% custom design.",
+      "We add animations, dynamic sections or SoundCloud integrations depending on the chosen plan.",
+      "We always maintain your visual identity and artistic narrative as the main axis.",
+    ],
+    icon: "UserPen",
+  },
+  {
+    question: "Can I see examples before hiring?",
+    answer:
+      "Of course, access the demo of our latest Advanced Plan Capsule and check real cases of DJs who have already professionalized their image on our networks.",
+    icon: "Eye",
+    link: "https://template-avanzado.dj-presskit.com",
+    linkText: "EXPLORE DEMO",
+  },
+  {
+    question: "What if I later want to update or scale my site?",
+    answer: [
+      "You can modify your events calendar or manage the upload of new photos for the gallery.",
+      "Most of your Presskit content is updated automatically, as it is integrated with your artist tools.",
+      "We offer ongoing support and referral plans for DJs who recommend our services.",
+      "You become part of a community of artists in constant evolution.",
+    ],
+    icon: "PencilRuler",
   },
 ];

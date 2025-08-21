@@ -26,8 +26,9 @@
     "from": "From"
   },
   "capsules": {
+    "unlock": "Unlock it",
     "genesis": "Genesis Capsule",
-    "genesis_description": "The first concept ramon. A starting point. Genesis is not just a set of websites; it's the beginning of a new way to show yourself with clarity and professionalism. From scattered links to purpose-driven branding. This is where the idea of DJ Presskit was born as a community and standard."
+    "genesis_description": "The first concept. A starting point. Genesis is not just a set of websites; it's the beginning of a new way to show yourself with clarity and professionalism. From scattered links to purpose-driven branding. This is where the idea of DJ Presskit was born as a community and standard."
   },
   "soundcloud": {
     "partner": "Official Partner",

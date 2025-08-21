@@ -1,17 +1,22 @@
 "use client";
 
 import { Capsule, Project } from "@/@types";
+import AnimatedSeparator from "@/components/AnimatedSeparator";
+import DefaultButton from "@/components/Buttons/DefaultButton";
 import Modal from "@/components/capsuleSection/Modal";
 import ProjectComponent from "@/components/capsuleSection/Project";
+import DecryptedText from "@/components/Text/DecryptedText";
 import Text from "@/components/Text/Text";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
-import { Lock } from "lucide-react";
+import { Cog, Lock } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
 export default function Capsules() {
-  const {CAPSULES} = useLocalizedData();
+  const { CAPSULES } = useLocalizedData();
   return (
     <section id="capsules" className={twMerge("w-full flex flex-col")}>
       {CAPSULES.map((item, index) => {
@@ -36,8 +41,13 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
   projects,
   title,
   description,
+  commingSoon,
+  demoUrl,
   capsuleIndex,
 }) => {
+  const t = useTranslations("capsules");
+  const { UnlockDemoWhatsappLink } = useLocalizedData();
+
   const [modal, setModal] = useState<ModalState>({
     active: false,
     index: 0,
@@ -62,23 +72,69 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
     <div
       ref={container}
       className={twMerge(
-        "container mx-auto w-full flex items-start gap-10 px-6 xl:px-0",
-        capsuleIndex % 2 && "flex-row-reverse",
+        "container mx-auto w-full px-6 xl:px-0",
+        // En mobile, si es comingSoon, usar flex-col simple
+        commingSoon && demoUrl
+          ? "flex !h-full lg:!h-screen flex-col gap-6 lg:flex-row lg:items-start lg:gap-10 mb-[20vh] lg:mb-0"
+          : "flex items-start gap-10",
+        capsuleIndex % 2 && "lg:flex-row-reverse",
+        // Solo aplicar altura cuando no es comingSoon en mobile
         projects.length > 5 ? "h-[200vh]" : "h-[150vh]"
       )}
     >
-      <div className="w-full sticky top-[25%] lg:top-[40%] z-10 flex-1 space-y-5">
+      <div
+        className={twMerge(
+          "w-full flex-1 space-y-5",
+          // En mobile, si es comingSoon, no usar sticky y usar flex-col
+          commingSoon && demoUrl
+            ? "lg:sticky lg:top-[20%] xl:top-[30%] lg:z-10 flex flex-col"
+            : "sticky top-[20%] lg:top-[30%] z-10"
+        )}
+      >
         <motion.div style={{ opacity: opacity1 }}>
           {projects.length === 10 && (
-            <Lock className="size-10 text-accent-2 mb-5" />
+            <Lock
+              className={twMerge(
+                "size-10 text-accent-2 mb-5",
+                capsuleIndex % 2 && "lg:!ml-auto"
+              )}
+            />
+          )}
+          {commingSoon && (
+            <motion.div
+              className={twMerge(
+                "mb-5 w-fit h-fit",
+                commingSoon && demoUrl && "mx-auto lg:mx-0 lg:mb-5",
+                capsuleIndex % 2 && "lg:ml-auto"
+              )}
+              animate={{
+                rotate: [0, 180, 220, 0],
+              }}
+              transition={{
+                duration: 6,
+                ease: "easeInOut",
+                repeat: Infinity,
+                repeatDelay: 2,
+              }}
+            >
+              <Cog className="size-10 text-accent-2" />
+            </motion.div>
           )}
           <Text
             Tag={"h2"}
             variant="title"
-            className={twMerge("text-left", capsuleIndex % 2 && "text-right")}
+            className={twMerge(
+              "text-left",
+              commingSoon &&
+                demoUrl &&
+                "text-center flex justify-center gap-2 lg:block",
+              capsuleIndex % 2 && "lg:text-right"
+            )}
           >
             {title.split(" ")[0]}
-            <br />
+            <br
+              className={twMerge(commingSoon && demoUrl && "hidden lg:block")}
+            />
             <span
               className="font-bold text-accent"
               style={{ fontFamily: "var(--font-primary)" }}
@@ -91,7 +147,11 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
           style={{ opacity: opacity2 }}
           className={twMerge(
             "max-w-[400px]",
-            capsuleIndex % 2 && "ml-auto text-right"
+            // En mobile centrar, en desktop mantener alineación original
+            commingSoon &&
+              demoUrl &&
+              "mx-auto text-center lg:mx-0 lg:text-left",
+            capsuleIndex % 2 && "lg:ml-auto lg:text-right"
           )}
         >
           <Text variant="content">{description}</Text>
@@ -102,17 +162,42 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
           "w-full flex-1 xl:flex-2 flex flex-col items-center justify-center overflow-y-auto self-center"
         )}
       >
-        {projects.map((project, index) => {
-          return (
-            <ProjectComponent
-              index={index}
-              capsuleIndex={capsuleIndex}
-              setModal={setModal}
-              key={index}
-              {...(project as Project)}
-            />
-          );
-        })}
+        {commingSoon && demoUrl ? (
+          <Link
+            href={UnlockDemoWhatsappLink}
+            target="_blank"
+            className="w-full"
+          >
+            <button className="cursor-pointer flex flex-col items-center justify-end w-full group overflow-hidden relative">
+              <div className="absolute w-0 h-auto group-hover:w-full blur-xl transition-all duration-700 ease-out top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-radial from-accent aspect-square via-secondary via-60% to-secondary -z-10 rounded-full" />
+              <AnimatedSeparator transformOrigin="center" />
+              <Text
+                variant="subtitle"
+                className={twMerge("transition p-10 uppercase")}
+              >
+                <DecryptedText
+                  text={t("unlock")}
+                  speed={150}
+                  animateOn="view"
+                  revealDirection="center"
+                />
+              </Text>
+              <AnimatedSeparator transformOrigin="center" />
+            </button>
+          </Link>
+        ) : (
+          projects.map((project, index) => {
+            return (
+              <ProjectComponent
+                index={index}
+                capsuleIndex={capsuleIndex}
+                setModal={setModal}
+                key={index}
+                {...(project as Project)}
+              />
+            );
+          })
+        )}
       </div>
       <Modal modal={modal} projects={projects} />
     </div>

@@ -10,7 +10,7 @@ interface AnimatedSeparatorProps {
   className?: string;
   direction?: "vertical" | "horizontal";
   once?: boolean;
-  transformOrigin?: "left" | "center";
+  transformOrigin?: "left" | "center" | "right";
 }
 
 const AnimatedSeparator = ({
@@ -73,7 +73,8 @@ const AnimatedSeparator = ({
         className={twMerge(
           `from-accent to-transparent rounded-full`,
           transformOrigin === "center" && "bg-radial",
-          transformOrigin === "left" && "bg-gradient-to-r"
+          transformOrigin === "left" && "bg-gradient-to-r",
+          transformOrigin === "right" && "bg-gradient-to-l"
         )}
       />
     </div>
