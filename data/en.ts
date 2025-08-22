@@ -59,7 +59,7 @@ export const plans: PlanType[] = [
       "Professional email with your domain.",
       "Delivery in less than 48 hours.",
     ],
-    href: "https://template-avanzado.dj-presskit.com",
+    href: "https://demo.dj-presskit.com",
     buttonText: "VIEW DEMO",
   },
   {
