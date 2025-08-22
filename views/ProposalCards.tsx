@@ -52,6 +52,7 @@ const Card = ({
   includes = [],
   href,
   buttonText,
+  discountText,
   discount,
 }: CardProps) => {
   const { CAPSULES } = useLocalizedData();
@@ -73,8 +74,7 @@ const Card = ({
       <div className="relative z-20 text-center h-full w-full flex items-center justify-center flex-col gap-10">
         {discount && (
           <span className="px-2 py-1 font-bold rounded bg-red-600 text-white text-sm animate-bounce md:absolute -top-10">
-            ÚLTIMOS {10 - CAPSULES[0].projects.length} - CÁPSULA{" "}
-            <strong className="text-accent">GÉNESIS</strong>
+            {discountText} - CÁPSULA <strong className="text-accent">00</strong>
           </span>
         )}
         <Text Tag={"h5"} variant="subtitle">

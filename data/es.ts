@@ -47,6 +47,8 @@ export const iconMap = {
 
 export const plans: PlanType[] = [
   {
+    discount: 20,
+    discountText: "PRE-VENTA 20% OFF",
     id: "advanced",
     title: "Plan Presskit Avanzado",
     description:

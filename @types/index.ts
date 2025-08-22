@@ -22,6 +22,7 @@ export type PlanType = {
   href: string;
   buttonText: string;
   discount?: number;
+  discountText?: string;
 };
 
 export type Project = {
