@@ -59,7 +59,7 @@ export const plans: PlanType[] = [
       "Email profesional con tu dominio.",
       "Entrega en menos de 48hs.",
     ],
-    href: "https://template-avanzado.dj-presskit.com",
+    href: "https://demo.dj-presskit.com",
     buttonText: "VER DEMO",
   },
   {
@@ -200,7 +200,7 @@ export const faqData = [
     answer:
       "Claro, accedé al demo de nuestra ultima CAPSULE de Plan Avanzado y revisá casos reales de DJs que ya profesionalizaron su imagen en nuestras redes.",
     icon: "Eye",
-    link: "https://template-avanzado.dj-presskit.com",
+    link: "https://demo.dj-presskit.com",
     linkText: "EXPLORAR DEMO",
   },
   {

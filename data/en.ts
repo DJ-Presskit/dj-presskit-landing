@@ -201,7 +201,7 @@ export const faqData = [
     answer:
       "Of course, access the demo of our latest Advanced Plan Capsule and check real cases of DJs who have already professionalized their image on our networks.",
     icon: "Eye",
-    link: "https://template-avanzado.dj-presskit.com",
+    link: "https://demo.dj-presskit.com",
     linkText: "EXPLORE DEMO",
   },
   {
