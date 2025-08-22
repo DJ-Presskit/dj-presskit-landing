@@ -4,10 +4,6 @@ export const whatsappLink = `https://wa.me/+5491140757359?text=${encodeURICompon
   "Send to start your Presskit"
 )}`;
 
-export const UnlockDemoWhatsappLink = `https://wa.me/+5491140757359?text=${encodeURIComponent(
-  "I want to see the Demo of capsule 00 and the key to access the development."
-)}`;
-
 export const benefitsCards: CardItemType[] = [
   {
     icon: "Rocket",

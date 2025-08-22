@@ -1,14 +1,12 @@
 "use client";
-
 import { Capsule, Project } from "@/@types";
 import AnimatedSeparator from "@/components/AnimatedSeparator";
-import DefaultButton from "@/components/Buttons/DefaultButton";
 import Modal from "@/components/capsuleSection/Modal";
 import ProjectComponent from "@/components/capsuleSection/Project";
 import DecryptedText from "@/components/Text/DecryptedText";
 import Text from "@/components/Text/Text";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Cog, Lock } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -17,6 +15,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function Capsules() {
   const { CAPSULES } = useLocalizedData();
+
   return (
     <section id="capsules" className={twMerge("w-full flex flex-col")}>
       {CAPSULES.map((item, index) => {
@@ -46,7 +45,6 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
   capsuleIndex,
 }) => {
   const t = useTranslations("capsules");
-  const { UnlockDemoWhatsappLink } = useLocalizedData();
 
   const [modal, setModal] = useState<ModalState>({
     active: false,
@@ -163,11 +161,7 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
         )}
       >
         {commingSoon && demoUrl ? (
-          <Link
-            href={UnlockDemoWhatsappLink}
-            target="_blank"
-            className="w-full"
-          >
+          <Link href={demoUrl} target="_blank" className="w-full">
             <button className="cursor-pointer flex flex-col items-center justify-end w-full group overflow-hidden relative">
               <div className="absolute w-0 h-auto group-hover:w-full blur-xl transition-all duration-700 ease-out top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-radial from-accent aspect-square via-secondary via-60% to-secondary -z-10 rounded-full" />
               <AnimatedSeparator transformOrigin="center" />
@@ -176,7 +170,7 @@ const CapsuleSection: React.FC<CapsuleSectionProps> = ({
                 className={twMerge("transition p-10 uppercase")}
               >
                 <DecryptedText
-                  text={t("unlock")}
+                  text={t("knowIt")}
                   speed={150}
                   animateOn="view"
                   revealDirection="center"
