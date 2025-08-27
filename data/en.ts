@@ -53,7 +53,7 @@ export const plans: PlanType[] = [
     title: "Advanced Presskit Plan",
     description:
       "A more visual, dynamic presskit with extra features to stand out.",
-    price: 220,
+    price: 150,
     includes: [
       "Design with animations and parallax transitions.",
       "Upcoming events section connected to Google Sheets.",
