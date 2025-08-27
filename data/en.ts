@@ -149,7 +149,7 @@ export const CAPSULES: Capsule[] = [
   {
     title: "Capsule 00",
     description:
-      "The evolution of the concept.\nA design that not only showcases but also connects; fluid animations, SoundCloud integration, multilingual support, and a unique effect that turns each presskit into an unrepeatable experience.\nThis capsule sets the path toward an even higher standard.\n15 spots available.",
+      "The evolution of the concept.\nA design that not only showcases but also connects; fluid animations, SoundCloud integration, multilingual support, and a unique effect that turns each presskit into an unrepeatable experience.\nThis capsule sets the path toward an even higher standard.",
     projects: [],
     commingSoon: true,
     demoUrl: "https://demo.dj-presskit.com",
