@@ -137,7 +137,12 @@ export const CAPSULES: Capsule[] = [
         image: "/images/genesis-capsule/pupi-jaet.webp",
         color: "#e5e5e5",
       },
-      { commingSoon: true, name: "Matias", web: "", image: "", color: "" },
+      {
+        name: "Matias D'Ignoto",
+        web: "https://matiasdignoto.dj-presskit.com",
+        image: "/images/genesis-capsule/matias-dignoto.webp",
+        color: "#011a94",
+      },
       {
         name: "Kebin Van Reeken",
         web: "https://kebinvanreeken.dj-presskit.com",
