@@ -48,8 +48,6 @@ export const iconMap = {
 export const plans: PlanType[] = [
   {
     id: "advanced",
-    discount: 20,
-    discountText: "PRE-SALE 20% OFF",
     title: "Advanced Presskit Plan",
     description:
       "A more visual, dynamic presskit with extra features to stand out.",
@@ -69,7 +67,7 @@ export const plans: PlanType[] = [
     title: "Premium Presskit Plan",
     description:
       "For demanding DJs seeking a custom boost, with no limits to creativity or functionality.",
-    price: 680,
+    price: 673,
     includes: [
       "Everything from the Advanced Plan.",
       "Unique design from scratch.",
