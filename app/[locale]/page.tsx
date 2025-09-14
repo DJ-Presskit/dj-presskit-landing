@@ -12,7 +12,7 @@ import Icon from "@/components/Icons/Icon";
 import SoundCloudSupportBanner from "@/components/soundcloud/SoundCloudSupportBanner";
 
 export default function Home() {
-  const { whatsappLink } = useLocalizedData();
+  const { calendlyLink } = useLocalizedData();
   useEffect(() => {
     const delay = (ms: number) =>
       new Promise((resolve) => setTimeout(resolve, ms));
@@ -37,7 +37,7 @@ export default function Home() {
       <CTA />
       <FAQ />
       <LandingLink
-        href={whatsappLink}
+        href={calendlyLink}
         className="fixed bottom-5 right-5 bg-gradient-to-r to-accent/50 group from-secondary-lighter w-[50px] h-[50px] lg:w-[70px] lg:h-[70px] aspect-square flex items-center justify-center rounded-full"
         newTab
       >

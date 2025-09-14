@@ -1,8 +1,6 @@
 import { CardItemType, PlanType, Capsule } from "@/@types";
 
-export const whatsappLink = `https://wa.me/+5491140757359?text=${encodeURIComponent(
-  "Send to start your Presskit"
-)}`;
+export const calendlyLink = 'https://calendly.com/dj-presskit/entrevista';
 
 export const benefitsCards: CardItemType[] = [
   {
@@ -76,7 +74,7 @@ export const plans: PlanType[] = [
       "1-on-1 guidance throughout the process.",
       "Delivery in ~20 days.",
     ],
-    href: "https://wa.me/542477313700",
+    href: calendlyLink,
     buttonText: "LET'S TALK",
   },
 ];

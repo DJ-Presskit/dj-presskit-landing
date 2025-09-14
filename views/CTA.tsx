@@ -10,7 +10,7 @@ import { twMerge } from "tailwind-merge";
 
 export default function CTA({ className }: { className?: string }) {
   const t = useTranslations("cta");
-  const { whatsappLink } = useLocalizedData();
+  const { calendlyLink } = useLocalizedData();
 
   return (
     <section
@@ -38,7 +38,7 @@ export default function CTA({ className }: { className?: string }) {
         </Text>
 
         <DefaultButton
-          href={whatsappLink}
+          href={calendlyLink}
           className="uppercase"
           trackingLabel="cta_section"
         >

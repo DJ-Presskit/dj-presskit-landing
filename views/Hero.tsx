@@ -10,7 +10,7 @@ import { initSafeHeight } from "@/lib/safeHeight";
 export default function Hero() {
   const { shouldUseSafeHeight } = useWebViewDetection();
   const t = useTranslations("hero");
-  const { whatsappLink } = useLocalizedData();
+  const { calendlyLink } = useLocalizedData();
 
   useEffect(() => {
     if (shouldUseSafeHeight) {
@@ -38,7 +38,7 @@ export default function Hero() {
           {t("desc")}
         </Text>
         <DefaultButton
-          href={whatsappLink}
+          href={calendlyLink}
           className="uppercase"
           trackingLabel="hero_section"
         >
