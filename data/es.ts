@@ -28,9 +28,9 @@ export const plans: PlanType[] = [
     includes: [
       "Diseño con animaciones y transiciones parallax.",
       "Sección de próximos eventos conectada a Google Sheets.",
-      "Dominio personalizado incluido con membresia.",
+      "Dominio personalizado incluido con membresía.",
       "Email profesional con tu dominio.",
-      "Entrega en menos de 48hs.",
+      "Entrega en menos de 48 hs.",
     ],
     href: "https://demo.dj-presskit.com",
     buttonText: "VER DEMO",
@@ -148,7 +148,7 @@ export const faqData = [
       "Sitio web responsive, listo en 48 hs hábiles.",
       "Tu bio, redes sociales y galería de imágenes.",
       "Sección de eventos sincronizada con Google Sheets.",
-      "Sección de musica sincronizada a Soundcloud.",
+      "Sección de música sincronizada a SoundCloud.",
       "Formulario de contacto y carpeta de Google Drive para subir todo lo que necesites.",
       "Dominio personalizado ([TuNombre].dj-presskit.com), hosting y certificados HTTPS.",
       "SEO Avanzado y posicionamiento.",
@@ -159,7 +159,7 @@ export const faqData = [
     question: "¿Cómo funciona el proceso y cuánto demora?",
     answer: [
       "Envías tu información (bio, fotos, redes, links, rider) a través de un formulario sencillo.",
-      "Nuestro equipo te acompaña de forma cercana por WhatsApp o mail.",
+      "Nuestro equipo te acompaña de forma cercana por WhatsApp o email.",
       "Recibís tu presskit terminado y publicado en 48 hs hábiles, sin complicaciones técnicas.",
     ],
     icon: "Clock",
@@ -176,7 +176,7 @@ export const faqData = [
   {
     question: "¿Puedo ver ejemplos antes de contratar?",
     answer:
-      "Claro, accedé al demo de nuestra ultima CAPSULE de Plan Avanzado y revisá casos reales de DJs que ya profesionalizaron su imagen en nuestras redes.",
+      "Claro, accedé al demo de nuestra última CÁPSULA del Plan Avanzado y revisá casos reales de DJs que ya profesionalizaron su imagen en nuestras redes.",
     icon: "Eye",
     link: "https://demo.dj-presskit.com",
     linkText: "EXPLORAR DEMO",
@@ -184,8 +184,8 @@ export const faqData = [
   {
     question: "¿Y si después quiero actualizar o escalar mi sitio?",
     answer: [
-      "Podés modificar tu calendario de eventos o gestionar la subida de nuevas fotos para la galeria.",
-      "La mayoria del contenido de tu Presskit se actualiza automaticamente, ya que esta integrado a tus herramientas como Artista",
+      "Podés modificar tu calendario de eventos o gestionar la subida de nuevas fotos para la galería.",
+      "La mayoría del contenido de tu presskit se actualiza automáticamente, ya que está integrado a tus herramientas como artista.",
       "Ofrecemos soporte continuo y planes de referidos para DJs que recomienden nuestros servicios.",
       "Formás parte de una comunidad de artistas en constante evolución.",
     ],

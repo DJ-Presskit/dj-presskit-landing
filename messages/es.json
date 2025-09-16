@@ -7,17 +7,42 @@
     "title_line1": "Tu música ya tiene estilo,",
     "title_line2": "tu presskit también debería",
     "desc_strong": "Convertí tus flyers, drives y PDFs en tu espacio digital optimizado para conseguir MÁS BOOKINGS, en 48 horas, sin vueltas.",
-    "desc": "Reuní tu bio, musica, sets, fechas, lanzamientos, rider y fotos en un solo link que hable por vos ante bookers y agencias.\n\nComunidad, claridad y estatus en cada clic.",
+    "desc": "Reuní tu bio, música, sets, fechas, lanzamientos, rider y fotos en un solo link que hable por vos ante bookers y agencias.\n\nComunidad, claridad y estatus en cada clic.",
     "check-1": "Pago flexible en cuotas",
-    "check-2": "Garantia 14 diás",
-    "check-3": "Entrega en 48hs",
+    "check-2": "Garantía 14 días",
+    "check-3": "Entrega en 48 hs",
     "cta": "Agendá una reunión"
   },
-  
+  "theProblem": {
+    "title": "El problema que\ntodos conocemos",
+    "subtitle": "Los bookers deciden en 5 segundos.\nSi tu presentación no está clara, ya perdiste.",
+    "left": {
+      "title": "Tu realidad actual:",
+      "item1": "Links dispersos por todas partes.",
+      "item2": "PDF desactualizado.",
+      "item3": "Carpeta de Drive desordenada.",
+      "item4": "BIO que no convence.",
+      "item5": "Perdés fechas por mala presentación."
+    },
+    "right": {
+      "title": "Con DJ PRESSKIT:",
+      "item1": "Diseño exclusiva y profesional.",
+      "item2": "Estructura optimizada para bookers.",
+      "item3": "Entrega garantizada en 48 hs.",
+      "item4": "Un solo link para todo.",
+      "item5": "Toda tu info a un clic."
+    },
+    "bottom": {
+      "title": "¿CÚANTAS FECHAS YA PERDISTE?",
+      "desc": "Cada día que pasas con una presentación desprolija es una oportunidad perdida. Los bookers no esperan. Tu competencia ya tiene todo ordenado."
+    }
+  },
+
   "cta": {
     "title": "Tu comunidad <br></br> te está esperando",
     "desc": "Seducí a bookers, sellos y fans con un presskit que hable por vos. <strong>Simplificá tu comunicación y potenciá tu marca hoy.</strong>",
-    "button": "CONTACTANOS"
+    "button": "CONTACTANOS",
+    "default": "Agendá una reunión"
   },
   "faq": {
     "title": "Preguntas Frecuentes",
@@ -28,9 +53,9 @@
     "from": "Desde"
   },
   "capsules": {
-    "knowIt": "Conócela",
+    "knowIt": "Conocela",
     "genesis": "Cápsula Génesis",
-    "genesis_description": "El primer concepto. Un punto de partida. Genesis no es solo un conjunto de sitios webs, es el inicio de una forma nueva de mostrarse con claridad y profesionalismo. De los links sueltos al branding con propósito. Acá nació la idea de DJ Presskit como comunidad y estándar."
+    "genesis_description": "El primer concepto. Un punto de partida. Génesis no es solo un conjunto de sitios web; es el inicio de una forma nueva de mostrarse con claridad y profesionalismo. De los links sueltos al branding con propósito. Acá nació la idea de DJ Presskit como comunidad y estándar."
   },
   "soundcloud": {
     "partner": "Official Partner",
@@ -44,6 +69,6 @@
     "let_s_talk": "HABLEMOS"
   },
   "projects": {
-    "soon": "proximamente"
+    "soon": "próximamente"
   }
 }

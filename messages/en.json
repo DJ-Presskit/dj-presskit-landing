@@ -9,6 +9,30 @@
     "desc": "Professionalize your personal brand: gather your bio, playlists, dates and photos into a single link that speaks for you before you hit play. Community, clarity and status in every click.",
     "cta": "Start your Presskit"
   },
+  "theProblem": {
+    "title": "The problem we all know",
+    "subtitle": "Bookers decide in 5 seconds. If your presentation isn’t clear, you’ve already lost.",
+    "left": {
+      "title": "Your current reality",
+      "item1": "Links scattered everywhere",
+      "item2": "Vague bio that doesn’t convince",
+      "item3": "Old or uncurated photos",
+      "item4": "Bookers without context",
+      "item5": "You lose dates due to poor presentation"
+    },
+    "right": {
+      "title": "DJ Presskit",
+      "item1": "Exclusive, professional capsule",
+      "item2": "Structure optimized for bookers",
+      "item3": "Delivery guaranteed in 48 h",
+      "item4": "One link for everything",
+      "cta": "I want my presskit running"
+    },
+    "bottom": {
+      "title": "How many gigs have you already lost?",
+      "desc": "Every day with a messy presentation is a lost opportunity. Bookers don’t wait. Your competition already has everything organized."
+    }
+  },
   "cards": {
     "title": "Why choose DJ Presskit?"
   },
