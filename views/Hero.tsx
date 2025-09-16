@@ -1,33 +1,43 @@
-import { BackgroundBeams } from "@/components/AnimatedBackgrounds/BackgroundBeams";
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import Text from "@/components/Text/Text";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
-import { useWebViewDetection } from "@/hooks/useWebViewDetection";
-import { useEffect } from "react";
+import {
+  Check,
+  CheckCheck,
+  CheckCircle,
+  Star,
+  User2,
+  Users,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
-import { initSafeHeight } from "@/lib/safeHeight";
+
+const SocialProofBadge = () => {
+  const t = useTranslations("hero");
+
+  return (
+    <div className="rounded-full flex gap-2 bg-primary/20 p-2 px-5 mb-10 items-center">
+      <Users />
+      <Text variant="content">{t("socialProof")}</Text>
+      <div className="flex items-center">
+        {Array.from({ length: 5 }).map((_, idx) => (
+          <Star key={idx} className="text-yellow-500 fill-yellow-500 size-4" />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default function Hero() {
-  const { shouldUseSafeHeight } = useWebViewDetection();
   const t = useTranslations("hero");
   const { calendlyLink } = useLocalizedData();
 
-  useEffect(() => {
-    if (shouldUseSafeHeight) {
-      const cleanup = initSafeHeight();
-      return cleanup;
-    }
-  }, [shouldUseSafeHeight]);
-
   return (
     <div
-      className={`${
-        shouldUseSafeHeight ? "safe-height-custom" : "h-screen"
-      } w-full bg-secondary flex flex-col items-center justify-center antialiased overflow-x-hidden`}
+      className={`h-[100dvh] w-full bg-secondary flex flex-col items-center justify-center overflow-x-hidden`}
     >
-      <BackgroundBeams />
-      <div className="!z-[80] flex items-center justify-center flex-col gap-[10vh] section-max-w mx-auto section-px">
-        <Text Tag={"h1"} variant="title" className="">
+      <div className="!z-[80] flex items-center  justify-center flex-col gap-10 section-max-w mx-auto section-px">
+        <SocialProofBadge />
+        <Text Tag={"h1"} variant="title" className="my-10">
           {t("title_line1")}
           <br />
           {t("title_line2")}
@@ -37,6 +47,16 @@ export default function Hero() {
           <br />
           {t("desc")}
         </Text>
+        <div className="grid grid-cols-3  gap-2 w-full lg:w-fit lg:mx-auto lg:flex lg:gap-5">
+          {Array.from({ length: 3 }).map((_, idx) => (
+            <div key={idx} className="flex items-center gap-2">
+              <CheckCircle className="text-green-500 w-5 h-5 min-w-5 min-h-5 lg:w-6 lg:h-6" />
+              <Text variant="custom" className="text-xs text-left lg:text-sm">
+                {t(`check-${idx + 1}`)}
+              </Text>
+            </div>
+          ))}
+        </div>
         <DefaultButton
           href={calendlyLink}
           className="uppercase"

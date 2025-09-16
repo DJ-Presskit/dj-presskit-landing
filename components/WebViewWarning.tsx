@@ -13,7 +13,7 @@ export const WebViewWarning = () => {
   return (
     <>
       {isVisible && (
-        <div className="fixed inset-0 flex items-center justify-center w-screen h-screen z-[9999] backdrop-blur-xl p-5">
+        <div className="fixed inset-0 flex items-center justify-center w-screen h-[100dvh] z-[9999] backdrop-blur-xl p-5">
           <X
             className="size-6 absolute top-5 right-5 cursor-pointer hover:opacity-70 transition-opacity"
             onClick={() => setIsVisible(false)}
