@@ -7,12 +7,6 @@ export type FAQItemType = {
   icon: React.ReactElement;
 };
 
-export type CardItemType = {
-  icon: string;
-  title: string;
-  description: string;
-};
-
 export type PlanType = {
   id?: string;
   title: string;

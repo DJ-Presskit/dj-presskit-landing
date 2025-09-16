@@ -3,15 +3,17 @@
     "language": "Idioma"
   },
   "hero": {
+    "socialProof": "+15 DJs ya lo usan",
     "title_line1": "Tu música ya tiene estilo,",
     "title_line2": "tu presskit también debería",
-    "desc_strong": "Convertí tus flyers y drives en tu espacio digital, en 48 horas sin tocar una línea de código.",
-    "desc": "Profesionalizá tu marca personal: reuní tu bio, playlists, fechas y fotos en un solo link que hable por vos antes de que pongas play. Comunidad, claridad y estatus en cada clic.",
-    "cta": "¡Empezá tu Presskit!"
+    "desc_strong": "Convertí tus flyers, drives y PDFs en tu espacio digital optimizado para conseguir MÁS BOOKINGS, en 48 horas, sin vueltas.",
+    "desc": "Reuní tu bio, musica, sets, fechas, lanzamientos, rider y fotos en un solo link que hable por vos ante bookers y agencias.\n\nComunidad, claridad y estatus en cada clic.",
+    "check-1": "Pago flexible en cuotas",
+    "check-2": "Garantia 14 diás",
+    "check-3": "Entrega en 48hs",
+    "cta": "Agendá una reunión"
   },
-  "cards": {
-    "title": "¿Por qué elegir DJ Presskit?"
-  },
+  
   "cta": {
     "title": "Tu comunidad <br></br> te está esperando",
     "desc": "Seducí a bookers, sellos y fans con un presskit que hable por vos. <strong>Simplificá tu comunicación y potenciá tu marca hoy.</strong>",

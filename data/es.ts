@@ -1,33 +1,7 @@
-import { CardItemType, PlanType, Capsule } from "@/@types";
+import { PlanType, Capsule } from "@/@types";
 
 
 export const calendlyLink = 'https://calendly.com/dj-presskit/entrevista';
-
-export const benefitsCards: CardItemType[] = [
-  {
-    icon: "Rocket",
-    title: "Entrega express en 48 hs",
-    description: "Tu presskit listo para compartir cuando tu ritmo no espera.",
-  },
-  {
-    icon: "Link",
-    title: "Unifica tu talento",
-    description:
-      "Agrupa tu música, bio y próximas fechas en un solo espacio profesional.",
-  },
-  {
-    icon: "Headphones",
-    title: "Imagen profesional",
-    description:
-      "Diseño premium que refleja la calidad de tu música ante bookers y fans.",
-  },
-  {
-    icon: "Brain",
-    title: "Sin complicaciones",
-    description:
-      "Envíanos tu info y despreocúpate: nosotros nos encargamos de todo el proceso.",
-  },
-];
 
 export const iconMap = {
   Rocket: "Rocket",

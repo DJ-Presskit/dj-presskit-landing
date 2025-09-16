@@ -15,7 +15,6 @@ interface DefaultButtonProps {
   type?: "submit" | "reset" | "button";
   disabled?: boolean;
   childrenClassName?: string;
-  noGlow?: boolean;
   trackingLabel?: string;
 }
 
@@ -28,13 +27,12 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
   type,
   disabled,
   childrenClassName,
-  noGlow = "false",
   trackingLabel,
 }) => {
   const variants = {
     primary: {
-      container: "backdrop-blur-xs",
-      text: "text-primary",
+      container: "bg-accent-2 border-accent-2",
+      text: "text-secondary",
     },
     secondary: {
       container: "",
@@ -48,9 +46,9 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
 
   const renderChildren = () => (
     <Text
-      variant="content"
+      variant="custom"
       className={twMerge(
-        "font-bold transition duration-500 lg:!text-xl",
+        "font-bold transition duration-500 ",
         variants[variant].text,
         childrenClassName
       )}
@@ -75,7 +73,7 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
       onClick={handleOnClick}
       transition={{ type: "spring", duration: 0.1 }}
       className={twMerge(
-        "w-fit h-[60px] relative min-w-[250px] disabled:opacity-50 disabled:pointer-events-none group flex px-5 lg:px-10 items-center justify-center cursor-pointer transition duration-500 border-2 border-neutral-500",
+        "w-full md:w-fit h-[60px] relative min-w-[250px] disabled:opacity-50 disabled:pointer-events-none group flex px-5 lg:px-10 items-center justify-center cursor-pointer transition duration-500 border-2 border-neutral-500",
         variants[variant].container,
         className
       )}
