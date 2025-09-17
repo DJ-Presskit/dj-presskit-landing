@@ -67,5 +67,41 @@
   },
   "projects": {
     "soon": "soon"
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "No technical hassles. We set it up, you focus on your music.",
+    "steps": {
+      "step1": {
+        "title": "Brief diagnosis",
+        "description": "10-15 minute meeting to understand your project and objectives.",
+        "duration": "15 min"
+      },
+      "step2": {
+        "title": "Capsule and personalization",
+        "description": "We choose your exclusive capsule and define colors, structure, and content.",
+        "duration": "2h"
+      },
+      "step3": {
+        "title": "Content upload",
+        "description": "We send you a simple form. You upload photos, bio, links, and we organize it.",
+        "duration": "1h"
+      },
+      "step4": {
+        "title": "Delivery in 48h",
+        "description": "We show you the complete preview and make quick adjustments.",
+        "duration": "48h"
+      },
+      "step5": {
+        "title": "Publication",
+        "description": "Your presskit is ready to share. Direct link + optional QR.",
+        "duration": "0h"
+      }
+    },
+    "cta": {
+      "title": "Ready to start?",
+      "description": "First meeting at no cost. We discuss your project and see how to help you.",
+      "button": "Schedule brief meeting"
+    }
   }
 }

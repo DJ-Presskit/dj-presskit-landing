@@ -6,6 +6,7 @@ import CTA from "@/views/CTA";
 import Capsules from "@/views/Capsules";
 import SoundCloudSupportBanner from "@/components/soundcloud/SoundCloudSupportBanner";
 import TheProblem from "@/views/TheProblem";
+import HowItsWorks from "@/views/HowItsWorks";
 
 export default function Home() {
   return (
@@ -13,9 +14,10 @@ export default function Home() {
       <Hero />
       <SoundCloudSupportBanner />
       <TheProblem />
+      <HowItsWorks />
+      <CTA />
       <Capsules />
       <ProposalCards />
-      <CTA />
       <FAQ />
 
       <div
