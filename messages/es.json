@@ -26,11 +26,11 @@
     },
     "right": {
       "title": "Con DJ PRESSKIT:",
-      "item1": "Diseño exclusiva y profesional.",
+      "item1": "Diseño exclusivo y profesional.",
       "item2": "Estructura optimizada para bookers.",
       "item3": "Entrega garantizada en 48 hs.",
       "item4": "Un solo link para todo.",
-      "item5": "Toda tu info a un clic."
+      "item5": "Optimizacion SEO nativa."
     },
     "bottom": {
       "title": "¿CÚANTAS FECHAS YA PERDISTE?",
@@ -40,9 +40,9 @@
 
   "cta": {
     "title": "Tu comunidad <br></br> te está esperando",
-    "desc": "Seducí a bookers, sellos y fans con un presskit que hable por vos. <strong>Simplificá tu comunicación y potenciá tu marca hoy.</strong>",
-    "button": "CONTACTANOS",
-    "default": "Agendá una reunión"
+    "subtitle": "¿Listo para empezar?",
+    "desc": "Seducí a bookers, sellos y fans con un presskit que hable por vos. <strong>Unifica tu comunicación y da el salto hacia el nuevo estandar.</strong>",
+    "button": "Hablemos"
   },
   "faq": {
     "title": "Preguntas Frecuentes",
@@ -70,5 +70,27 @@
   },
   "projects": {
     "soon": "próximamente"
+  },
+  "howItWorks": {
+    "title": "Cómo funciona",
+    "subtitle": "Sin enredos técnicos. Nosotros lo montamos, vos te enfocás en tu música.",
+    "steps": {
+      "step1": {
+        "title": "Diagnóstico breve",
+        "description": "Reunión de 15-20 minutos para entender tu situacion y asesorarte de la mejor manera."
+      },
+      "step2": {
+        "title": "Carga de contenido",
+        "description": "Te enviamos un form simple. Subís fotos, bio, links, rider, etc...\nNosotros lo organizamos."
+      },
+      "step3": {
+        "title": "Entrega en<br></br>48 hs",
+        "description": "En menos de 48 hs tenemos tu Presskit listo y hacemos correcciones 1 a 1 con vos antes de Lanzarlo."
+      },
+      "step4": {
+        "title": "Lanzamiento",
+        "description": "Tu presskit está listo para empezar a compartirlo, ponerlo en tu bio y presentarte con un link."
+      }
+    }
   }
 }

@@ -3,6 +3,7 @@ import Text from "@/components/Text/Text";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
 import { CheckCircle, Star, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 export default function Hero() {
@@ -45,7 +46,12 @@ export default function Hero() {
         <div className="grid grid-cols-3  gap-2 w-full lg:w-fit lg:mx-auto lg:flex lg:gap-5">
           {Array.from({ length: 3 }).map((_, idx) => (
             <div key={idx} className="flex items-center gap-2">
-              <CheckCircle className="text-green-500 w-5 h-5 min-w-5 min-h-5 lg:w-6 lg:h-6" />
+              <Image
+                src={"/resources/check-icon-3d.svg"}
+                alt="check"
+                width={20}
+                height={20}
+              />
               <Text variant="custom" className="text-xs text-left lg:text-sm">
                 {t(`check-${idx + 1}`)}
               </Text>

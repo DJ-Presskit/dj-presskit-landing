@@ -30,6 +30,9 @@ export default function CTA({ className }: { className?: string }) {
         <Text Tag={"h4"} variant="title">
           {t.rich("title", { br: () => <br></br> })}
         </Text>
+        <Text variant="content" className="text-accent font-bold">
+          {t("subtitle")}
+        </Text>
 
         <Text variant="content" className="text-neutral-500 max-w-[600px]">
           {t.rich("desc", {
