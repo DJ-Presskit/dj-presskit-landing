@@ -7,6 +7,7 @@ import Capsules from "@/views/Capsules";
 import SoundCloudSupportBanner from "@/components/soundcloud/SoundCloudSupportBanner";
 import TheProblem from "@/views/TheProblem";
 import HowItsWorks from "@/views/HowItsWorks";
+import Includes from "@/views/Includes";
 
 export default function Home() {
   return (
@@ -16,15 +17,10 @@ export default function Home() {
       <TheProblem />
       <HowItsWorks />
       <CTA />
-      <Capsules />
+      <Includes />
+      {/* <Capsules />
       <ProposalCards />
-      <FAQ />
-
-      <div
-        className={
-          "h-[100px] translate-y-[99px] w-full  absolute bottom-0 left-0 bg-gradient-to-b from-secondary to-transparent z-50"
-        }
-      ></div>
+      <FAQ /> */}
     </main>
   );
 }
