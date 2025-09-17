@@ -21,7 +21,6 @@ export default function HowItsWorks() {
       number: "1",
       title: t.rich("steps.step1.title", { br: () => <br></br> }),
       description: t("steps.step1.description"),
-      duration: t("steps.step1.duration"),
       icon: (
         <Image
           src={"/resources/messages-3d.svg"}
@@ -35,7 +34,6 @@ export default function HowItsWorks() {
       number: "2",
       title: t.rich("steps.step2.title", { br: () => <br></br> }),
       description: t("steps.step2.description"),
-      duration: t("steps.step2.duration"),
       icon: (
         <Image
           src={"/resources/upload-3d.svg"}
@@ -49,7 +47,6 @@ export default function HowItsWorks() {
       number: "3",
       title: t.rich("steps.step3.title", { br: () => <br></br> }),
       description: t("steps.step3.description"),
-      duration: t("steps.step3.duration"),
       icon: (
         <Image
           src={"/resources/clock-3d.svg"}
@@ -63,7 +60,6 @@ export default function HowItsWorks() {
       number: "4",
       title: t.rich("steps.step4.title", { br: () => <br></br> }),
       description: t("steps.step4.description"),
-      duration: t("steps.step4.duration"),
       icon: (
         <Image
           src={"/resources/rocket-3d.svg"}
