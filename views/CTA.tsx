@@ -15,10 +15,11 @@ export default function CTA({ className }: { className?: string }) {
   return (
     <section
       className={twMerge(
-        "relative section-px py-20 lg:py-40 section-my mx-auto bg-radial from-secondary-lighter to-secondary-lighter/90 overflow-hidden",
+        "relative section-px py-20 lg:py-40 section-mt mx-auto bg-radial from-secondary-lighter to-secondary-lighter/90 overflow-hidden",
         className
       )}
     >
+      <div className="w-full h-[150px] absolute -bottom-10 left-0  bg-gradient-to-t from-secondary-lighter to-transparent"></div>
       <VideoBackground
         className="object-bottom"
         sources={[

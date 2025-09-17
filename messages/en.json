@@ -103,5 +103,47 @@
       "description": "First meeting at no cost. We discuss your project and see how to help you.",
       "button": "Schedule brief meeting"
     }
+  },
+  "includes": {
+    "title": "What your presskit includes",
+    "subtitle": "Everything a booker needs to see, organized in a design that turns visits into bookings.",
+    "items": {
+      "bio": {
+        "title": "Professional bio",
+        "description": "Bio optimized for bookers in EN/ES. Clear, direct, and persuasive."
+      },
+      "calendar": {
+        "title": "Integrated schedule",
+        "description": "Past and upcoming dates synchronized. Bookers see your real activity."
+      },
+      "media": {
+        "title": "Embedded media",
+        "description": "SoundCloud and YouTube integrated + banner video to showcase your sound."
+      },
+      "rider": {
+        "title": "Technical rider",
+        "description": "Clear technical specifications and press kit with professional photos."
+      },
+      "gallery": {
+        "title": "Visual gallery",
+        "description": "Grid/parallax with your best live and session photos."
+      },
+      "contact": {
+        "title": "Direct contact",
+        "description": "Booking-optimized form + clear contact info."
+      },
+      "domain": {
+        "title": "Custom domain",
+        "description": "Optional: your-name.com + professional email @your-name.com"
+      },
+      "analytics": {
+        "title": "Basic analytics",
+        "description": "Visit and interaction stats to optimize your strategy."
+      }
+    },
+    "note": {
+      "title": "Optimized for bookers",
+      "description": "Each element is designed so bookers quickly find what they need: your sound, experience, and availability."
+    }
   }
 }

@@ -92,5 +92,47 @@
         "description": "Tu presskit está listo para empezar a compartirlo, ponerlo en tu bio y presentarte con un solo link."
       }
     }
+  },
+  "includes": {
+    "title": "Qué incluye<br></br>tu presskit",
+    "subtitle": "Dejá de perder oportunidades:\n<strong>Un diseño pensado para bookers que convierte tu música en fechas</strong>.",
+    "items": {
+      "bio": {
+        "title": "Bio profesional",
+        "description": "<underline>Olvidate de mandar textos desordenados</underline>: tu historia se presenta breve, clara y en varios idiomas, lista para cerrar bookings."
+      },
+      "gigs": {
+        "title": "Gigs actualizados",
+        "description": "<underline>No más excusas de `no vemos actividad`</underline>: tu calendario se sincroniza solo y muestra en tiempo real tus fechas pasadas y próximas."
+      },
+      "media": {
+        "title": "Media",
+        "description": "<underline>Dejá de mandar links sueltos</underline>: tus últimos tracks y sets aparecen integrados desde SoundCloud y YouTube con un look profesional."
+      },
+      "lanzamientos": {
+        "title": "Lanzamientos",
+        "description": "<underline>Nada de mails perdidos</underline>: tus releases recientes y futuros se listan en un solo lugar, con accesos directos para escuchar y compartir."
+      },
+      "gallery": {
+        "title": "Galería",
+        "description": "<underline>Fotos de WhatsApp pixeladas, nunca más</underline>: tu galería es dinámica, optimizada y lista para mostrarte con la calidad que merecés."
+      },
+      "rider": {
+        "title": "Rider técnico",
+        "description": "<underline>Evita malentendidos técnicos</underline>: tu rider queda claro y accesible para que el equipo sepa exactamente qué necesitás en cabina."
+      },
+      "contact": {
+        "title": "Contacto directo",
+        "description": "<underline>Cortá la fricción</underline>: tu info de contacto y links de booking aparecen visibles, sin vueltas ni barreras para el booker."
+      },
+      "seo": {
+        "title": "SEO técnico",
+        "description": "<underline>Dejá que también te encuentren solos</underline>: tu presskit está optimizado para buscadores y atrae interesados de forma orgánica."
+      }
+    },
+    "note": {
+      "title": "Optimizado para bookers",
+      "description": "Cada elemento está pensado para que todo <strong>booker, agencia o productora</strong>\nencuentre rápido lo que busca contratar en su proximo evento."
+    }
   }
 }
