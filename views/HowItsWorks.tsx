@@ -1,17 +1,8 @@
 import React from "react";
 import Text from "@/components/Text/Text";
 import { useTranslations } from "next-intl";
-import {
-  ArrowRight,
-  Clock,
-  CloudUpload,
-  MessageSquare,
-  MessagesSquare,
-  Rocket,
-} from "lucide-react";
-import DefaultButton from "@/components/Buttons/DefaultButton";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import { calendlyLink } from "@/data/es";
 
 export default function HowItsWorks() {
   const t = useTranslations("howItWorks");
@@ -72,7 +63,7 @@ export default function HowItsWorks() {
   ];
 
   return (
-    <section className="w-full bg-secondary">
+    <section className="w-full bg-secondary section-pb">
       <div className="section-max-w section-px mx-auto flex flex-col items-center gap-10">
         <Text Tag={"h2"} variant="title" className="text-center">
           {t("title")}
@@ -85,10 +76,10 @@ export default function HowItsWorks() {
         </Text>
 
         {/* Steps Process */}
-        <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-8 mt-10">
+        <div className="w-full flex flex-col lg:flex-row items-center justify-center gap-5 lg:gap-10 mt-10">
           {steps.map((step, index) => (
             <React.Fragment key={step.number}>
-              <div className="relative bg-secondary-lighter border-2 border-primary/20 p-5 lg:p-8 shadow-[0px_0px_10px_5px] shadow-accent/20 flex flex-col gap-5 h-[400px] items-center justify-center w-full lg:w-[250px]">
+              <div className="relative bg-secondary-lighter border-2 border-primary/20 p-5 md:px-20 lg:px-8 lg:p-8 shadow-[0px_0px_10px_5px] shadow-accent/20 flex flex-col gap-5 h-[300px] md:h-[250px] items-center justify-center w-full lg:h-[450px] lg:min-w-[200px]  rounded-sm">
                 <div className="absolute -top-3 -right-3 w-10 h-10 bg-radial from-secondary via-secondary via-30% to-accent rounded-full flex items-center justify-center">
                   <Text variant="content" className="font-bold text-accent">
                     {step.number}
@@ -109,7 +100,7 @@ export default function HowItsWorks() {
 
               {/* Arrow between steps (except last one) */}
               {index < steps.length - 1 && (
-                <ArrowRight className="rotate-90 lg:rotate-0 size-10 mx-auto lg:mx-0" />
+                <ArrowRight className="rotate-90 lg:rotate-0 size-10 mx-auto lg:mx-0 lg:hidden xl:block lg:min-w-10 text-accent-2" />
               )}
             </React.Fragment>
           ))}

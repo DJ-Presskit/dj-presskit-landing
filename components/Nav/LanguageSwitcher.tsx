@@ -4,6 +4,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { locales } from "@/i18n";
 import { twMerge } from "tailwind-merge";
 import { motion } from "framer-motion";
+import Text from "../Text/Text";
 
 type Props = { className?: string };
 
@@ -56,7 +57,9 @@ export default function LanguageSwitcher({ className }: Props) {
             )}
             aria-label={`${t("language")}: ${loc}`}
           >
-            {loc}
+            <Text variant="custom" className="!text-xs">
+              {loc}
+            </Text>
           </button>
         ))}
       </div>

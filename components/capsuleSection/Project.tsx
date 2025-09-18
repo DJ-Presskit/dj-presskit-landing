@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 import Text from "../Text/Text";
 import { Project as ProjectType } from "@/@types";
 import AnimatedSeparator from "../AnimatedSeparator";
-import { ModalState } from "@/views/Capsules";
+import { ModalState } from "@/views/CapsulesOLD";
 import { Hash } from "lucide-react";
 import DecryptedText from "../Text/DecryptedText";
 import { useTranslations } from "next-intl";

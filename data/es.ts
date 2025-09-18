@@ -1,58 +1,22 @@
-import { PlanType, Capsule } from "@/@types";
+import { Capsule, Review } from "@/@types";
 
 
 export const calendlyLink = 'https://calendly.com/dj-presskit/entrevista';
 
-export const iconMap = {
-  Rocket: "Rocket",
-  UserPen: "UserPen",
-  Link: "Link",
-  Headphones: "Headphones",
-  Flame: "Flame",
-  Brain: "Brain",
-  CheckCheck: "CheckCheck",
-  Pin: "Pin",
-  Clock: "Clock",
-  PencilRuler: "PencilRuler",
-  Lightbulb: "Lightbulb",
-  Eye: "Eye",
-} as const;
+export const REVIEWS:Review[] = [
+  {
+    content: "GRACIAS X TODO.\nSos el uno.\nNo puedo estar más contenta con tu trabajo de verdad.",
+    name: "Serena",
+    detail: "DJ / La Plata"
+  },
+  {
+    content: "AA se actualizan solo.\nQue copado esto.\nNa muy bueno esto. Todo lo que necesitaba ajaja",
+    name: "Dexther",
+    detail: "DJ / Buenos Aires"
+  }
 
-export const plans: PlanType[] = [
-  {
-    id: "advanced",
-    title: "Plan Presskit Avanzado",
-    description:
-      "Un presskit más visual, más dinámico y con funciones extra para destacar.",
-    price: 150,
-    includes: [
-      "Diseño con animaciones y transiciones parallax.",
-      "Sección de próximos eventos conectada a Google Sheets.",
-      "Dominio personalizado incluido con membresía.",
-      "Email profesional con tu dominio.",
-      "Entrega en menos de 48 hs.",
-    ],
-    href: "https://demo.dj-presskit.com",
-    buttonText: "VER DEMO",
-  },
-  {
-    id: "premium",
-    title: "Plan Presskit Premium",
-    description:
-      "Para DJs exigentes que buscan un impulso a medida, sin límites de creatividad ni funcionalidad.",
-    price: 673,
-    includes: [
-      "Todo lo del Plan Avanzado.",
-      "Diseño único desde cero.",
-      "Animaciones, efectos y performance top tier.",
-      "Secciones personalizadas a elección.",
-      "Asesoramiento 1 a 1 en todo el proceso.",
-      "Entrega en 20 días aprox.",
-    ],
-    href: calendlyLink,
-    buttonText: "HABLEMOS",
-  },
-];
+]
+
 
 export const CAPSULES: Capsule[] = [
   {
@@ -129,66 +93,5 @@ export const CAPSULES: Capsule[] = [
     projects: [],
     commingSoon: true,
     demoUrl: "https://demo.dj-presskit.com",
-  },
-];
-
-export const faqData = [
-  {
-    question: "¿Por qué necesito un presskit si ya tengo Instagram o Linktree?",
-    answer: [
-      "Porque DJ Presskit es tu espacio real, con diseño estratégico y dominio que transmite profesionalismo.",
-      "Unifica tu bio, música, fechas, rider y fotos en un espacio coherente que Instagram o Linktree no pueden ofrecer.",
-      "Te posiciona como un DJ serio ante bookers, sellos y tu comunidad, más allá de un simple perfil o lista de enlaces.",
-    ],
-    icon: "Lightbulb",
-  },
-  {
-    question: "¿Qué incluye exactamente mi presskit?",
-    answer: [
-      "Sitio web responsive, listo en 48 hs hábiles.",
-      "Tu bio, redes sociales y galería de imágenes.",
-      "Sección de eventos sincronizada con Google Sheets.",
-      "Sección de música sincronizada a SoundCloud.",
-      "Formulario de contacto y carpeta de Google Drive para subir todo lo que necesites.",
-      "Dominio personalizado ([TuNombre].dj-presskit.com), hosting y certificados HTTPS.",
-      "SEO Avanzado y posicionamiento.",
-    ],
-    icon: "CheckCheck",
-  },
-  {
-    question: "¿Cómo funciona el proceso y cuánto demora?",
-    answer: [
-      "Envías tu información (bio, fotos, redes, links, rider) a través de un formulario sencillo.",
-      "Nuestro equipo te acompaña de forma cercana por WhatsApp o email.",
-      "Recibís tu presskit terminado y publicado en 48 hs hábiles, sin complicaciones técnicas.",
-    ],
-    icon: "Clock",
-  },
-  {
-    question: "¿Puedo personalizar el diseño a mi estilo?",
-    answer: [
-      "Sí, desde el Plan Básico moderno hasta el Premium con diseño 100% a medida.",
-      "Agregamos animaciones, secciones dinámicas o integraciones con SoundCloud según el plan elegido.",
-      "Siempre mantenemos tu identidad visual y tu narrativa artística como eje principal.",
-    ],
-    icon: "UserPen",
-  },
-  {
-    question: "¿Puedo ver ejemplos antes de contratar?",
-    answer:
-      "Claro, accedé al demo de nuestra última CÁPSULA del Plan Avanzado y revisá casos reales de DJs que ya profesionalizaron su imagen en nuestras redes.",
-    icon: "Eye",
-    link: "https://demo.dj-presskit.com",
-    linkText: "EXPLORAR DEMO",
-  },
-  {
-    question: "¿Y si después quiero actualizar o escalar mi sitio?",
-    answer: [
-      "Podés modificar tu calendario de eventos o gestionar la subida de nuevas fotos para la galería.",
-      "La mayoría del contenido de tu presskit se actualiza automáticamente, ya que está integrado a tus herramientas como artista.",
-      "Ofrecemos soporte continuo y planes de referidos para DJs que recomienden nuestros servicios.",
-      "Formás parte de una comunidad de artistas en constante evolución.",
-    ],
-    icon: "PencilRuler",
   },
 ];

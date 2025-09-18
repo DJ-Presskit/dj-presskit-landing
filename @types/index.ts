@@ -7,6 +7,12 @@ export type FAQItemType = {
   icon: React.ReactElement;
 };
 
+export type Review = {
+  content: string,
+  name: string,
+  detail: string,
+}
+
 export type PlanType = {
   id?: string;
   title: string;

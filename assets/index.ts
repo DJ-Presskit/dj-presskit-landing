@@ -14,7 +14,7 @@ export const backgrounds = {
 export type BackgroundsKey = keyof typeof backgrounds;
 
 export const logos = {
-  default_logo: "/logos/default-logo.png",
+  default_logo: "/logos/default-logo.svg",
 
   //? Agregar mas logos aca
 } as const;
@@ -23,6 +23,12 @@ export type LogosKeys = keyof typeof logos;
 export const icons = {
   whatsapp: "/icons/whatsapp.svg",
   soundcloud: "/icons/soundcloud.svg",
+  
+  // 3D Resources
+  crown: "/resources/crown.svg",
+  thunder: "/resources/thunder.svg",
+  clock: "/resources/clock-3d.svg",
+  star: "/resources/star.svg",
 
   //? Agregar mas iconos aca
 } as const;

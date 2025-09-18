@@ -1,4 +1,4 @@
-import BookingsChecklist from "@/components/BookingsChecklist";
+import BookingsChecklist from "@/views/bookingChecklist/BookingsChecklist";
 import CTA from "@/views/CTA";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
