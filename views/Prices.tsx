@@ -3,7 +3,7 @@ import React from "react";
 import Text from "@/components/Text/Text";
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, SquareArrowOutUpRight, Table } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function Prices() {
@@ -99,13 +99,20 @@ export default function Prices() {
               ))}
             </div>
 
-            <div className="w-full flex justify-center pt-4">
+            <div className="w-full flex flex-col-reverse md:flex-row items-center justify-center pt-4 gap-5">
               <DefaultButton
                 onClick={handleCTA}
                 className="text-sm sm:text-base md:text-lg uppercase w-full sm:w-[90%] md:w-[80%]"
                 trackingLabel="pricing-main-cta"
               >
                 {t("cta")}
+              </DefaultButton>
+              <DefaultButton
+                href="https://demo.dj-presskit.com"
+                variant="basic"
+                className="md:w-fit min-w-none !px-0 !aspect-square"
+              >
+                <SquareArrowOutUpRight />
               </DefaultButton>
             </div>
           </div>
