@@ -73,7 +73,7 @@ const DefaultButton: React.FC<DefaultButtonProps> = ({
       onClick={handleOnClick}
       transition={{ type: "spring", duration: 0.1 }}
       className={twMerge(
-        "w-full md:w-fit h-[60px] relative min-w-[250px] rounded-[5px] disabled:opacity-50 disabled:pointer-events-none group flex px-5 lg:px-10 items-center justify-center cursor-pointer transition duration-500 border-2 border-neutral-500",
+        "w-full md:w-fit h-[60px] hover:opacity-60 relative min-w-[250px] rounded-[5px] disabled:opacity-50 disabled:pointer-events-none group flex px-5 lg:px-10 items-center justify-center cursor-pointer transition duration-500 border-2 border-neutral-500",
         variants[variant].container,
         className
       )}
