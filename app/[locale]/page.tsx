@@ -15,7 +15,6 @@ export default function Home() {
   return (
     <main className="relative h-full">
       <Hero />
-      <SoundCloudSupportBanner />
       <TheProblem />
       <HowItsWorks />
       <CTA />
@@ -25,6 +24,7 @@ export default function Home() {
       <Reviews />
       <Prices />
       <GuaranteeBanner />
+      <SoundCloudSupportBanner />
     </main>
   );
 }
