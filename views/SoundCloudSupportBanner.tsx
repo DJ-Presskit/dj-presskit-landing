@@ -1,9 +1,6 @@
 "use client";
-import { Cross, CrossIcon } from "lucide-react";
-import Icon from "../Icons/Icon";
-import LandingImage from "../Images/LandingImage";
-import Text from "../Text/Text";
-import Image from "next/image";
+import Icon from "../components/Icons/Icon";
+import Text from "../components/Text/Text";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 

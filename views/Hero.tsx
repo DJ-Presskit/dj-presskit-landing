@@ -1,7 +1,7 @@
 import DefaultButton from "@/components/Buttons/DefaultButton";
 import Text from "@/components/Text/Text";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
-import { CheckCircle, Star, Users } from "lucide-react";
+import { Star, Users } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";

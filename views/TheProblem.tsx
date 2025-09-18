@@ -37,7 +37,7 @@ export default function TheProblem() {
         </Text>
 
         <div className="mt-[10vh] grid grid-cols-1 lg:grid-cols-[1fr_auto_1fr] items-center gap-10 w-full">
-          <div className="relative bg-secondary-lighter opacity-70 border-2 border-red-500/50 p-5 lg:p-10 h-full flex flex-col gap-5">
+          <div className="relative bg-secondary-lighter opacity-70 border-2 border-red-500/50 p-5 lg:p-10 h-full flex flex-col gap-5  rounded-sm">
             <div className="absolute lg:-top-20 lg:right-10 z-10 lg:w-[250px] w-full -bottom-10 -right-0 h-full pointer-events-none">
               <Image
                 src={"/resources/grieta.svg"}
@@ -78,23 +78,24 @@ export default function TheProblem() {
             </ul>
           </div>
 
-          <ArrowRight className="rotate-90 lg:rotate-0 size-10 mx-auto lg:mx-0" />
+          <ArrowRight className="rotate-90 lg:rotate-0 size-10 mx-auto lg:mx-0 text-accent-2" />
 
-          <div className="bg-secondary-lighter border-2 border-green-500/50 p-5 lg:p-10 h-full shadow-[0px_0px_10px_5px] shadow-green-500/50 flex flex-col gap-5">
+          <div className="bg-secondary-lighter border-2 border-green-500/50 p-5 lg:p-10 h-full shadow-[0px_0px_10px_5px] shadow-green-500/50 flex flex-col gap-5 rounded-sm">
             <div className="relative">
               <Image
                 src={"/resources/check-icon-3d.svg"}
                 alt="check"
                 width={50}
                 height={50}
-                className="opacity-20 translate-y-3 -translate-x-2"
+                className="opacity-50 blur-xs translate-y-2 -translate-x-3 floating"
+                style={{ animationDelay: "250ms" }}
               />
               <Image
                 src={"/resources/check-icon-3d.svg"}
                 alt="check"
                 width={50}
                 height={50}
-                className="absolute top-0 left-0 z-10"
+                className="absolute top-0 left-0 z-10 floating"
               />
             </div>
             <Text variant="subtitle" className="text-left">

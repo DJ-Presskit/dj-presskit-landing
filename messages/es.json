@@ -30,18 +30,18 @@
       "item2": "Estructura optimizada para bookers.",
       "item3": "Entrega garantizada en 48 hs.",
       "item4": "Un solo link para todo.",
-      "item5": "Optimizacion SEO nativa."
+      "item5": "Optimización SEO nativa."
     },
     "bottom": {
-      "title": "¿CÚANTAS FECHAS YA PERDISTE?",
-      "desc": "Cada día que pasas con una presentación desprolija es una oportunidad perdida. Los bookers no esperan. Tu competencia ya tiene todo ordenado."
+      "title": "¿CUÁNTAS FECHAS YA PERDISTE?",
+      "desc": "Cada día que pasás con una presentación desprolija es una oportunidad perdida. Los bookers no esperan. Tu competencia ya tiene todo ordenado."
     }
   },
 
   "cta": {
     "title": "Tu comunidad <br></br> te está esperando",
     "subtitle": "¿Listo para empezar?",
-    "desc": "Seducí a bookers, sellos y fans con un presskit que hable por vos. <strong>Unifica tu comunicación y da el salto hacia el nuevo estandar.</strong>",
+    "desc": "Seducí a bookers, sellos y fans con un presskit que hable por vos. <strong>Unificá tu comunicación y da el salto hacia el nuevo estándar.</strong>",
     "button": "Hablemos"
   },
   "faq": {
@@ -62,7 +62,24 @@
     "text": "DJ Presskit is officially supported by SoundCloud.<br></br>A trusted partnership to elevate your music presence."
   },
   "footer": {
-    "rights": "All Rights Reserved"
+    "slogan": "DJ QUE SE RESPETA TIENE PRESSKIT.",
+    "product": "Producto",
+    "resources": "Recursos",
+    "legal": "Legal",
+    "home": "Inicio",
+    "support": "Soporte",
+    "pricing": "Precios",
+    "affiliate": "Afiliados",
+    "company": "Empresa",
+    "blogs": "Blogs",
+    "community": "Comunidad",
+    "careers": "Carreras",
+    "hiring": "¡Estamos contratando!",
+    "about": "Acerca de",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "description": "Haciendo que cada cliente se sienta valorado—sin importar el tamaño de tu audiencia.",
+    "rights": "Todos los derechos reservados"
   },
   "buttons": {
     "view_demo": "VER DEMO",
@@ -77,15 +94,15 @@
     "steps": {
       "step1": {
         "title": "Diagnóstico breve",
-        "description": "Reunión de 15-20 minutos para entender tu situacion y asesorarte de la mejor manera."
+        "description": "Reunión de 15-20 minutos para entender tu situación y asesorarte de la mejor manera."
       },
       "step2": {
         "title": "Carga de contenido",
-        "description": "Te enviamos un form simple. Subís fotos, bio, links, rider, etc...\nNosotros lo organizamos."
+        "description": "Te enviamos un formulario simple. Subís fotos, bio, links, rider, etc...\nNosotros lo organizamos."
       },
       "step3": {
         "title": "Entrega en<br></br>48 hs",
-        "description": "En menos de 48 hs tenemos tu Presskit listo y hacemos correcciones 1 a 1 con vos antes de Lanzarlo."
+        "description": "En menos de 48 hs tenemos tu Presskit listo y hacemos correcciones 1 a 1 con vos antes de lanzarlo."
       },
       "step4": {
         "title": "Lanzamiento",
@@ -132,7 +149,136 @@
     },
     "note": {
       "title": "Optimizado para bookers",
-      "description": "Cada elemento está pensado para que todo <strong>booker, agencia o productora</strong>\nencuentre rápido lo que busca contratar en su proximo evento."
+      "description": "Cada elemento está pensado para que todo <strong>booker, agencia o productora</strong>\nencuentre rápido lo que busca contratar en su próximo evento."
     }
+  },
+  "comparison": {
+    "title": "Antes vs Después",
+    "subtitle": "La diferencia entre <red>perder oportunidades</red> y <green>cerrar bookings</green>.",
+    "before": "ANTES",
+    "before-subtitle": "Lo que los bookers ven ahora",
+    "after": "DESPUÉS",
+    "after-subtitle": "Con DJ Presskit",
+    "result": {
+      "before": "RESULTADO: Bookers pasan de largo.",
+      "after": "RESULTADO: Bookers te recuerdan y contactan."
+    },
+    "cta": {
+      "title": "¿EN CUÁL QUERÉS ESTAR?",
+      "subtitle": "La decisión está en tus manos. Seguí perdiendo oportunidades o empezá a cerrar fechas."
+    }
+  },
+  "before": {
+    "1": "Bio genérica que no comunica ni posiciona.",
+    "2": "Enlaces rotos o dispersos que generan rechazo.",
+    "3": "Sin calendario: los bookers no ven actividad.",
+    "4": "Fotos desordenadas o de baja calidad.",
+    "5": "Info tirada en varias plataformas sin orden.",
+    "6": "Imagen amateur que reduce tu credibilidad."
+  },
+  "after": {
+    "1": "Bio precisa que define y vende tu estilo.",
+    "2": "Todo en un solo link unificado.",
+    "3": "Agenda sincronizada que muestra tus fechas reales.",
+    "4": "Galería optimizada que potencia tu imagen profesional.",
+    "5": "Un único presskit centralizado con todo accesible.",
+    "6": "Presencia profesional que genera confianza y bookings."
+  },
+  "whyCapsules": {
+    "title": "¿Por qué cápsulas\nexclusivas?",
+    "subtitle": "Las cápsulas son diseños <strong>LIMITADOS</strong> de Presskit que garantizan exclusividad y status profesional.",
+    "steps": {
+      "step1": {
+        "title": "Exclusividad garantizada",
+        "description": "Número LIMITADO de DJs por cápsula. Cuando se completa, se cierra para siempre. Tu diseño será único en tu región."
+      },
+      "step2": {
+        "title": "Diferenciación inmediata",
+        "description": "Mientras otros usan plantillas genéricas y PDF, vos tenés un diseño premium que refleja tu nivel profesional."
+      },
+      "step3": {
+        "title": "Status profesional",
+        "description": "Los bookers reconocen inmediatamente la calidad. Tu Presskit habla de seriedad antes que vos digas una palabra."
+      }
+    }
+  },
+  "reviews": {
+    "title": "Lo que dicen nuestros DJs",
+    "subtitle": "Testimonios reales de DJs que <strong>ya empezaron a profesionalizarse</strong>.",
+    "count-1": "DJs ya usan DJ Presskit",
+    "count-2": "Tiempo promedio de entrega",
+    "count-3": "Satisfacción garantizada"
+  },
+  "guaranteeBanner": {
+    "title": "Garantía de satisfacción 14 días",
+    "desc": "Si no estás 100% conforme con tu presskit durante los primeros 14 días:\n<strong>Te devolvemos todo tu dinero</strong>.",
+    "point1": "0 riesgo",
+    "point2": "Reembolso 100%",
+    "point3": "Sin preguntas",
+    "note": "Después de los 14 días, cambios adicionales tienen fee de mantenimiento."
+  },
+  "pricing": {
+    "title": "Planes y precios",
+    "subtitle": "Inversión única que se paga sola con la primera fecha que cerrés.",
+    "popular": "Más elegido",
+    "main": {
+      "title": "Cápsula 00",
+      "desc": "Abónalo en 2 o 3 CUOTAS."
+    },
+    "base": {
+      "1": "Bio profesional ES/EN.",
+      "2": "Gigs sincronizados.",
+      "3": "Media integrada (SoundCloud + YouTube).",
+      "4": "Lanzamientos destacados.",
+      "5": "Rider completo.",
+      "6": "Galería optimizada.",
+      "7": "Contacto directo.",
+      "8": "Diseño de cápsula exclusivo",
+      "9": "SEO técnico.",
+      "10": "Carpeta de Drive conectada a tu Presskit.",
+      "11": "Entrega en 48h + link único."
+    },
+    "addons": {
+      "title": "Extras opcionales",
+      "subtitle": "Potenciá tu Presskit con las siguientes opciones:",
+      "cta": "Consultar extras",
+      "domain": {
+        "title": "Dominio personalizado",
+        "desc": "tu-dominio.com + email profesional."
+      },
+      "sections": {
+        "title": "Secciones extra",
+        "desc": "Discografía, prensa, colaboraciones..."
+      },
+      "support": {
+        "title": "Soporte extendido",
+        "desc": "Cambios ilimitados por 3 meses."
+      }
+    },
+    "cta": "Reserva tu cupo"
+  },
+  "finalCTA": {
+    "title1": "Los bookers",
+    "title2": "no esperan",
+    "subtitle": "Cada día que pasa sin un presskit profesional es una oportunidad perdida. <strong>Tu competencia ya se está posicionando.</strong>",
+    "point1": {
+      "title": "Posicionamiento profesional",
+      "desc": "Cápsula exclusiva que te diferencia"
+    },
+    "point2": {
+      "title": "Rapidez garantizada",
+      "desc": "Listo en 48h para usar ya"
+    },
+    "point3": {
+      "title": "Exclusividad limitada",
+      "desc": "Solo 5 cupos restantes"
+    },
+    "cta": "Agendar reunión breve",
+    "ctaSubtitle": "Primera charla sin costo • 10-15 minutos • Sin compromiso",
+    "urgency": {
+      "title": "Últimos 5 cupos de la Cápsula 00",
+      "desc": "Una vez completados, la próxima cápsula tendrá precio mayor y diferente diseño."
+    },
+    "secondary": "Mientras pensás, tu competencia ya está cerrando fechas con presskits profesionales."
   }
 }

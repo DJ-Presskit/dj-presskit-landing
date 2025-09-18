@@ -12,8 +12,6 @@ import { notFound } from "next/navigation";
 import { routing, AppLocale } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import LanguageSwitcher from "@/components/Nav/LanguageSwitcher";
-import FAQSchema from "@/components/FAQSchema";
-import OrganizationSchema from "@/components/OrganizationSchema";
 
 const michroma = Michroma({
   weight: ["400"],
@@ -112,8 +110,6 @@ export default async function LocaleLayout({
       <body
         className={`${michroma.variable} ${quicksand.variable} antialiased`}
       >
-        <FAQSchema />
-        <OrganizationSchema />
         <NextIntlClientProvider messages={messages} locale={lang}>
           <Providers>
             <WebViewWarning />

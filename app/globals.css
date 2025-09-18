@@ -16,10 +16,6 @@
     font-style: normal;
   }
 
-  :root {
-    --font-primary: "Bebas Neue", sans-serif;
-    --font-secondary: "Unbounded", sans-serif;
-  }
 
   html {
     font-family: var(--font-secondary);
@@ -138,22 +134,30 @@
     transform-style: flat;
     backface-visibility: visible;
   }
+  
   @keyframes moveInCircle {
     0% {
-      transform: translate(-30%, -30%);
+      transform: translate(-15%, -15%);
     }
     25% {
-      transform: translate(30%, -30%);
+      transform: translate(15%, -15%);
     }
     50% {
-      transform: translate(30%, 30%);
+      transform: translate(15%, 15%);
     }
     75% {
-      transform: translate(-30%, 30%);
+      transform: translate(-15%, 15%);
     }
     100% {
-      transform: translate(-30%, -30%);
+      transform: translate(-15%, -15%);
     }
+  }
+
+  /* Clase para animación flotante infinita */
+  .floating {
+    animation: moveInCircle 15s  infinite;
+    /* Puedes ajustar la duración (6s) según lo que necesites */
+    will-change: transform;
   }
 
   @keyframes moveHorizontal {

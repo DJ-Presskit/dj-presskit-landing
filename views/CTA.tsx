@@ -1,8 +1,6 @@
 "use client";
-import { motion } from "framer-motion";
 import Text from "@/components/Text/Text";
 import DefaultButton from "@/components/Buttons/DefaultButton";
-import { MessageCircle } from "lucide-react";
 import { useLocalizedData } from "@/hooks/useLocalizedData";
 import VideoBackground from "@/components/VideoBackground";
 import { useTranslations } from "next-intl";

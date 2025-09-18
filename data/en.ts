@@ -1,63 +1,28 @@
-import {  PlanType, Capsule } from "@/@types";
+import { Capsule, Review } from "@/@types";
+
 
 export const calendlyLink = 'https://calendly.com/dj-presskit/entrevista';
 
-export const iconMap = {
-  Rocket: "Rocket",
-  UserPen: "UserPen",
-  Link: "Link",
-  Headphones: "Headphones",
-  Flame: "Flame",
-  Brain: "Brain",
-  CheckCheck: "CheckCheck",
-  Pin: "Pin",
-  Clock: "Clock",
-  PencilRuler: "PencilRuler",
-  Lightbulb: "Lightbulb",
-  Eye: "Eye",
-} as const;
+export const REVIEWS:Review[] = [
+  {
+    content: "GRACIAS X TODO.\nSos el uno.\nNo puedo estar más contenta con tu trabajo de verdad.",
+    name: "Serena",
+    detail: "DJ / La Plata"
+  },
+  {
+    content: "AA se actualizan solo.\nQue copado esto.\nNa muy bueno esto. Todo lo que necesitaba ajaja",
+    name: "Dexther",
+    detail: "DJ / Buenos Aires"
+  }
 
-export const plans: PlanType[] = [
-  {
-    id: "advanced",
-    title: "Advanced Presskit Plan",
-    description:
-      "A more visual, dynamic presskit with extra features to stand out.",
-    price: 150,
-    includes: [
-      "Design with animations and parallax transitions.",
-      "Upcoming events section connected to Google Sheets.",
-      "Custom domain included with membership.",
-      "Professional email with your domain.",
-      "Delivery in less than 48 hours.",
-    ],
-    href: "https://demo.dj-presskit.com",
-    buttonText: "VIEW DEMO",
-  },
-  {
-    id: "premium",
-    title: "Premium Presskit Plan",
-    description:
-      "For demanding DJs seeking a custom boost, with no limits to creativity or functionality.",
-    price: 673,
-    includes: [
-      "Everything from the Advanced Plan.",
-      "Unique design from scratch.",
-      "Top-tier animations, effects and performance.",
-      "Custom sections of your choice.",
-      "1-on-1 guidance throughout the process.",
-      "Delivery in ~20 days.",
-    ],
-    href: calendlyLink,
-    buttonText: "LET'S TALK",
-  },
-];
+]
+
 
 export const CAPSULES: Capsule[] = [
   {
-    title: "Genesis Capsule",
+    title: "Cápsula Génesis",
     description:
-      "The first concept.\nA starting point.\nGenesis is not just a set of websites; it's the beginning of a new way to show yourself with clarity and professionalism. From scattered links to purpose-driven branding. This is where the idea of DJ Presskit was born as a community and standard.",
+      "El primer concepto.\nUn punto de partida.\nGenesis no es solo un conjunto de sitios webs, es el inicio de una forma nueva de mostrarse con claridad y profesionalismo. De los links sueltos al branding con propósito.\nAcá nació la idea de DJ Presskit como comunidad y estándar.",
     projects: [
       {
         name: "Giuliano",
@@ -122,73 +87,11 @@ export const CAPSULES: Capsule[] = [
     ],
   },
   {
-    title: "Capsule 00",
+    title: "Cápsula 00",
     description:
-      "The evolution of the concept.\nA design that not only showcases but also connects; fluid animations, SoundCloud integration, multilingual support, and a unique effect that turns each presskit into an unrepeatable experience.\nThis capsule sets the path toward an even higher standard.",
+      "La evolución del concepto.\nUn diseño que no solo muestra, sino que conecta; animaciones fluidas, integración con SoundCloud, soporte multilenguaje y un efecto único que convierte cada presskit en una experiencia irrepetible.\nEsta cápsula marca el paso hacia un estándar aún más alto.",
     projects: [],
     commingSoon: true,
     demoUrl: "https://demo.dj-presskit.com",
-  },
-];
-
-export const faqData = [
-  {
-    question:
-      "Why do I need a presskit if I already have Instagram or Linktree?",
-    answer: [
-      "DJ Presskit is your real space, with strategic design and domain that conveys professionalism.",
-      "It unifies your bio, music, dates, rider and photos in a coherent space that Instagram or Linktree cannot offer.",
-      "It positions you as a serious DJ before bookers, labels and your community, beyond a simple profile or list of links.",
-    ],
-    icon: "Lightbulb",
-  },
-  {
-    question: "What exactly does my presskit include?",
-    answer: [
-      "Responsive website, ready in 48 business hours.",
-      "Your bio, social networks and image gallery.",
-      "Events section synchronized with Google Sheets.",
-      "Music section synchronized with SoundCloud.",
-      "Contact form and Google Drive folder to upload everything you need.",
-      "Custom domain ([YourName].dj-presskit.com), hosting and HTTPS certificates.",
-      "Advanced SEO and positioning.",
-    ],
-    icon: "CheckCheck",
-  },
-  {
-    question: "How does the process work and how long does it take?",
-    answer: [
-      "Send your information (bio, photos, networks, links, rider) through a simple form.",
-      "Our team accompanies you closely via WhatsApp or email.",
-      "You receive your finished and published presskit in 48 business hours, with no technical complications.",
-    ],
-    icon: "Clock",
-  },
-  {
-    question: "Can I customize the design to my style?",
-    answer: [
-      "Yes, from the modern Basic Plan to the Premium with 100% custom design.",
-      "We add animations, dynamic sections or SoundCloud integrations depending on the chosen plan.",
-      "We always maintain your visual identity and artistic narrative as the main axis.",
-    ],
-    icon: "UserPen",
-  },
-  {
-    question: "Can I see examples before hiring?",
-    answer:
-      "Of course, access the demo of our latest Advanced Plan Capsule and check real cases of DJs who have already professionalized their image on our networks.",
-    icon: "Eye",
-    link: "https://demo.dj-presskit.com",
-    linkText: "EXPLORE DEMO",
-  },
-  {
-    question: "What if I later want to update or scale my site?",
-    answer: [
-      "You can modify your events calendar or manage the upload of new photos for the gallery.",
-      "Most of your Presskit content is updated automatically, as it is integrated with your artist tools.",
-      "We offer ongoing support and referral plans for DJs who recommend our services.",
-      "You become part of a community of artists in constant evolution.",
-    ],
-    icon: "PencilRuler",
   },
 ];

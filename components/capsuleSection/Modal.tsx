@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { Project as ProjectType } from "@/@types";
 import { twMerge } from "tailwind-merge";
-import { ModalState } from "@/views/Capsules";
+import { ModalState } from "@/views/CapsulesOLD";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },

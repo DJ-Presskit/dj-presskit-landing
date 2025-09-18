@@ -1,55 +1,94 @@
 "use client";
-import { Instagram } from "lucide-react";
-import LandingImage from "../Images/LandingImage";
+import Image from "next/image";
 import Text from "../Text/Text";
-import LandingLink from "../LandingLink/LandingLink";
 import { useTranslations } from "next-intl";
+import { Instagram, Mail, Video } from "lucide-react";
 import Link from "next/link";
+import AnimatedSeparator from "../AnimatedSeparator";
 
-const Footer = () => {
-  return (
-    <footer
-      className="h-[300px] relative lg:h-[300px] bg-secondary-lighter"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-    >
-      <div className="fixed bottom-0 h-[300px] lg:h-[300px] w-full flex flex-col  justify-center lg:items-center">
-        <Content />
-      </div>
-    </footer>
-  );
-};
+export default function Footer() {
+  const SOCIALS = [
+    {
+      icon: (
+        <Instagram
+          width={30}
+          height={30}
+          className="text-primary/50 hover:text-accent transition duration-500 hover:scale-125"
+        />
+      ),
+      href: "https://instagram.com/dj.presskit",
+    },
+    {
+      icon: (
+        <Mail
+          width={35}
+          height={35}
+          className="text-primary/50 hover:text-accent transition duration-500 hover:scale-125"
+        />
+      ),
+      href: "mailto:info@dj-presskit.com",
+    },
+    {
+      icon: (
+        <Video
+          width={35}
+          height={35}
+          className="text-primary/50 hover:text-accent transition duration-500 hover:scale-125"
+        />
+      ),
+      href: "https://calendly.com/dj-presskit/entrevista",
+    },
+  ];
 
-const Content = () => {
   const t = useTranslations("footer");
+
   return (
-    <div className="relative section-px section-max-w mx-auto w-full flex flex-col items-center gap-10 justify-between pt-[50px] md:flex-row-reverse">
-      <Link href={"/"}>
-        <LandingImage
-          noPreload
-          src="default_logo"
+    <footer className="flex flex-col gap-10 items-center py-20 justify-center w-full section-max-w section-px bg-gradient-to-b from-secondary to-accent/15">
+      <div className="flex items-center justify-center flex-col gap-5">
+        <Image
+          src="/logos/default-logo.svg"
           alt="logo"
           width={100}
           height={100}
-          className=""
+          className="hover:rotate-45 transition duration-500 delay-100 cursor-pointer ease-in-out"
+          onClick={() => {
+            if (window !== undefined) {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }}
         />
-      </Link>
-      <div className="flex md:flex-col gap-10 flex-col-reverse md:items-start items-center">
-        <Text variant="content" className="!text-xs">
-          © Copyright {new Date().getFullYear()} -{" "}
-          <strong>DJ PRESSKIT ®</strong> -
-          <br className="md:hidden" /> {t("rights")}
-        </Text>
-        <LandingLink href={"https://www.instagram.com/dj_presskit"} newTab>
-          <Instagram className="size-8 hover:text-accent cursor-pointer" />
-        </LandingLink>
-      </div>
-      <div className="hidden md:flex w-full items-center justify-center h-[0px] blur-sm absolute top-auto bottom-auto left-0">
-        <h5 className="text-[100px] tracking-wider  bg-gradient-to-t from-accent/40 to-secondary bg-clip-text text-transparent">
+        <Text
+          variant="custom"
+          className="text-transparent bg-clip-text bg-radial from-accent to-secondary-lighter text-xl lg:text-3xl"
+          Tag={"h5"}
+        >
           DJ PRESSKIT
-        </h5>
+        </Text>
+        <Text
+          variant="custom"
+          className="text-[8px] lg:text-[10px] text-transparent bg-clip-text bg-radial from-accent-2 to-accent-2/50"
+        >
+          {t("slogan")}
+        </Text>
       </div>
-    </div>
+      <AnimatedSeparator transformOrigin="center" />
+      <div className="w-full flex items-center justify-center gap-10 flex-col-reverse md:flex-row md:justify-between">
+        <div className="text-center">
+          <Text
+            variant="content"
+            className="!text-center md:!text-left !text-sm opacity-80"
+          >
+            {new Date().getFullYear()} DJ PRESSKIT ® {t("rights")}
+          </Text>
+        </div>
+        <div className="flex items-center gap-5">
+          {SOCIALS.map((item, idx) => (
+            <Link target="_blank" key={idx} href={item.href}>
+              {item.icon}
+            </Link>
+          ))}
+        </div>
+      </div>
+    </footer>
   );
-};
-
-export default Footer;
+}

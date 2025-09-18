@@ -10,81 +10,35 @@ export default function Includes() {
   const items = [
     {
       key: "bio",
-      icon: (
-        <Image src="/resources/bio.svg" alt="bio-icon" width={50} height={50} />
-      ),
+      icon: <Image src="/resources/bio.svg" alt="bio-icon" fill />,
     },
     {
       key: "gigs",
-      icon: (
-        <Image
-          src="/resources/gigs.svg"
-          alt="gigs-icon"
-          width={50}
-          height={50}
-        />
-      ),
+      icon: <Image src="/resources/gigs.svg" alt="gigs-icon" fill />,
     },
     {
       key: "media",
-      icon: (
-        <Image
-          src="/resources/media.svg"
-          alt="media-icon"
-          width={50}
-          height={50}
-        />
-      ),
+      icon: <Image src="/resources/media.svg" alt="media-icon" fill />,
     },
     {
       key: "lanzamientos",
-      icon: (
-        <Image
-          src="/resources/rocket-3d.svg"
-          alt="rocket-icon"
-          width={50}
-          height={50}
-        />
-      ),
+      icon: <Image src="/resources/rocket-3d.svg" alt="rocket-icon" fill />,
     },
     {
       key: "gallery",
-      icon: (
-        <Image
-          src="/resources/gallery.svg"
-          alt="gallery-icon"
-          width={50}
-          height={50}
-        />
-      ),
+      icon: <Image src="/resources/gallery.svg" alt="gallery-icon" fill />,
     },
     {
       key: "rider",
-      icon: (
-        <Image
-          src="/resources/rider.svg"
-          alt="rider-icon"
-          width={50}
-          height={50}
-        />
-      ),
+      icon: <Image src="/resources/rider.svg" alt="rider-icon" fill />,
     },
     {
       key: "contact",
-      icon: (
-        <Image
-          src="/resources/messages-3d.svg"
-          alt="contact-icon"
-          width={50}
-          height={50}
-        />
-      ),
+      icon: <Image src="/resources/messages-3d.svg" alt="contact-icon" fill />,
     },
     {
       key: "seo",
-      icon: (
-        <Image src="/resources/seo.svg" alt="seo-icon" width={50} height={50} />
-      ),
+      icon: <Image src="/resources/seo.svg" alt="seo-icon" fill />,
     },
   ];
 
@@ -103,16 +57,28 @@ export default function Includes() {
           })}
         </Text>
 
-        <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
-          {items.map(({ key, icon }) => (
+        <div
+          style={{ height: items.length * 270 + "px" }}
+          className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 relative lg:!h-full"
+        >
+          {items.map(({ key, icon }, idx) => (
             <div
+              style={{
+                top: 80 + idx * 20 + "px",
+              }}
               key={key}
-              className="bg-secondary-lighter group hover:scale-110 transition duration-500 cursor-default border-2 border-primary/20 p-5 lg:p-6 shadow-[0px_0px_6px_2px] shadow-accent/20 rounded-none flex flex-col gap-4 h-full"
+              className="h-[250px] sticky md:!top-[150px] bg-secondary  rounded-sm group hover:scale-110 transition duration-500 cursor-default border-2 border-primary/20 p-5 lg:p-6 shadow-[0px_0px_5px_2px] shadow-accent/20 flex flex-col gap-4 lg:h-full lg:relative lg:!top-0"
             >
-              {icon}
+              <div className="w-[50px] lg:w-[70px] h-[50px] lg:h-[70px] relative">
+                {icon}
+              </div>
 
-              <div className="flex flex-col gap-2 items-start">
-                <Text variant="subtitle" className="!text-base" Tag={"h5"}>
+              <div className="flex flex-col gap-2 items-start justify-center grow">
+                <Text
+                  variant="subtitle"
+                  className="!text-base text-left"
+                  Tag={"h5"}
+                >
                   {t.rich(`items.${key}.title`)}
                 </Text>
                 <Text variant="content" className="text-primary/60 text-left">
@@ -130,7 +96,7 @@ export default function Includes() {
         </div>
 
         <div className="w-full mt-10">
-          <div className="bg-secondary-lighter border-2 border-primary/20 shadow-[0px_0px_6px_2px] shadow-accent/20 p-6 lg:p-8 text-center">
+          <div className="bg-secondary border-2 border-primary/20 shadow-[0px_0px_6px_2px] shadow-accent/20 p-6 lg:p-8 text-center rounded-sm">
             <Text
               variant="subtitle"
               className="text-accent-2 uppercase mb-5"

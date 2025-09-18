@@ -3,43 +3,46 @@
     "language": "Language"
   },
   "hero": {
+    "socialProof": "+15 DJs already use it",
     "title_line1": "Your music already has style,",
     "title_line2": "your presskit should too",
-    "desc_strong": "Turn your flyers and drives into your digital space in 48 hours without touching a line of code.",
-    "desc": "Professionalize your personal brand: gather your bio, playlists, dates and photos into a single link that speaks for you before you hit play. Community, clarity and status in every click.",
-    "cta": "Start your Presskit"
+    "desc_strong": "Turn your flyers, drives and PDFs into your optimized digital space to get MORE BOOKINGS, in 48 hours, hassle-free.",
+    "desc": "Gather your bio, music, sets, dates, releases, rider and photos in a single link that speaks for you to bookers and agencies.\n\nCommunity, clarity and status in every click.",
+    "check-1": "Flexible installment payments",
+    "check-2": "14-day guarantee",
+    "check-3": "Delivery in 48 hrs",
+    "cta": "Schedule a meeting"
   },
   "theProblem": {
-    "title": "The problem we all know",
-    "subtitle": "Bookers decide in 5 seconds. If your presentation isn’t clear, you’ve already lost.",
+    "title": "The problem we\nall know",
+    "subtitle": "Bookers decide in 5 seconds.\nIf your presentation isn’t clear, you already lost.",
     "left": {
-      "title": "Your current reality",
-      "item1": "Links scattered everywhere",
-      "item2": "Vague bio that doesn’t convince",
-      "item3": "Old or uncurated photos",
-      "item4": "Bookers without context",
-      "item5": "You lose dates due to poor presentation"
+      "title": "Your current reality:",
+      "item1": "Links scattered everywhere.",
+      "item2": "Outdated PDF.",
+      "item3": "Messy Drive folder.",
+      "item4": "Unconvincing BIO.",
+      "item5": "Losing gigs due to poor presentation."
     },
     "right": {
-      "title": "DJ Presskit",
-      "item1": "Exclusive, professional capsule",
-      "item2": "Structure optimized for bookers",
-      "item3": "Delivery guaranteed in 48 h",
-      "item4": "One link for everything",
-      "cta": "I want my presskit running"
+      "title": "With DJ PRESSKIT:",
+      "item1": "Exclusive and professional design.",
+      "item2": "Structure optimized for bookers.",
+      "item3": "Guaranteed delivery in 48 hrs.",
+      "item4": "One single link for everything.",
+      "item5": "Native SEO optimization."
     },
     "bottom": {
-      "title": "How many gigs have you already lost?",
-      "desc": "Every day with a messy presentation is a lost opportunity. Bookers don’t wait. Your competition already has everything organized."
+      "title": "HOW MANY GIGS HAVE YOU ALREADY LOST?",
+      "desc": "Every day with a sloppy presentation is a lost opportunity. Bookers don’t wait. Your competition already has everything sorted."
     }
   },
-  "cards": {
-    "title": "Why choose DJ Presskit?"
-  },
+
   "cta": {
-    "title": "Your community <br></br> is waiting",
-    "desc": "Attract bookers, labels and fans with a presskit that speaks for you. <strong>Simplify your communication and boost your brand today.</strong>",
-    "button": "CONTACT US"
+    "title": "Your community <br></br> is waiting for you",
+    "subtitle": "Ready to start?",
+    "desc": "Attract bookers, labels and fans with a presskit that speaks for you. <strong>Unify your communication and step into the new standard.</strong>",
+    "button": "Let’s talk"
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -50,100 +53,232 @@
     "from": "From"
   },
   "capsules": {
-    "knowIt": "Know it",
+    "knowIt": "Check it out",
     "genesis": "Genesis Capsule",
-    "genesis_description": "The first concept. A starting point. Genesis is not just a set of websites; it's the beginning of a new way to show yourself with clarity and professionalism. From scattered links to purpose-driven branding. This is where the idea of DJ Presskit was born as a community and standard."
+    "genesis_description": "The first concept. A starting point. Genesis is not just a set of websites; it’s the beginning of a new way of showing yourself with clarity and professionalism. From random links to purposeful branding. This is where the idea of DJ Presskit as a community and standard was born."
   },
   "soundcloud": {
     "partner": "Official Partner",
     "text": "DJ Presskit is officially supported by SoundCloud.<br></br>A trusted partnership to elevate your music presence."
   },
   "footer": {
-    "rights": "All Rights Reserved"
+    "slogan": "A DJ WHO RESPECTS HIMSELF HAS A PRESSKIT.",
+    "product": "Product",
+    "resources": "Resources",
+    "legal": "Legal",
+    "home": "Home",
+    "support": "Support",
+    "pricing": "Pricing",
+    "affiliate": "Affiliates",
+    "company": "Company",
+    "blogs": "Blogs",
+    "community": "Community",
+    "careers": "Careers",
+    "hiring": "We’re hiring!",
+    "about": "About",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "description": "Making every client feel valued—no matter the size of your audience.",
+    "rights": "All rights reserved"
   },
   "buttons": {
     "view_demo": "VIEW DEMO",
-    "let_s_talk": "LET'S TALK"
+    "let_s_talk": "LET’S TALK"
   },
   "projects": {
-    "soon": "soon"
+    "soon": "coming soon"
   },
   "howItWorks": {
     "title": "How it works",
-    "subtitle": "No technical hassles. We set it up, you focus on your music.",
+    "subtitle": "No technical headaches. We set it up, you focus on your music.",
     "steps": {
       "step1": {
-        "title": "Brief diagnosis",
-        "description": "10-15 minute meeting to understand your project and objectives.",
-        "duration": "15 min"
+        "title": "Quick diagnosis",
+        "description": "15–20 min meeting to understand your situation and guide you properly."
       },
       "step2": {
-        "title": "Capsule and personalization",
-        "description": "We choose your exclusive capsule and define colors, structure, and content.",
-        "duration": "2h"
+        "title": "Content upload",
+        "description": "We send you a simple form. Upload photos, bio, links, rider, etc...\nWe organize everything."
       },
       "step3": {
-        "title": "Content upload",
-        "description": "We send you a simple form. You upload photos, bio, links, and we organize it.",
-        "duration": "1h"
+        "title": "Delivery in<br></br>48 hrs",
+        "description": "In less than 48 hrs we have your presskit ready and make 1-to-1 revisions with you before launching."
       },
       "step4": {
-        "title": "Delivery in 48h",
-        "description": "We show you the complete preview and make quick adjustments.",
-        "duration": "48h"
-      },
-      "step5": {
-        "title": "Publication",
-        "description": "Your presskit is ready to share. Direct link + optional QR.",
-        "duration": "0h"
+        "title": "Launch",
+        "description": "Your presskit is ready to start sharing, put in your bio and present yourself with a single link."
       }
-    },
-    "cta": {
-      "title": "Ready to start?",
-      "description": "First meeting at no cost. We discuss your project and see how to help you.",
-      "button": "Schedule brief meeting"
     }
   },
   "includes": {
-    "title": "What your presskit includes",
-    "subtitle": "Everything a booker needs to see, organized in a design that turns visits into bookings.",
+    "title": "What’s included<br></br>in your presskit",
+    "subtitle": "Stop losing opportunities:\n<strong>A design made for bookers that turns your music into gigs</strong>.",
     "items": {
       "bio": {
-        "title": "Professional bio",
-        "description": "Bio optimized for bookers in EN/ES. Clear, direct, and persuasive."
+        "title": "Professional Bio",
+        "description": "<underline>No more messy texts</underline>: your story is presented short, clear and in multiple languages, ready to close bookings."
       },
-      "calendar": {
-        "title": "Integrated schedule",
-        "description": "Past and upcoming dates synchronized. Bookers see your real activity."
+      "gigs": {
+        "title": "Updated Gigs",
+        "description": "<underline>No more excuses like ‘we don’t see activity’</underline>: your calendar syncs automatically and shows past and upcoming dates in real time."
       },
       "media": {
-        "title": "Embedded media",
-        "description": "SoundCloud and YouTube integrated + banner video to showcase your sound."
+        "title": "Media",
+        "description": "<underline>No more scattered links</underline>: your latest tracks and sets appear integrated from SoundCloud and YouTube with a professional look."
       },
-      "rider": {
-        "title": "Technical rider",
-        "description": "Clear technical specifications and press kit with professional photos."
+      "lanzamientos": {
+        "title": "Releases",
+        "description": "<underline>No more lost emails</underline>: your recent and upcoming releases are listed in one place, with quick access to listen and share."
       },
       "gallery": {
-        "title": "Visual gallery",
-        "description": "Grid/parallax with your best live and session photos."
+        "title": "Gallery",
+        "description": "<underline>No more pixelated WhatsApp pics</underline>: your gallery is dynamic, optimized and shows you with the quality you deserve."
+      },
+      "rider": {
+        "title": "Technical Rider",
+        "description": "<underline>Avoid technical misunderstandings</underline>: your rider is clear and accessible so the team knows exactly what you need in the booth."
       },
       "contact": {
-        "title": "Direct contact",
-        "description": "Booking-optimized form + clear contact info."
+        "title": "Direct Contact",
+        "description": "<underline>Cut the friction</underline>: your contact info and booking links are visible, no detours or barriers for the booker."
       },
-      "domain": {
-        "title": "Custom domain",
-        "description": "Optional: your-name.com + professional email @your-name.com"
-      },
-      "analytics": {
-        "title": "Basic analytics",
-        "description": "Visit and interaction stats to optimize your strategy."
+      "seo": {
+        "title": "Technical SEO",
+        "description": "<underline>Let them also find you organically</underline>: your presskit is optimized for search engines and attracts interest organically."
       }
     },
     "note": {
       "title": "Optimized for bookers",
-      "description": "Each element is designed so bookers quickly find what they need: your sound, experience, and availability."
+      "description": "Each element is designed so every <strong>booker, agency or promoter</strong>\nquickly finds what they need to book you at their next event."
     }
+  },
+  "comparison": {
+    "title": "Before vs After",
+    "subtitle": "The difference between <red>losing opportunities</red> and <green>securing bookings</green>.",
+    "before": "BEFORE",
+    "before-subtitle": "What bookers see now",
+    "after": "AFTER",
+    "after-subtitle": "With DJ Presskit",
+    "result": {
+      "before": "RESULT: Bookers skip over you.",
+      "after": "RESULT: Bookers remember and contact you."
+    },
+    "cta": {
+      "title": "WHICH ONE DO YOU WANT TO BE IN?",
+      "subtitle": "The decision is in your hands. Keep losing opportunities or start closing gigs."
+    }
+  },
+  "before": {
+    "1": "Generic bio that doesn’t communicate or position you.",
+    "2": "Broken or scattered links that turn people off.",
+    "3": "No calendar: bookers don’t see activity.",
+    "4": "Disorganized or low-quality photos.",
+    "5": "Info scattered across multiple platforms.",
+    "6": "Amateur image that lowers credibility."
+  },
+  "after": {
+    "1": "Precise bio that defines and sells your style.",
+    "2": "Everything in one single unified link.",
+    "3": "Synced calendar that shows your real dates.",
+    "4": "Optimized gallery that boosts your professional image.",
+    "5": "A single centralized presskit with everything accessible.",
+    "6": "Professional presence that generates trust and bookings."
+  },
+  "whyCapsules": {
+    "title": "Why exclusive\ncapsules?",
+    "subtitle": "Capsules are <strong>LIMITED</strong> Presskit designs that guarantee exclusivity and professional status.",
+    "steps": {
+      "step1": {
+        "title": "Guaranteed exclusivity",
+        "description": "LIMITED number of DJs per capsule. Once it’s full, it closes forever. Your design will be unique in your region."
+      },
+      "step2": {
+        "title": "Immediate differentiation",
+        "description": "While others use generic templates and PDFs, you have a premium design that reflects your professional level."
+      },
+      "step3": {
+        "title": "Professional status",
+        "description": "Bookers instantly recognize quality. Your Presskit speaks seriousness before you say a word."
+      }
+    }
+  },
+  "reviews": {
+    "title": "What our DJs say",
+    "subtitle": "Real testimonials from DJs who <strong>already started professionalizing</strong>.",
+    "count-1": "DJs already use DJ Presskit",
+    "count-2": "Average delivery time",
+    "count-3": "Satisfaction guaranteed"
+  },
+  "guaranteeBanner": {
+    "title": "14-Day Satisfaction Guarantee",
+    "desc": "If you’re not 100% satisfied with your presskit during the first 14 days:\n<strong>We’ll refund all your money</strong>.",
+    "point1": "Zero risk",
+    "point2": "100% refund",
+    "point3": "No questions asked",
+    "note": "After 14 days, additional changes carry a maintenance fee."
+  },
+  "pricing": {
+    "title": "Plans & Pricing",
+    "subtitle": "One-time investment that pays for itself with the first gig you land.",
+    "popular": "Most chosen",
+    "main": {
+      "title": "Capsule 00",
+      "desc": "Payable in 2 or 3 INSTALLMENTS."
+    },
+    "base": {
+      "1": "Professional Bio EN/ES.",
+      "2": "Synced gigs.",
+      "3": "Integrated media (SoundCloud + YouTube).",
+      "4": "Highlighted releases.",
+      "5": "Complete rider.",
+      "6": "Optimized gallery.",
+      "7": "Direct contact.",
+      "8": "Exclusive capsule design.",
+      "9": "Technical SEO.",
+      "10": "Drive folder connected to your Presskit.",
+      "11": "Delivery in 48h + single link."
+    },
+    "addons": {
+      "title": "Optional extras",
+      "subtitle": "Boost your Presskit with the following options:",
+      "cta": "Check extras",
+      "domain": {
+        "title": "Custom domain",
+        "desc": "your-domain.com + professional email."
+      },
+      "sections": {
+        "title": "Extra sections",
+        "desc": "Discography, press, collaborations..."
+      },
+      "support": {
+        "title": "Extended support",
+        "desc": "Unlimited changes for 3 months."
+      }
+    },
+    "cta": "Reserve your spot"
+  },
+  "finalCTA": {
+    "title1": "Bookers",
+    "title2": "don’t wait",
+    "subtitle": "Every day without a professional presskit is a lost opportunity. <strong>Your competition is already positioning themselves.</strong>",
+    "point1": {
+      "title": "Professional positioning",
+      "desc": "Exclusive capsule that sets you apart"
+    },
+    "point2": {
+      "title": "Guaranteed speed",
+      "desc": "Ready in 48h to use immediately"
+    },
+    "point3": {
+      "title": "Limited exclusivity",
+      "desc": "Only 5 spots remaining"
+    },
+    "cta": "Book a quick meeting",
+    "ctaSubtitle": "First call free • 10–15 minutes • No commitment",
+    "urgency": {
+      "title": "Last 5 spots of Capsule 00",
+      "desc": "Once filled, the next capsule will have a higher price and different design."
+    },
+    "secondary": "While you think, your competition is already closing gigs with professional presskits."
   }
 }
