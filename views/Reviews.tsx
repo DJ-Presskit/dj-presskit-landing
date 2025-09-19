@@ -11,7 +11,7 @@ export default function Reviews() {
   return (
     <section className="w-full bg-secondary section-py">
       <div className="section-max-w section-px mx-auto flex flex-col items-center gap-10">
-        <Text Tag={"h2"} variant="title" className="text-center">
+        {/* <Text Tag={"h2"} variant="title" className="text-center">
           {t("title")}
         </Text>
         <Text
@@ -43,10 +43,10 @@ export default function Reviews() {
               </div>
             </React.Fragment>
           ))}
-        </div>
+        </div> */}
         <div className="w-full flex flex-col gap-10 lg:gap-0 md:flex-row justify-around mt-10">
           <div className="flex flex-col gap-2 items-center">
-            <CountUp to={15} plus />
+            <CountUp to={17} plus />
             <Text variant="content">{t("count-1")}</Text>
           </div>
           <div className="flex flex-col gap-2 items-center">
