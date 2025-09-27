@@ -244,15 +244,13 @@
       "cta": "Check extras",
       "domain": {
         "title": "Custom domain",
-        "desc": "your-domain.com + professional email."
+        "desc": "your-domain.com + professional email.",
+        "detail": "Per month"
       },
       "sections": {
         "title": "Extra sections",
-        "desc": "Discography, press, collaborations..."
-      },
-      "support": {
-        "title": "Extended support",
-        "desc": "Unlimited changes for 3 months."
+        "desc": "Discography, press, collaborations...",
+        "detail": "Per section"
       }
     },
     "cta": "Reserve your spot"

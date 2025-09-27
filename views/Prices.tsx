@@ -32,17 +32,14 @@ export default function Prices() {
     {
       title: t("addons.domain.title"),
       description: t("addons.domain.desc"),
-      price: "+$20",
+      price: "+$15",
+      detail: t("addons.domain.detail"),
     },
     {
       title: t("addons.sections.title"),
       description: t("addons.sections.desc"),
-      price: "+$30",
-    },
-    {
-      title: t("addons.support.title"),
-      description: t("addons.support.desc"),
-      price: "+$60",
+      price: "+$50",
+      detail: t("addons.sections.detail"),
     },
   ];
 
@@ -133,33 +130,48 @@ export default function Prices() {
 
             <div className="space-y-3 sm:space-y-4 md:space-y-5 mb-6 md:mb-10 flex-1">
               {addOns.map((addon, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 md:p-5 bg-secondary rounded-sm gap-2 sm:gap-3"
-                >
-                  <div className="flex-1 flex flex-col items-start gap-1">
-                    <Text variant="content" className="text-sm sm:text-base">
-                      {addon.title}
-                    </Text>
-                    <Text
-                      variant="custom"
-                      className="text-xs sm:text-sm text-primary/80 text-left"
-                    >
-                      {addon.description}
-                    </Text>
+                <div className="rounded-sm border-secondary border-2 overflow-hidden">
+                  <div
+                    key={index}
+                    className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 md:p-5 bg-secondary gap-2 sm:gap-3"
+                  >
+                    <div className="flex-1 flex flex-col items-start gap-1">
+                      <Text variant="content" className="text-sm sm:text-base">
+                        {addon.title}
+                      </Text>
+                      <Text
+                        variant="custom"
+                        className="text-xs sm:text-sm text-primary/80 text-left"
+                      >
+                        {addon.description}
+                      </Text>
+                    </div>
+                    <div className="flex items-center gap-1 sm:gap-2">
+                      <Text
+                        variant="content"
+                        Tag={"h5"}
+                        className="text-accent-2 font-semibold text-sm sm:text-base"
+                      >
+                        {addon.price}
+                      </Text>
+                      <Text
+                        variant="custom"
+                        className="text-xs text-primary/80"
+                      >
+                        USD
+                      </Text>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-1 sm:gap-2">
-                    <Text
-                      variant="content"
-                      Tag={"h5"}
-                      className="text-accent-2 font-semibold text-sm sm:text-base"
-                    >
-                      {addon.price}
-                    </Text>
-                    <Text variant="custom" className="text-xs text-primary/80">
-                      USD
-                    </Text>
-                  </div>
+                  {addon.detail && (
+                    <div className="flex items-center justify-center py-2 bg-secondary-lighter">
+                      <Text
+                        variant="custom"
+                        className="text-xs text-primary/80 uppercase"
+                      >
+                        {addon.detail}
+                      </Text>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

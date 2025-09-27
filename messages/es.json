@@ -244,15 +244,13 @@
       "cta": "Consultar extras",
       "domain": {
         "title": "Dominio personalizado",
-        "desc": "tu-dominio.com + email profesional."
+        "desc": "tu-dominio.com + email profesional.",
+        "detail": "Por mes"
       },
       "sections": {
         "title": "Secciones extra",
-        "desc": "Discografía, prensa, colaboraciones..."
-      },
-      "support": {
-        "title": "Soporte extendido",
-        "desc": "Cambios ilimitados por 3 meses."
+        "desc": "Discografía, prensa, colaboraciones...",
+        "detail": "Por sección"
       }
     },
     "cta": "Reserva tu cupo"

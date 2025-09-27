@@ -43,7 +43,7 @@ export default function Footer() {
   const t = useTranslations("footer");
 
   return (
-    <footer className="flex flex-col gap-10 items-center py-20 justify-center w-full section-max-w section-px bg-gradient-to-b from-secondary to-accent/15">
+    <footer className="flex flex-col gap-10 items-center py-20 justify-center w-full section-px bg-gradient-to-b from-secondary to-accent/15">
       <div className="flex items-center justify-center flex-col gap-5">
         <Image
           src="/logos/default-logo.svg"
