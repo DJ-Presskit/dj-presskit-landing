@@ -112,7 +112,6 @@ export default async function LocaleLayout({
       >
         <NextIntlClientProvider messages={messages} locale={lang}>
           <Providers>
-            <WebViewWarning />
             <LanguageSwitcher className="fixed top-5 right-5 z-[100]" />
             {children}
             <Footer />
