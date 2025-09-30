@@ -1,22 +1,37 @@
 import { Capsule, Review } from "@/@types";
 
+export const calendlyLink = "https://calendly.com/dj-presskit/entrevista";
 
-export const calendlyLink = 'https://calendly.com/dj-presskit/entrevista';
-
-export const REVIEWS:Review[] = [
+export const REVIEWS: Review[] = [
   {
-    content: "GRACIAS X TODO.\nSos el uno.\nNo puedo estar más contenta con tu trabajo de verdad.",
+    content:
+      "GRACIAS X TODO.\nSos el uno.\nNo puedo estar más contenta con tu trabajo de verdad.",
     name: "Serena",
-    detail: "DJ / La Plata"
+    detail: "DJ / La Plata",
+    url: "https://serena.dj-presskit.com/",
   },
   {
-    content: "AA se actualizan solo.\nQue copado esto.\nNa muy bueno esto. Todo lo que necesitaba ajaja",
+    content:
+      "AA se actualizan solo.\nQue copado esto.\nNa muy bueno esto. Todo lo que necesitaba ajaja",
     name: "Dexther",
-    detail: "DJ / Buenos Aires"
-  }
-
-]
-
+    detail: "DJ / Buenos Aires",
+    url: "https://dexther.dj-presskit.com/",
+  },
+  {
+    content:
+      "La verdad me encantó!!! Ahora tengo un presskit que transmite profesionalismo y estéticamente quedó impecable. Además fue súper rápido y prolijo en todo",
+    name: "Rolling",
+    detail: "DJ / Bariloche",
+    url: "https://rolling.dj-presskit.com/",
+  },
+  {
+    content:
+      "La verdad que el Presskit me llamó la atención desde un principio por la claridad y prolijidad con la que está presentada la información del artista, ademas la disposición de los chicos ayuda mucho al proceso de creación y personalización del Presskit en cada caso.\n\nEs muy práctico a la hora de hacer la publicidad de uno mismo y le facilita mucho el trabajo a las productoras o bookers porque comunica de forma sencilla la información relevante, 100% recomendado si la idea es profesionalizarte.",
+    name: "Joaquin Ibanez",
+    detail: "DJ / Bariloche",
+    url: "https://joacoibanez.dj-presskit.com/",
+  },
+];
 
 export const CAPSULES: Capsule[] = [
   {

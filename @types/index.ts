@@ -8,10 +8,11 @@ export type FAQItemType = {
 };
 
 export type Review = {
-  content: string,
-  name: string,
-  detail: string,
-}
+  content: string;
+  name: string;
+  detail: string;
+  url: string;
+};
 
 export type PlanType = {
   id?: string;
