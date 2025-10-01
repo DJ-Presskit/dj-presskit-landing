@@ -36,11 +36,8 @@ export default function HowItsWorks() {
     },
     {
       number: "3",
-      title: "Entrega en 2 años",
-      //t.rich("steps.step3.title", { br: () => <br></br> }),
-      description:
-        "En menos de 2 años tenemos tu Presskit listo y hacemos correcciones 1 a 1 con vos antes de lanzarlo.",
-      // t("steps.step3.description"),
+      title: t.rich("steps.step3.title", { br: () => <br></br> }),
+      description: t("steps.step3.description"),
       icon: (
         <Image
           src={"/resources/clock-3d.svg"}
@@ -92,21 +89,10 @@ export default function HowItsWorks() {
                 <div className="mx-auto">{step.icon}</div>
 
                 <div className="flex flex-col gap-5">
-                  {step.title === "Entrega en 2 años" ? (
-                    <button
-                      onClick={() =>
-                        alert("Este cupón ya se uso :(\n\nSegui buscando...")
-                      }
-                    >
-                      <Text variant="subtitle" className="!text-lg" Tag={"h5"}>
-                        {step.title}
-                      </Text>
-                    </button>
-                  ) : (
-                    <Text variant="subtitle" className="!text-lg" Tag={"h5"}>
-                      {step.title}
-                    </Text>
-                  )}
+                  <Text variant="subtitle" className="!text-lg" Tag={"h5"}>
+                    {step.title}
+                  </Text>
+
                   <Text variant="content" className="">
                     {step.description}
                   </Text>

@@ -31,6 +31,20 @@ export const REVIEWS: Review[] = [
     detail: "DJ / Bariloche",
     url: "https://joacoibanez.dj-presskit.com/",
   },
+  {
+    content:
+      "Lo bueno y lo interesante que ofrece Dj presskit es la unificación de información para que el artista pueda mostrar de manera ordenada y profesional su recorrido con infogrsfia e imagen, es un salto de calidad para aquellos artistas que quieren llevar el formato de calidad a otro nivel, la cápsula es muy estética, y tiene lo justo y necesario que un artista tiene que mostrar a la hora de cerrar un evento.",
+    name: "Lorenzo Turco",
+    detail: "DJ / Córdoba",
+    url: "https://lorenzoTurco.dj-presskit.com/",
+  },
+  {
+    content:
+      "La experiencia con DJ Presskit fue súper fluida. Me ayudó a ordenar toda mi información de manera profesional y a tener un material de presentación que realmente refleja mi estilo. El proceso fue rápido, claro y muy personalizado. Ahora siento que tengo una herramienta que me da más confianza para mostrarme y conectar con nuevos eventos.",
+    name: "Tino Sbriglio",
+    detail: "DJ / Mendoza",
+    url: "https://tinoSbriglio.dj-presskit.com/",
+  },
 ];
 
 export const CAPSULES: Capsule[] = [

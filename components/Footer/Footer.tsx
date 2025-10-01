@@ -64,14 +64,12 @@ export default function Footer() {
         >
           DJ PRESSKIT
         </Text>
-        <Link href={"https://wa.link/fehmpu"} className="cursor-default">
-          <Text
-            variant="custom"
-            className="text-[8px] cursor-help lg:text-[10px] text-transparent bg-clip-text bg-radial from-accent-2 to-accent-2/50"
-          >
-            {t("slogan")}
-          </Text>
-        </Link>
+        <Text
+          variant="custom"
+          className="text-[8px] cursor-help lg:text-[10px] text-transparent bg-clip-text bg-radial from-accent-2 to-accent-2/50"
+        >
+          {t("slogan")}
+        </Text>
       </div>
       <AnimatedSeparator transformOrigin="center" />
       <div className="w-full flex items-center justify-center gap-10 flex-col-reverse md:flex-row md:justify-between">
