@@ -3,16 +3,16 @@ import { Capsule, Review } from "@/@types";
 export const calendlyLink = "https://calendly.com/dj-presskit/entrevista";
 
 export const REVIEWS: Review[] = [
+  // {
+  //   content:
+  //     "GRACIAS X TODO.\nSos el uno.\nNo puedo estar más contenta con tu trabajo de verdad.",
+  //   name: "Serena",
+  //   detail: "DJ / La Plata",
+  //   url: "https://serena.dj-presskit.com/",
+  // },
   {
     content:
-      "GRACIAS X TODO.\nSos el uno.\nNo puedo estar más contenta con tu trabajo de verdad.",
-    name: "Serena",
-    detail: "DJ / La Plata",
-    url: "https://serena.dj-presskit.com/",
-  },
-  {
-    content:
-      "AA se actualizan solo.\nQue copado esto.\nNa muy bueno esto. Todo lo que necesitaba ajaja",
+      "Mi experiencia con presskit fue excelente y al pasarlo visualmente tambien cambio demasiado y no solo eso , tambien es demasiado practico ya al convertirse una pagina web es mucho mas fácil enviarselo a cualquier persona",
     name: "Dexther",
     detail: "DJ / Buenos Aires",
     url: "https://dexther.dj-presskit.com/",

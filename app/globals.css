@@ -16,7 +16,6 @@
     font-style: normal;
   }
 
-
   html {
     font-family: var(--font-secondary);
   }
@@ -134,7 +133,23 @@
     transform-style: flat;
     backface-visibility: visible;
   }
-  
+
+  /* Carrusel horizontal infinito para reviews */
+  .marquee {
+    display: flex;
+    gap: 1.25rem;
+    animation: infiniteCarrousel 50s linear infinite;
+  }
+
+  @keyframes infiniteCarrousel {
+    from {
+      translate: -100%;
+    }
+    to {
+      translate: 0;
+    }
+  }
+
   @keyframes moveInCircle {
     0% {
       transform: translate(-15%, -15%);
@@ -155,9 +170,13 @@
 
   /* Clase para animación flotante infinita */
   .floating {
-    animation: moveInCircle 15s  infinite;
+    animation: moveInCircle 15s infinite;
     /* Puedes ajustar la duración (6s) según lo que necesites */
     will-change: transform;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 
   @keyframes moveHorizontal {

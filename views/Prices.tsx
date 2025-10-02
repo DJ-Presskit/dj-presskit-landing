@@ -130,7 +130,10 @@ export default function Prices() {
 
             <div className="space-y-3 sm:space-y-4 md:space-y-5 mb-6 md:mb-10 flex-1">
               {addOns.map((addon, index) => (
-                <div className="rounded-sm border-secondary border-2 overflow-hidden">
+                <div
+                  key={index}
+                  className="rounded-sm border-secondary border-2 overflow-hidden"
+                >
                   <div
                     key={index}
                     className="flex flex-col sm:flex-row sm:items-center justify-between p-3 sm:p-4 md:p-5 bg-secondary gap-2 sm:gap-3"
