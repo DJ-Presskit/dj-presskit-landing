@@ -103,7 +103,7 @@ export default function Reviews() {
         </div>
         <div className="w-full flex flex-col gap-10 lg:gap-0 md:flex-row justify-around mt-10">
           <div className="flex flex-col gap-2 items-center">
-            <CountUp to={22} plus />
+            <CountUp to={31} plus />
             <Text variant="content">{t("count-1")}</Text>
           </div>
           <div className="flex flex-col gap-2 items-center">
