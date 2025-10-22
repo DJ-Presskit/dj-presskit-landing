@@ -31,14 +31,17 @@ export default function Reviews() {
             {REVIEWS.map(({ content, detail, name, url }, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[320px] md:w-[380px] lg:w-[420px]"
+                className="flex-shrink-0 w-[320px] md:w-[380px] lg:w-[420px] max-h-[500px]"
               >
                 <div className="relative bg-secondary !pt-[90px] border-2 border-primary/20 p-5 md:px-20 lg:px-8 lg:p-8 flex flex-col gap-5 items-center justify-center w-full rounded-sm h-full">
                   <div className="absolute h-[30px] w-[30px] opacity-80 top-6 left-6">
                     <Image src="/resources/ticks.svg" alt="ticks" fill />
                   </div>
                   <div className="flex flex-col items-start self-start gap-5 grow">
-                    <Text variant="content" className="text-left !text-sm">
+                    <Text
+                      variant="content"
+                      className="text-left !text-sm line-clamp-[12]"
+                    >
                       {content}
                     </Text>
                     <div className="mt-auto space-y-5 flex flex-col items-start w-full">
@@ -56,7 +59,7 @@ export default function Reviews() {
                     variant="basic"
                     className="w-fit min-w-none border-none !px-0 !aspect-square absolute right-5 bottom-5"
                   >
-                    <SquareArrowOutUpRight />
+                    <Globe />
                   </DefaultButton>
                 </div>
               </div>
