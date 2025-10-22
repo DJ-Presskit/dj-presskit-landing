@@ -32,7 +32,7 @@ export default function Prices() {
     {
       title: t("addons.domain.title"),
       description: t("addons.domain.desc"),
-      price: "+$15",
+      price: "+$10",
       detail: t("addons.domain.detail"),
     },
     {
