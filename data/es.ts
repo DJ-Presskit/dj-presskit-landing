@@ -5,6 +5,13 @@ export const calendlyLink = "https://calendly.com/dj-presskit/entrevista";
 export const REVIEWS: Review[] = [
   {
     content:
+      "Desde el primer momento, trabajar con el equipo fue una experiencia excelente. Son personas muy humanas, súper atentas y con una creatividad impresionante. Están en cada detalle y eso se nota en el resultado final. Además de que toda la comunicación fue muy fluida y el equipo muy predispuesto. \n\nMe encantó la estética de mi cápsula: es muy llamativa, transmite mi estilo y refleja completamente mi esencia. Supieron captar mi energía y potenciar mi identidad sin perder mi onda.\n\nA partir del pre-skit me llegaron muchas propuestas, y siento que me ayudó a consolidar mi marca como DJ. Logré mostrar con más claridad lo que tengo para aportar dentro de la escena electrónica.\n\nRealmente fue un proceso muy enriquecedor y con un resultado que superó mis expectativas",
+    name: "Serena",
+    detail: "DJ / La Plata",
+    url: "https://serena.dj-presskit.com/",
+  },
+  {
+    content:
       "Mi experiencia con presskit fue excelente y al pasarlo visualmente tambien cambio demasiado y no solo eso , tambien es demasiado practico ya al convertirse una pagina web es mucho mas fácil enviarselo a cualquier persona",
     name: "Dexther",
     detail: "DJ / Buenos Aires",
